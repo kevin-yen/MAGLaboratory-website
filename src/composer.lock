@@ -1,0 +1,173 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "hash": "8ec569014276c42f9fa1c52b41f8c03c",
+    "content-hash": "2f6b5bc73e433833d07616e5e46931c9",
+    "packages": [
+        {
+            "name": "coffeescript/coffeescript",
+            "version": "1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/alxlit/coffeescript-php.git",
+                "reference": "ef262881d3f1edcca1366f4ddf18293843370da5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/alxlit/coffeescript-php/zipball/ef262881d3f1edcca1366f4ddf18293843370da5",
+                "reference": "ef262881d3f1edcca1366f4ddf18293843370da5",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "CoffeeScript": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Alex Little",
+                    "email": "alxlit@gmail.com",
+                    "homepage": "http://alxlit.name"
+                }
+            ],
+            "description": "A port of the CoffeeScript compiler to PHP.",
+            "homepage": "http://github.com/alxlit/coffeescript-php",
+            "keywords": [
+                "JS",
+                "coffee",
+                "coffeescript",
+                "javascript"
+            ],
+            "time": "2012-08-04 14:44:51"
+        },
+        {
+            "name": "erusev/parsedown",
+            "version": "1.6.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/erusev/parsedown.git",
+                "reference": "3ebbd730b5c2cf5ce78bc1bf64071407fc6674b7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/3ebbd730b5c2cf5ce78bc1bf64071407fc6674b7",
+                "reference": "3ebbd730b5c2cf5ce78bc1bf64071407fc6674b7",
+                "shasum": ""
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Parsedown": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Emanuil Rusev",
+                    "email": "hello@erusev.com",
+                    "homepage": "http://erusev.com"
+                }
+            ],
+            "description": "Parser for Markdown.",
+            "homepage": "http://parsedown.org",
+            "keywords": [
+                "markdown",
+                "parser"
+            ],
+            "time": "2015-10-04 16:44:32"
+        },
+        {
+            "name": "mthaml/mthaml",
+            "version": "1.8.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/arnaud-lb/MtHaml.git",
+                "reference": "b7e0c72883ee3efcf8b8819210b90496158b00d4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/arnaud-lb/MtHaml/zipball/b7e0c72883ee3efcf8b8819210b90496158b00d4",
+                "reference": "b7e0c72883ee3efcf8b8819210b90496158b00d4",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.4.0"
+            },
+            "conflict": {
+                "mthaml/mthaml-bundle": "<1.1.0"
+            },
+            "require-dev": {
+                "cebe/markdown": "~1",
+                "coffeescript/coffeescript": "~1",
+                "erusev/parsedown": "*",
+                "fluxbb/commonmark": "~1@dev",
+                "gregwar/rst": "~1",
+                "kzykhys/ciconia": "~1",
+                "leafo/lessphp": "*",
+                "leafo/scssphp": "*",
+                "league/commonmark": ">=0.9",
+                "michelf/php-markdown": "~1.3",
+                "oyejorge/less.php": "*",
+                "twig/twig": "~1.12|~2.0"
+            },
+            "suggest": {
+                "cebe/markdown": "If you want to use :markdown filter",
+                "coffeescript/coffeescript": "If you want to use :coffee or :coffeescript filter",
+                "erusev/parsedown": "If you want to use :markdown filter",
+                "fluxbb/commonmark": "If you want to use :markdown filter",
+                "gregwar/rst": "If you want to use :rest filter",
+                "kzykhys/ciconia": "If you want to use :markdown filter",
+                "leafo/lessphp": "If you want to use :less filter",
+                "leafo/scssphp": "If you want to use :scss filter",
+                "league/commonmark": "If you want to use :markdown filter",
+                "michelf/php-markdown": "If you want to use :markdown filter",
+                "oyejorge/less.php": "If you want to use :less filter",
+                "twig/twig": "If you want to use Twig templating engine"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "MtHaml\\": "lib/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Arnaud Le Blanc",
+                    "email": "arnaud.lb@gmail.com"
+                }
+            ],
+            "description": "HAML for PHP",
+            "homepage": "https://github.com/arnaud-lb/MtHaml",
+            "keywords": [
+                "HAML"
+            ],
+            "time": "2015-12-17 09:48:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
