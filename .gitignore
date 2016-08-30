@@ -1,5 +1,8 @@
-tmp
-logs
-.config
-home/protected/config/config.php
-.notes
+/tmp
+/logs
+/.config
+/wip
+/home/protected/config/config.php
+/home/protected/config/config_*.php
+/home/protected/app/vendor/dokuwiki/conf
+/home/protected/app/vendor/dokuwiki/data

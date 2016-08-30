@@ -9,6 +9,7 @@ return array(
     'Slim\\Views\\' => array($vendorDir . '/slim/php-view/src'),
     'Slim\\' => array($vendorDir . '/slim/slim/Slim'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
+    'MtHaml\\' => array($baseDir . '/lib/mthaml'),
     'Models\\' => array($baseDir . '/app/models'),
     'Interop\\Container\\' => array($vendorDir . '/container-interop/container-interop/src/Interop/Container'),
     'Helpers\\' => array($baseDir . '/app/helpers'),

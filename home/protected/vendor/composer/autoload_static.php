@@ -23,6 +23,7 @@ class ComposerStaticInitac49f09f570f8a29adb63669117d1cc3
         ),
         'M' => 
         array (
+            'MtHaml\\' => 7,
             'Models\\' => 7,
         ),
         'I' => 
@@ -56,6 +57,10 @@ class ComposerStaticInitac49f09f570f8a29adb63669117d1cc3
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
         ),
+        'MtHaml\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/lib/mthaml',
+        ),
         'Models\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app/models',
@@ -81,9 +86,17 @@ class ComposerStaticInitac49f09f570f8a29adb63669117d1cc3
     public static $prefixesPsr0 = array (
         'P' => 
         array (
+            'Psr\\Log\\' => 
+            array (
+                0 => __DIR__ . '/..' . '/psr/log',
+            ),
             'Pimple' => 
             array (
                 0 => __DIR__ . '/..' . '/pimple/pimple/src',
+            ),
+            'PayPal' => 
+            array (
+                0 => __DIR__ . '/..' . '/paypal/rest-api-sdk-php/lib',
             ),
         ),
         'H' => 

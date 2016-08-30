@@ -2,13 +2,15 @@
   "require": {
     "slim/slim": "^3.0",
     "slim/php-view": "^2.0",
-    "ezyang/htmlpurifier": "^4.8"
+    "ezyang/htmlpurifier": "^4.8",
+    "paypal/rest-api-sdk-php": "^1.7"
   },
   "autoload": {
     "psr-4": {
       "Controllers\\": "app/controllers",
       "Models\\": "app/models",
-      "Helpers\\": "app/helpers"
+      "Helpers\\": "app/helpers",
+      "MtHaml\\": "lib/mthaml"
     }
   }
 }
