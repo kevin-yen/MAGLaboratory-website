@@ -6,6 +6,7 @@
 /home/protected/config/config_*.php
 
 /.sass-cache
+/home/public/css/*.map
 
 # media wiki resource files
 /home/public/w/resources

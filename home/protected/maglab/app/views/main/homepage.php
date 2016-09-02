@@ -77,30 +77,32 @@
       <div class="container">
         <ul class="social-icons">
           <li>
-            <a <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'soc-email1'), array('href', ('mailto:contact@maglaboratory.org'))), 'html5', 'UTF-8'); ?>></a>
+            <a <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'sprite-mail'), array('href', ('mailto:contact@maglaboratory.org')), array('target', ('_blank'))), 'html5', 'UTF-8'); ?>></a>
           </li>
           <li>
-            <a <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'soc-facebook'), array('href', ('https://www.facebook.com/MAGLaboratory'))), 'html5', 'UTF-8'); ?>></a>
+            <a <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'sprite-facebook'), array('href', ('https://www.facebook.com/MAGLaboratory')), array('target', ('_blank'))), 'html5', 'UTF-8'); ?>></a>
           </li>
           <li>
-            <a <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'soc-instagram'), array('href', ('https://www.instagram.com/MAGLaboratory/'))), 'html5', 'UTF-8'); ?>></a>
+            <a <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'sprite-twitter'), array('href', ('https://www.twitter.com/MAGLaboratory')), array('target', ('_blank'))), 'html5', 'UTF-8'); ?>></a>
           </li>
           <li>
-            <a <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'soc-youtube'), array('href', ('https://www.youtube.com/channel/UCxkmJiwGmDQnIvLe2gDKbpg'))), 'html5', 'UTF-8'); ?>></a>
+            <a <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'sprite-instagram'), array('href', ('https://www.instagram.com/MAGLaboratory/')), array('target', ('_blank'))), 'html5', 'UTF-8'); ?>></a>
           </li>
           <li>
-            <a <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'soc-twitter'), array('href', ('https://www.twitter.com/MAGLaboratory'))), 'html5', 'UTF-8'); ?>></a>
+            <a <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'sprite-youtube'), array('href', ('https://www.youtube.com/channel/UCxkmJiwGmDQnIvLe2gDKbpg')), array('target', ('_blank'))), 'html5', 'UTF-8'); ?>></a>
           </li>
           <li>
-            <a <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'soc-github'), array('href', ('https://github.com/MAGLaboratory'))), 'html5', 'UTF-8'); ?>></a>
+            <a <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'sprite-yelp'), array('href', ('https://www.yelp.com/biz/mag-lab-walnut')), array('target', ('_blank'))), 'html5', 'UTF-8'); ?>></a>
           </li>
           <li>
-            <a <?php echo MtHaml\Runtime::renderAttributes(array(array('class', ('soc-yelp' . ' ' . 'soc-icon-last')), array('href', ('https://www.yelp.com/biz/mag-lab-walnut'))), 'html5', 'UTF-8'); ?>></a>
+            <a <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'sprite-github'), array('href', ('https://github.com/MAGLaboratory')), array('target', ('_blank'))), 'html5', 'UTF-8'); ?>></a>
           </li>
         </ul>
       </div>
     </div>
-    hello
+    <div <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'container-fluid'), array('style', ('height: 250px;'))), 'html5', 'UTF-8'); ?>>
+  hello
+</div>
 
   </body>
 </html>

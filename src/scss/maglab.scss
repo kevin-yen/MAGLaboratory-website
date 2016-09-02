@@ -1,36 +1,3 @@
 @import 'social_icons';
+@import 'header';
 
-#header {
-  background: #ddd url('/images/bg/stainless_steel.jpg') repeat fixed center;
-  padding: 20px;
-  nav { 
-    opacity: 0.6;
-  }
-}
-
-#main-nav {
-  font-family: "Bree Serif", Eczar, Georgia, "Times New Roman", Times, serif;
-  font-size: 20px;
-  
-  .nav {
-    margin: 0 auto;
-    display: table;
-    table-layout: fixed;
-    float: none;
-    a { color: black; }
-  }
-}
-
-#logo {
-  width: 100%;
-}
-
-#header {
-  .navbar {
-    margin-top: 25px;
-  }
-  
-  .social-icons {
-    text-align: center;
-  }
-}

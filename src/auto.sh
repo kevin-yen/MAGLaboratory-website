@@ -2,7 +2,7 @@
 
 DIR=$( dirname "$0" )
 
-sass --sourcemap=none --watch $DIR/scss:$DIR/../home/public/css &
+sass --style=compressed --sourcemap=none --watch $DIR/scss:$DIR/../home/public/css &
 
 while true; do
   change=$(inotifywait -e close_write,moved_to,create,modify -r $DIR/views)
