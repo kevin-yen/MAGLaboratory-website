@@ -4,5 +4,8 @@
 /wip
 /home/protected/config/config.php
 /home/protected/config/config_*.php
-/home/protected/app/vendor/dokuwiki/conf
-/home/protected/app/vendor/dokuwiki/data
+
+# media wiki resource files
+/home/public/w/resources
+/home/public/w/skins
+/home/public/w/images

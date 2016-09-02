@@ -1,5 +1,29 @@
 RewriteEngine On
 
-RewriteCond %{REQUEST_URI} !^main.php
-RewriteRule .* main.php [L]
+RewriteRule ^/?haldor/.+$ /haldor-load.php [L]
+RewriteRule ^/?hal/?$ /haldor-load.php [L]
+RewriteRule ^/?hal/.+$ /haldor-load.php [L]
+RewriteRule ^/?halley/.+$ /haldor-load.php [L]
+
+RewriteRule ^/?members/?$ /members-load.php [L]
+RewriteRule ^/?members/.+$ /members-load.php [L]
+
+RewriteCond %{QUERY_STRING} title=(.*) [NC]
+RewriteRule ^/?~maglab/wiki/index.php$ /wiki/%1 [R=301,L]
+
+RewriteRule ^/?wiki(/.*)?$ %{DOCUMENT_ROOT}/w/index.php [L]
+#RewriteRule ^/?wiki(/.*)?$ %{DOCUMENT_ROOT}/blank.php [L]
+
+# TODO: These two are just legacy routes, remove later
+RedirectMatch 301 /MagLabHAL/(.*) /hal
+RedirectMatch 301 /readDoorLogs.php /hal
+
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /main.php [L]
+
+RewriteRule ^$ /main.php [L]
+
+Options All -Indexes
 
