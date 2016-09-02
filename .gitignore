@@ -5,6 +5,8 @@
 /home/protected/config/config.php
 /home/protected/config/config_*.php
 
+/.sass-cache
+
 # media wiki resource files
 /home/public/w/resources
 /home/public/w/skins

@@ -2,8 +2,10 @@
 
 DIR=$( dirname "$0" )
 
+sass --sourcemap=none --watch $DIR/scss:$DIR/../home/public/css &
+
 while true; do
-  change=$(inotifywait -e close_write,moved_to,create,modify -r .)
+  change=$(inotifywait -e close_write,moved_to,create,modify -r $DIR/views)
   echo $change;
   sleep 1;
   php $DIR/compile.php

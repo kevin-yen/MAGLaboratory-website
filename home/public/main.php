@@ -1,3 +1,3 @@
 <?php
-require_once('../protected/app/main.php');
+require_once('../protected/maglab/app/main.php');
 
