@@ -100,7 +100,8 @@
         </ul>
       </div>
     </div>
-    <div <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'container-fluid'), array('style', ('height: 250px;'))), 'html5', 'UTF-8'); ?>>
+    <div class="bg-pullup bg-subtle-food"></div>
+<div <?php echo MtHaml\Runtime::renderAttributes(array(array('class', ('container-fluid' . ' ' . 'bg-subtle-food')), array('style', ('height: 250px;'))), 'html5', 'UTF-8'); ?>>
   hello
 </div>
 

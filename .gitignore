@@ -8,6 +8,9 @@
 /.sass-cache
 /home/public/css/*.map
 
+# manually add images that you want to use
+/home/public/images/bg
+
 # media wiki resource files
 /home/public/w/resources
 /home/public/w/skins
