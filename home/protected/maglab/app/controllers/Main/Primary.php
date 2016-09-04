@@ -10,8 +10,8 @@ class Primary extends PurifierBase {
   }
   
   function homepage($req, $res){
-    return $this->render($res, 'main/homepage.php', 'MAG Laboratory - Welcome', array(
-      'argument' => 'value'
+    return $this->render($res, 'main/homepage.php', 'Welcome', array(
+      'layout_show_entrances' => true
     ));
   }
 }

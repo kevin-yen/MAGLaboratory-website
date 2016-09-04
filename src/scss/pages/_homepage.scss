@@ -1,0 +1,28 @@
+#footer {
+  height: 1222px;
+  margin: 0;
+  padding: 0;
+
+  &.bg-maglab_map {
+    background-origin: content-box;
+    background: #eaeaea url('/images/bg/maglab_map.jpg') no-repeat fixed center;
+  }
+}
+
+#join-newsletter {
+  .container {
+    background-color: #fff;
+    opacity: 0.8;
+  }
+  .form-control { color: #222; }
+}
+
+#pricing {
+  .panel { padding: 0; }
+}
+
+#google-calendar {
+  border-top: 5px solid #e7ecfe;
+  border-bottom: 5px solid #e7ecfe;
+  background-color: #e7ecfe;
+}

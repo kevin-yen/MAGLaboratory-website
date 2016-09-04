@@ -1,6 +1,6 @@
 body {
   /* Background pattern from subtlepatterns.com */
-  background: #ddd url('/images/bg/subtle/geometry.png') repeat fixed center;
+  background: #ddd url('/images/bg/subtle/geometry.png') repeat scroll center;
 }
 
 #header {
@@ -8,11 +8,12 @@ body {
   nav { 
     opacity: 0.6;
   }
+  
+  font-family: "Bree Serif", Eczar, Georgia, "Times New Roman", Times, serif;
+  font-size: 20px;
 }
 
 #main-nav {
-  font-family: "Bree Serif", Eczar, Georgia, "Times New Roman", Times, serif;
-  font-size: 20px;
   
   .nav {
     margin: 0 auto;
@@ -35,4 +36,10 @@ body {
   .social-icons {
     text-align: center;
   }
+  
+  address {
+    margin-top: 25px;
+    color: #777;
+  }
 }
+

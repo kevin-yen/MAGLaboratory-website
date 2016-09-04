@@ -1,3 +1,246 @@
-.bg-pullup.bg-subtle-food
-.container-fluid.bg-subtle-food{:style => 'height: 250px;'}
-  hello
+
+.bg-subtle-geometry2.containment
+  .container
+    .row
+      %h1.text-center ABOUT US
+      .col-xs-12.col-md-4
+        %h2.text-center Who
+        %p
+          We are a non-profit
+          %a(href='http://en.wikipedia.org/wiki/Hackerspace') hackerspace / makerspace
+          and collaborative workspace based in Pomona, CA.
+          
+        %p
+          People come to our space to 
+          %strong work
+          on projects,
+          %strong explore
+          their inner artists,
+          %strong make
+          cool gadgets, and
+          %strong interact
+          with a community of like-minded individuals.
+          
+        %p
+          We are makers, artists, DIYers, hobbyists, combat robot creators, ham radio amateurs, tech enthusiasts and...well...
+          %strong just normal people, doing stuff regular people do.
+          (except MAG Cat, he has cat duties.)
+        
+        %p
+          Join us and work on your projects here.
+          %strong Share it. Inspire others! Get inspired.
+          They might share some tips and tricks or even be interested in joining your project. There's a lot of expertise in our members and many are happy to share their knowledge.
+        
+        %p
+          And if you don't like us enough to join in holy makermony, you're still welcome visit anytime.
+          %strong Check the calendar, Facebook and Meetup page
+          to see what MAGLab is doing.
+      .col-xs-12.col-md-4
+        %h2.text-center What
+        -# TODO: Tools and Equipment page to list our tools
+        
+        %p
+          We have 
+          %strong a wall full of general-purpose tools and supplies
+          like screw drivers, tape measures, drills, hammers, saws, and much more
+
+        %p
+          The (partially) sound-insulated
+          %strong presentation room with AC,
+          a projector and whiteboard services our meetings.
+          %strong The electronics room
+          has a lazer cutter, 3d printers, variable power supplies, oscilloscopes, a logic analyzer, soldering iron and other electro-doodads.
+        
+        %p
+          %strong The workshop
+          houses a mill, lathe, drill press, grinder, jig saw, forge and other destructive machines. If you're
+          %strong woodworking or metalworking,
+          chances are we have a machine for your needs.
+        
+        %p
+          And for a limited time, we have
+          %strong a large CNC machine.
+        
+        %p
+          Oh almost forgot, we have
+          %strong a restroom with working toilet, and sink,
+          and running water. (But please don't drink it.)
+        
+      .col-xs-12.col-md-4
+        %h2.text-center When
+        %p You're welcome to come and check us out! See the calendar for events and open hours.
+        
+        %p
+          The space is open whenever a key member or officer is at the space.
+          %strong Our doors are always open Tuesday and Friday evenings
+          for our business meetings and open project night respectively. There's a 
+          %strong public monthly Open House on the last Saturday
+          of every month.
+          
+        %p
+          To see if we're open right now, please check with our resident
+          %strong deliberately-not-very-sentient sensor system,
+          codenamed
+          %strong
+            %a.text-danger(href='/hal') HAL.
+          %a(href='/hal') Click to see HAL.
+          
+        %p
+          If the date is not on the calendar, it's always safe (and advised) to 
+          %strong give us a call
+          to check if--and for how long--the space will be open by the time you arrive.
+          
+#google-calendar.containment
+  %iframe(src="https://www.google.com/calendar/embed?src=bjpkvaeg1rjq9u3c6utecq1jos%40group.calendar.google.com&amp;ctz=America/Los_Angeles" style="border: 0" width="100%" height="650" frameborder="0" scrolling="no")
+
+.containment{:style => 'height: 1000px;'}
+  -# Upcoming Events
+  -# Past Events
+  
+#pricing.bg-subtle-gridme.containment
+  .container
+    .row
+      %h1.text-center Membership
+      - if(!$skip_membership_link)
+        %p.text-center
+          More information available on the
+          %strong
+            %a(href='/membership') Membership page
+      .panel.panel-success.col-xs-12.col-sm-3
+        .panel-heading
+          %h1.text-center Guest
+        .panel-body
+          Guests are welcome to
+          %ul
+            %li
+              come to the space
+            %li
+              engage, talk, discuss, dance, play and enjoy themselves
+            %li
+              partake in public festivities and fun
+            %li
+              use the restroom
+          Guests are
+          %strong.text-danger not allowed
+          to
+          %ul
+            %li use equipment (unless accompanied by and helping a General Member)
+            %li steal anything including but not limited to tools, supplies, equipment, personal belongings, and/or trash
+            %li kidnap, impersonate, pester, lick or kick people and/or objects at the space
+            %li injure, maim, kill or otherwise endanger harm upon themselves or others while on premises
+        .panel-footer.text-center
+          %strong Free!
+          %br
+          But if you would like to help, please
+          %br
+          %button.btn.btn-success Donate
+      
+      .panel.panel-default.col-xs-12.col-sm-4.col-sm-offset-1
+        .panel-heading
+          %h1.text-center General
+        .panel-body
+          General Members have all basic guest privileges and
+          %ul
+            %li can use the space whenever it is open
+            %li bring a guest to help them work on their project
+            %li must leave if the space is closing (last keyholder is leaving and locking up)
+            %li use any of our machines (after a quick safety test and verification that you can use the machine safely)
+            %li throw stuff away and take out the trash
+            %li use publicly available materials (please refill or donate for consumables that you use often)
+            %li a locker at the space (please bring your own lock)
+          
+          General Members are
+          %strong.text-danger not allowed
+          to
+          %ul
+            %li do the stuff guests are not allowed to do (except explicitly listed above)
+            %li ignore safety procedures and guidelines
+            %li damage the space's property through excessive misuse
+            %li use the space for illegal activities or to create anything illegal
+            %li take or use other member's personal supplies and tools without permission
+        .panel-footer.text-center
+          %strong $40/month
+          %br
+          %button.btn.btn-default Subscribe with Paypal
+          %br
+          You may also pay with cash in person
+      
+      .panel.panel-primary.col-xs-12.col-sm-3.col-sm-offset-1
+        .panel-heading
+          %h1.text-center Keyholder
+        .panel-body
+          Keyholders have all General Member privileges and
+          %ul
+            %li get an rfid key allowing them to come and go whenever
+            %li responsibility to lock up if they are the last keyholder to leave
+            %li allow general members to use the space while they are there
+            %li officer positions if they're interested in helping with MAG Lab business or administration affairs (on a volunteer basis)
+          
+          Keyholders are
+          %strong.text-danger not allowed
+          to
+          %ul
+            %li do the stuff Guests and General Members are not allowed to do (except explicitly listed above)
+            %li duplicate the RFID key or share it with others
+
+        .panel-footer.text-center
+          %strong $90/month
+          %br
+          %a.btn.btn-primary(href='mailto:contact@maglaboratory.org') Ask an officer
+          %br
+          We ask that interested keyholders try the space out as a General Member first.
+    .row
+      - if(!$skip_membership_link)
+        %p.text-center
+          If you're interested and want more details, please see the
+          %strong
+            %a(href='/membership') Membership page
+          or contact us.
+
+#join-newsletter.containment.bg-subtle-gridme
+  .container
+    %h1.text-center Did you know?
+    %h2.text-center We have weekly newsletter that doesn't go out?
+    %p.text-center
+      Why does it not go out?
+      %br
+      Well...because there's not a lot of people signed up...
+      %br
+      Register now and we'll start planning updates for the newsletter--once we have enough interested members
+    %form.form-horizontal(action="//maglaboratory.us12.list-manage.com/subscribe/post" method="post" target="_blank")
+      .form-group
+        %label.col-xs-4.control-label(for='MERGE1') First Name (optional)
+        .col-xs-8.col-md-4
+          %input.form-control(type='text' value='' name='MERGE1' placeholder='Berry')
+      .form-group
+        %label.col-xs-4.control-label(for='MERGE2') Last Name (optional)
+        .col-xs-8.col-md-4
+          %input.form-control(type='text' value='' name='MERGE2' placeholder='Cunning')
+      .form-group
+        %label.col-xs-4.control-label(for='MERGE0') Email (required)
+        .col-xs-8.col-md-4
+          %input.form-control(type='email' value='' name='MERGE0' placeholder='diy.workalot@example.com')
+      .form-group
+        %label.col-xs-4.control-label(for='EMAILTYPE') Preferred Format
+        .col-xs-8.col-md-4
+          %label.radio-inline
+            %input(type='radio' name='EMAILTYPE' value='html') HTML
+          %label.radio-inline
+            %input(type='radio' name='EMAILTYPE' value='text') TEXT
+      .form-group
+        -# This is for bot checking, they don't fill in this field
+        
+        %div(style="position: absolute; left: -5000px;" aria-hidden="true")
+          %input(type="text" name="b_c5f2672775054e0a1b3f98dac_4a9f6654cf" tabindex="-1" value="")
+        .col-xs-8.col-md-4.col-xs-offset-4
+          %input(type='hidden' name='u' value='c5f2672775054e0a1b3f98dac')
+          %input(type='hidden' name='id' value='4a9f6654cf')
+          %input.btn.btn-primary(type='submit' value='Subscribe' name='subscribe')
+        
+
+#footer.bg-maglab_map.containment
+  %div(style='background-color: #fcd89e;')
+    .container
+      .row
+        %span.text-center Copyright &copy; 2011-2016 Makers, Artists, and Gadgeteers Laboratory, Inc
+  -# Footer and Map
