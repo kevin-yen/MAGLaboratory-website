@@ -1,1 +1,50 @@
-.social-icons{overflow:hidden;margin:0;padding:0;list-style:none}.social-icons li{display:inline-block;*display:inline;zoom:1}.social-icons li a{background-image:url(/images/social-icons.png);background-repeat:no-repeat;display:block;width:45px;height:45px}.social-icons .sprite-facebook{width:45px;height:45px;background-position:-5px -5px}.social-icons .sprite-github{width:45px;height:45px;background-position:-60px -5px}.social-icons .sprite-instagram{width:45px;height:45px;background-position:-5px -60px}.social-icons .sprite-mail{width:45px;height:45px;background-position:-60px -60px}.social-icons .sprite-meetup{width:45px;height:45px;background-position:-115px -5px}.social-icons .sprite-twitter{width:45px;height:45px;background-position:-115px -60px}.social-icons .sprite-yelp{width:45px;height:45px;background-position:-5px -115px}.social-icons .sprite-youtube{width:45px;height:45px;background-position:-60px -115px}body{background:#ddd url("/images/bg/subtle/geometry.png") repeat scroll center}#header{padding:50px 0;font-family:"Bree Serif", Eczar, Georgia, "Times New Roman", Times, serif;font-size:20px}#header nav{opacity:0.6}#main-nav .nav{margin:0 auto;display:table;table-layout:fixed;float:none}#main-nav .nav a{color:black}#logo{width:100%}#header .navbar{margin-top:25px}#header .social-icons{text-align:center}#header address{margin-top:25px;color:#777}.bg-pullup{height:50px;opacity:0.5}.containment{padding:50px 0;opacity:0.8}.bg-subtle-geometry{border-top:5px solid #ddd;border-bottom:5px solid #ddd;background:#ddd url("/images/bg/subtle/geometry.png") repeat scroll center}.bg-subtle-geometry2{border-top:5px solid #ddd;border-bottom:5px solid #ddd;background:#ddd url("/images/bg/subtle/geometry2.png") repeat scroll center}.bg-subtle-food{border-top:5px solid #fac564;border-bottom:5px solid #fac564;background:#fac564 url("/images/bg/subtle/food.png") repeat scroll center}.bg-subtle-giftly{border-top:5px solid #ebe8d7;border-bottom:5px solid #ebe8d7;background:#ebe8d7 url("/images/bg/subtle/giftly.png") repeat scroll center}.bg-subtle-gridme{border-top:1px solid black;border-bottom:1px solid black;background:#fff url("/images/bg/subtle/gridme.png") repeat scroll center}.bg-subtle-light_honeycomb{background:#d7d7d7 url("/images/bg/subtle/light_honeycomb.png") repeat scroll center}.bg-subtle-photography{background:#fafafa url("/images/bg/subtle/photography.png") repeat scroll center}.bg-subtle-old_mathematics{background:#e8ebeb url("/images/bg/subtle/old_mathematics.png") repeat scroll center}.bg-flight_machines{background:#eee url("/images/bg/flight_machines.png") repeat scroll center}#footer{height:1222px;margin:0;padding:0}#footer.bg-maglab_map{background-origin:content-box;background:#eaeaea url("/images/bg/maglab_map.jpg") no-repeat fixed center}#join-newsletter .container{background-color:#fff;opacity:0.8}#join-newsletter .form-control{color:#222}#pricing .panel{padding:0}#google-calendar{border-top:5px solid #e7ecfe;border-bottom:5px solid #e7ecfe;background-color:#e7ecfe}
+.social-icons { overflow: hidden; margin: 0; padding: 0; list-style: none; }
+.social-icons li { display: inline-block; *display: inline; zoom: 1; }
+.social-icons li a { background-image: url(/images/social-icons.png); background-repeat: no-repeat; display: block; width: 45px; height: 45px; }
+.social-icons .sprite-facebook { width: 45px; height: 45px; background-position: -5px -5px; }
+.social-icons .sprite-github { width: 45px; height: 45px; background-position: -60px -5px; }
+.social-icons .sprite-instagram { width: 45px; height: 45px; background-position: -5px -60px; }
+.social-icons .sprite-mail { width: 45px; height: 45px; background-position: -60px -60px; }
+.social-icons .sprite-meetup { width: 45px; height: 45px; background-position: -115px -5px; }
+.social-icons .sprite-twitter { width: 45px; height: 45px; background-position: -115px -60px; }
+.social-icons .sprite-yelp { width: 45px; height: 45px; background-position: -5px -115px; }
+.social-icons .sprite-youtube { width: 45px; height: 45px; background-position: -60px -115px; }
+
+#header { padding: 50px 0; font-family: "Bree Serif", Eczar, Georgia, "Times New Roman", Times, serif; font-size: 20px; }
+#header nav { opacity: 0.6; }
+
+#main-nav .nav { margin: 0 auto; display: table; table-layout: fixed; float: none; }
+#main-nav .nav a { color: black; }
+
+#logo { width: 100%; }
+
+#header .navbar { margin-top: 25px; }
+#header .social-icons { text-align: center; }
+#header address { margin-top: 25px; color: #777; }
+
+/* Background patterns inside subtle from subtlepatterns.com */
+body { background: #fff url("/images/bg/subtle/gridme.png") repeat scroll center; }
+
+.bg-pullup { height: 50px; opacity: 0.5; }
+
+.containment { padding: 50px 0; opacity: 0.8; }
+
+.bg-subtle-geometry { background: #fff url("/images/bg/subtle/geometry.png") repeat scroll center; }
+
+.bg-subtle-geometry2 { background: #fff url("/images/bg/subtle/geometry2.png") repeat scroll center; }
+
+.bg-subtle-gridme { border-top: 1px solid black; border-bottom: 1px solid black; background: #fff url("/images/bg/subtle/gridme.png") repeat scroll center; }
+
+/*
+.bg-subtle- { background: #ddd url('/images/bg/subtle/.png') repeat fixed center;
+}
+*/
+#footer { height: 1222px; margin: 0; padding: 0; }
+#footer.bg-maglab_map { background-origin: content-box; background: #eaeaea url("/images/bg/maglab_map.jpg") no-repeat fixed center; }
+
+#join-newsletter .container { background-color: #fff; opacity: 0.8; }
+#join-newsletter .form-control { color: #222; }
+
+#pricing .panel { padding: 0; }
+
+#google-calendar { border-top: 5px solid #e7ecfe; border-bottom: 5px solid #e7ecfe; background-color: #e7ecfe; }

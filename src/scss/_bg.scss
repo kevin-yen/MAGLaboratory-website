@@ -1,3 +1,9 @@
+/* Background patterns inside subtle from subtlepatterns.com */
+
+body {
+  background: #fff url('/images/bg/subtle/gridme.png') repeat scroll center;
+}
+
 .bg-pullup {
   height: 50px;
   opacity: 0.5;
@@ -8,52 +14,22 @@
   opacity: 0.8;
 }
 
-/* Background patterns inside subtle from subtlepatterns.com */
 .bg-subtle-geometry {
-  border-top: 5px solid #ddd;
-  border-bottom: 5px solid #ddd;
-  background: #ddd url('/images/bg/subtle/geometry.png') repeat scroll center;
+  //border-top: 5px solid #ddd;
+  //border-bottom: 5px solid #ddd;
+  background: #fff url('/images/bg/subtle/geometry.png') repeat scroll center;
 }
 
 .bg-subtle-geometry2 {
-  border-top: 5px solid #ddd;
-  border-bottom: 5px solid #ddd;
-  background: #ddd url('/images/bg/subtle/geometry2.png') repeat scroll center;
-}
-
-.bg-subtle-food {
-  border-top: 5px solid #fac564;
-  border-bottom: 5px solid #fac564;
-  background: #fac564 url('/images/bg/subtle/food.png') repeat scroll center;
-}
-
-.bg-subtle-giftly {
-  border-top: 5px solid #ebe8d7;
-  border-bottom: 5px solid #ebe8d7;
-  background: #ebe8d7 url('/images/bg/subtle/giftly.png') repeat scroll center;
+  //border-top: 5px solid #ddd;
+  //border-bottom: 5px solid #ddd;
+  background: #fff url('/images/bg/subtle/geometry2.png') repeat scroll center;
 }
 
 .bg-subtle-gridme {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
   background: #fff url('/images/bg/subtle/gridme.png') repeat scroll center;
-}
-
-.bg-subtle-light_honeycomb {
-  background: #d7d7d7 url('/images/bg/subtle/light_honeycomb.png') repeat scroll center;
-}
-
-.bg-subtle-photography {
-  background: #fafafa url('/images/bg/subtle/photography.png') repeat scroll center;
-}
-
-.bg-subtle-old_mathematics {
-  background: #e8ebeb url('/images/bg/subtle/old_mathematics.png') repeat scroll center;
-}
-
-.bg-flight_machines {
-  /* Background made by http://artrayd.deviantart.com/ */
-  background: #eee url('/images/bg/flight_machines.png') repeat scroll center;
 }
 
 /*

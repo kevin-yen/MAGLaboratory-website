@@ -236,9 +236,7 @@
 <div id="google-calendar" class="containment">
   <iframe src="https://www.google.com/calendar/embed?src=bjpkvaeg1rjq9u3c6utecq1jos%40group.calendar.google.com&amp;amp;ctz=America/Los_Angeles" style="border: 0" width="100%" height="650" frameborder="0" scrolling="no"></iframe>
 </div>
-<div <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'containment'), array('style', ('height: 1000px;'))), 'html5', 'UTF-8'); ?>>
-</div>
-<div id="pricing" class="bg-subtle-gridme containment">
+<div id="pricing" class="containment">
   <div class="container">
     <div class="row">
       <h1 class="text-center">Membership</h1>
@@ -364,16 +362,18 @@
     </div>
   </div>
 </div>
-<div id="join-newsletter" class="containment bg-subtle-gridme">
+<div id="join-newsletter" class="containment bg-subtle-geometry">
   <div class="container">
     <h1 class="text-center">Did you know?</h1>
     <h2 class="text-center">We have weekly newsletter that doesn't go out?</h2>
     <p class="text-center">
-      Why does it not go out?
+      Why doesn't it go out?
       <br>
       Well...because there's not a lot of people signed up...
       <br>
-      Register now and we'll start planning updates for the newsletter--once we have enough interested members
+      Register now and we'll start planning updates for the newsletter
+      <br>
+      (once we have enough interested members)
     </p>
     <form class="form-horizontal" action="//maglaboratory.us12.list-manage.com/subscribe/post" method="post" target="_blank">
       <div class="form-group">

@@ -93,11 +93,12 @@
 #google-calendar.containment
   %iframe(src="https://www.google.com/calendar/embed?src=bjpkvaeg1rjq9u3c6utecq1jos%40group.calendar.google.com&amp;ctz=America/Los_Angeles" style="border: 0" width="100%" height="650" frameborder="0" scrolling="no")
 
-.containment{:style => 'height: 1000px;'}
-  -# Upcoming Events
-  -# Past Events
+-# TODO Events Focus
+  .containment{:style => 'height: 1000px;'}
+    -# Upcoming Events
+    -# Past Events
   
-#pricing.bg-subtle-gridme.containment
+#pricing.containment
   .container
     .row
       %h1.text-center Membership
@@ -197,16 +198,18 @@
             %a(href='/membership') Membership page
           or contact us.
 
-#join-newsletter.containment.bg-subtle-gridme
+#join-newsletter.containment.bg-subtle-geometry
   .container
     %h1.text-center Did you know?
     %h2.text-center We have weekly newsletter that doesn't go out?
     %p.text-center
-      Why does it not go out?
+      Why doesn't it go out?
       %br
       Well...because there's not a lot of people signed up...
       %br
-      Register now and we'll start planning updates for the newsletter--once we have enough interested members
+      Register now and we'll start planning updates for the newsletter
+      %br
+      (once we have enough interested members)
     %form.form-horizontal(action="//maglaboratory.us12.list-manage.com/subscribe/post" method="post" target="_blank")
       .form-group
         %label.col-xs-4.control-label(for='MERGE1') First Name (optional)
