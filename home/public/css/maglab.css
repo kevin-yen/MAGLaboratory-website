@@ -33,7 +33,7 @@ body { background: #fff url("/images/bg/subtle/gridme.png") repeat scroll center
 
 .bg-subtle-geometry2 { background: #fff url("/images/bg/subtle/geometry2.png") repeat scroll center; }
 
-.bg-subtle-gridme { border-top: 1px solid black; border-bottom: 1px solid black; background: #fff url("/images/bg/subtle/gridme.png") repeat scroll center; }
+.bg-subtle-gridme { background: #fff url("/images/bg/subtle/gridme.png") repeat scroll center; }
 
 /*
 .bg-subtle- { background: #ddd url('/images/bg/subtle/.png') repeat fixed center;
