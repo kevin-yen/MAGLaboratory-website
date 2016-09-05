@@ -137,7 +137,7 @@
         </ul>
       </div>
     </div>
-    <div class="bg-subtle-geometry2 containment">
+    <div class="containment">
   <div class="container">
     <div class="row">
       <h1 class="text-center">ABOUT US</h1>
@@ -362,7 +362,7 @@
     </div>
   </div>
 </div>
-<div id="join-newsletter" class="containment bg-subtle-geometry">
+<div id="join-newsletter" class="containment">
   <div class="container">
     <h1 class="text-center">Did you know?</h1>
     <h2 class="text-center">We have weekly newsletter that doesn't go out?</h2>

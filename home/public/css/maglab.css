@@ -27,7 +27,7 @@ body { background: #fff url("/images/bg/subtle/gridme.png") repeat scroll center
 
 .bg-pullup { height: 50px; opacity: 0.5; }
 
-.containment { padding: 50px 0; opacity: 0.8; }
+.containment { padding: 50px 0; border-top: 10px solid #333; border-bottom: 10px solid #333; opacity: 0.8; }
 
 .bg-subtle-geometry { background: #fff url("/images/bg/subtle/geometry.png") repeat scroll center; }
 
@@ -42,7 +42,6 @@ body { background: #fff url("/images/bg/subtle/gridme.png") repeat scroll center
 #footer { height: 1222px; margin: 0; padding: 0; }
 #footer.bg-maglab_map { background-origin: content-box; background: #eaeaea url("/images/bg/maglab_map.jpg") no-repeat fixed center; }
 
-#join-newsletter .container { background-color: #fff; opacity: 0.8; }
 #join-newsletter .form-control { color: #222; }
 
 #pricing .panel { padding: 0; }
