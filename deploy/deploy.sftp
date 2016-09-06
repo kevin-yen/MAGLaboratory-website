@@ -1,3 +1,6 @@
-!echo "Commit: 4d066ab1976e7a42b7a9d4bdd4ab3d78be7ca695 7587effed51787b8f518eb5b35bfc68c3f90eaab"
-put 'public/images/bg/maglab_map.jpg' 'public/images/bg/maglab_map.jpg'
+!echo "Commit: 7587effed51787b8f518eb5b35bfc68c3f90eaab ad6e4652724c13ee9fce11a7d2cf6c08d09f284c"
+put 'protected/maglab/app/views/main/donate.php' 'protected/maglab/app/views/main/donate.php'
+put 'protected/maglab/app/views/main/homepage.php' 'protected/maglab/app/views/main/homepage.php'
+put 'protected/maglab/app/views/main/membership.php' 'protected/maglab/app/views/main/membership.php'
+put 'protected/maglab/app/views/main/pay4keyed.php' 'protected/maglab/app/views/main/pay4keyed.php'
 put '/home/httpd/maglabs-www/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
