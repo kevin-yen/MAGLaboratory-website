@@ -1,13 +1,11 @@
 #footer {
-  height: 1222px;
-  margin: 0;
-  padding: 0;
-
   &.bg-maglab_map {
+    height: 1222px;
     background-origin: content-box;
     background: #eaeaea url('/images/bg/maglab_map.jpg') no-repeat fixed center;
     padding: 0;
     border: 0;
+    margin: 0;
   }
 }
 
