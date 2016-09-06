@@ -1,6 +1,3 @@
-!echo "Commit: 7587effed51787b8f518eb5b35bfc68c3f90eaab ad6e4652724c13ee9fce11a7d2cf6c08d09f284c"
-put 'protected/maglab/app/views/main/donate.php' 'protected/maglab/app/views/main/donate.php'
-put 'protected/maglab/app/views/main/homepage.php' 'protected/maglab/app/views/main/homepage.php'
-put 'protected/maglab/app/views/main/membership.php' 'protected/maglab/app/views/main/membership.php'
-put 'protected/maglab/app/views/main/pay4keyed.php' 'protected/maglab/app/views/main/pay4keyed.php'
+!echo "Commit: ad6e4652724c13ee9fce11a7d2cf6c08d09f284c b7d2e023fb7e5edde7dafaabe391018d3b75b7d1"
+put 'public/css/maglab.css' 'public/css/maglab.css'
 put '/home/httpd/maglabs-www/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
