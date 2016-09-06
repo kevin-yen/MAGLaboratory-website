@@ -1,6 +1,8 @@
 <?php
 # ----- CONFIGURATION DIRECTIVES ----- #
 
+define('DEPLOY_DIRECTORY', __DIR__);
+
 # This is the project directory. If you have deploy.php in the root directory
 # then you can leave this alone, otherwise change it to the correct path.
 # Absolute paths recommended, eg: /home/you/Projects/CoolStuff
