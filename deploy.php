@@ -6,7 +6,7 @@ define('DEPLOY_DIRECTORY', __DIR__);
 # This is the project directory. If you have deploy.php in the root directory
 # then you can leave this alone, otherwise change it to the correct path.
 # Absolute paths recommended, eg: /home/you/Projects/CoolStuff
-define('PROJECT_HOME', __DIR__ . '/home');
+define('PROJECT_ROOT', __DIR__);
 
 # This is the username and host part that you use to login.
 # eg: user5_testsite@ssh.phx.nearlyfreespeech.net
