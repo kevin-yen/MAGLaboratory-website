@@ -20,7 +20,7 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <script src="/js/jquery-2.2.4.min.js"></script>
-    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/bootstrap-471c05a.js"></script>
   </head>
   <body>
     <script type="text/javascript">
@@ -254,7 +254,7 @@
 </div>
 
     <?php if(!isset($layout_no_footer)) { ?>
-      <div id="footer" class="bg-maglab_map containment">
+      <div id="footer" class="containment">
         <div class="container">
           <div class="row">
             <span class="text-center">Copyright &copy; 2011-2016 Makers, Artists, and Gadgeteers Laboratory, Inc</span>
