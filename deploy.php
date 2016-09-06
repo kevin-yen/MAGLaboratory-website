@@ -1,7 +1,11 @@
 <?php
 # ----- CONFIGURATION DIRECTIVES ----- #
 
+# This is the directory where we will output deploy.sftp
 define('DEPLOY_DIRECTORY', __DIR__);
+
+# Set to true if you want to confirm deployment before sending sftp commands
+define('DEPLOY_TEST', true);
 
 # This is the project directory. If you have deploy.php in the root directory
 # then you can leave this alone, otherwise change it to the correct path.
