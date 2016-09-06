@@ -1,0 +1,119 @@
+ 
+#pricing.containment
+  .container
+    .row
+      %h1.text-center
+        - if($pricing_title)
+          = $pricing_title
+        - else
+          Membership Info
+      - if(!$skip_membership_link)
+        %p.text-center
+          More information available on the
+          %strong
+            %a(href='/membership') Membership page
+      .panel.panel-default.col-xs-12.col-sm-3
+        .panel-heading
+          %h1.text-center Guest
+        .panel-body
+          Guests are welcome to
+          %ul
+            %li
+              visit the space
+            %li
+              engage, talk, discuss, dance, play and enjoy themselves
+            %li
+              partake in public festivities and fun
+            %li
+              attend classes (fee may apply for some classes)
+            %li
+              teach classes (please talk to an officer to work out details)
+          Guests are
+          %strong.text-danger not allowed
+          to
+          %ul
+            %li disregard common sense or otherwise do anything illegal
+            %li use equipment (unless accompanied by and helping a General Member)
+            %li steal anything including but not limited to tools, supplies, equipment, personal belongings, and/or trash
+            %li kidnap, impersonate, pester, lick or kick people and/or objects at the space
+            %li injure, maim, kill or otherwise endanger harm upon themselves or others while on premises
+        .panel-footer.text-center
+          %strong Free!
+          %br
+          %form#donate_now(action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top")
+            %input(type="hidden" name="cmd" value="_s-xclick")
+            %input(type="hidden" name="hosted_button_id" value="ZDGPLW6W5E9XJ")
+            %button.btn.btn-success(type="submit") Donate via PayPal
+            %img(alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1")
+          %br
+          You can also donate cash or tools/equipment in person
+      
+      .panel.panel-success.col-xs-12.col-sm-4.col-sm-offset-1
+        .panel-heading
+          %h1.text-center General
+        .panel-body
+          General Members have all basic guest privileges and
+          %ul
+            %li can use the space whenever it is open
+            %li bring a guest to help them work on their project
+            %li must leave if the space is closing (last keyholder is leaving and locking up)
+            %li use our machines and equipment (heavy machinery requires safety test)
+            %li throw stuff away and take out the trash
+            %li use publicly available materials (please refill or donate for consumables that you use often)
+            %li a locker at the space (please bring your own lock)
+            %li should clean up their workspace
+            %li return equipment/tools/supplies to their designated location before leaving
+          
+          General Members are
+          %strong.text-danger not allowed
+          to
+          %ul
+            %li do the stuff guests are not allowed to do (except explicitly listed above)
+            %li ignore safety procedures and guidelines
+            %li damage the space's property through overly excessive use or improper misuse
+            %li use the space for illegal activities or to create anything illegal
+            %li take or use other member's personal supplies and tools without permission
+        .panel-footer.text-center
+          %strong $40/month
+          %br
+          %form(action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top")
+            %input(type="hidden" name="cmd" value="_s-xclick")
+            %input(type="hidden" name="hosted_button_id" value="QFSJ8MX7C5L8L")
+            %button.btn.btn-success(type="submit") Subscribe with Paypal
+            %img(alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1")
+          %br
+          You may also pay with cash in person
+      
+      .panel.panel-primary.col-xs-12.col-sm-3.col-sm-offset-1
+        .panel-heading
+          %h1.text-center Keyholder
+        .panel-body
+          Keyholders have all General Member privileges and
+          %ul
+            %li get an rfid key allowing them to come and go whenever
+            %li responsibility to lock up if they are the last keyholder to leave
+            %li allow general members to use the space while they are there
+            %li officer positions if they're interested in helping with MAG Lab business or administration affairs (on a volunteer basis)
+          
+          Keyholders are
+          %strong.text-danger not allowed
+          to
+          %ul
+            %li do the stuff Guests and General Members are not allowed to do (except explicitly listed above)
+            %li duplicate the RFID key or share it with others
+
+        .panel-footer.text-center
+          %strong $90/month
+          %br
+          %a.btn.btn-primary(href='mailto:contact@maglaboratory.org') Ask an officer
+          %br
+          %br
+          We ask that interested keyholders try the space out as a General Member first.
+    .row
+      - if(!$skip_membership_link)
+        %p.text-center
+          If you're interested and want more details, please see the
+          %strong
+            %a(href='/membership') Membership page
+          or contact us.
+

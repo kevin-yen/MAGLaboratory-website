@@ -137,167 +137,117 @@
         </ul>
       </div>
     </div>
-    <div class="containment">
+    <?php $pricing_title = 'Membership Info (the short version)'; ?>
+<?php include('_pricing.php'); ?>
+<div class="containment">
   <div class="container">
     <div class="row">
-      <h1 class="text-center">ABOUT US</h1>
-      <div class="col-xs-12 col-md-4">
-        <h2 class="text-center">Who</h2>
+      <h1 class="text-center">Membership Information (the long version)</h1>
+      <div class="col-xs-12">
+        <h2>
+          Guests / Visitors
+          <small>Free!</small>
+        </h2>
         <p>
-          We are a non-profit
-          <a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ('http://en.wikipedia.org/wiki/Hackerspace'))), 'html5', 'UTF-8'); ?>>hackerspace / makerspace</a>
-          and collaborative workspace based in Pomona, CA.
+          Anybody is free to visit the MAG Lab any time that the space is open. Many of our members are 
         </p>
         <p>
-          People come to our space to 
-          <strong>work</strong>
-          on projects,
-          <strong>explore</strong>
-          their inner artists,
-          <strong>make</strong>
-          cool gadgets, and
-          <strong>interact</strong>
-          with a community of like-minded individuals.
-        </p>
-        <p>
-          We are makers, artists, DIYers, hobbyists, combat robot creators, ham radio amateurs, tech enthusiasts and...well...
-          <strong>just normal people, doing stuff regular people do.</strong>
-          (except MAG Cat, he has cat duties.)
-        </p>
-        <p>
-          Join us and work on your projects here.
-          <strong>Share it. Inspire others! Get inspired.</strong>
-          They might share some tips and tricks or even be interested in joining your project. There's a lot of expertise in our members and many are happy to share their knowledge.
-        </p>
-        <p>
-          And if you don't like us enough to join in holy makermony, you're still welcome visit anytime.
-          <strong>Check the calendar, Facebook and Meetup page</strong>
-          to see what MAGLab is doing.
+          We reserve the right to refuse service and entry for whatever reason. If there's a chance that a visitor's behavior might jeopardize safety or pose a risk, we'll ask them to leave. There are adverse consequences to disregarding common sense, especially when the machines are active.
         </p>
       </div>
-      <div class="col-xs-12 col-md-4">
-        <h2 class="text-center">What</h2>
+      <div class="col-xs-12">
+        <h2>
+          General Members
+          <small>$40/month</small>
+        </h2>
         <p>
-          We have 
-          <strong>a wall full of general-purpose tools and supplies</strong>
-          like screw drivers, tape measures, drills, hammers, saws, and much more
+          Heavy machinery and other dangerous equipment like the welder require special permission to operate. There's a safety test and you must demonstrate that you can follow basic procedures to the section lead. This avoids potential accidents that harm yourself or damage the equipment.
         </p>
         <p>
-          The (partially) sound-insulated
-          <strong>presentation room with AC,</strong>
-          a projector and whiteboard services our meetings.
-          <strong>The electronics room</strong>
-          has a lazer cutter, 3d printers, variable power supplies, oscilloscopes, a logic analyzer, soldering iron and other electro-doodads.
-        </p>
-        <p>
-          <strong>The workshop</strong>
-          houses a mill, lathe, drill press, grinder, jig saw, forge and other destructive machines. If you're
-          <strong>woodworking or metalworking,</strong>
-          chances are we have a machine for your needs.
-        </p>
-        <p>
-          And for a limited time, we have
-          <strong>a large CNC machine.</strong>
-        </p>
-        <p>
-          Oh almost forgot, we have
-          <strong>a restroom with working toilet, and sink,</strong>
-          and running water. (But please don't drink it.)
+          Most of our members pay using the PayPal subscription link. Some members pay in cash, usually during one of the weekly Tuesday business meetings.
         </p>
       </div>
-      <div class="col-xs-12 col-md-4">
-        <h2 class="text-center">When</h2>
-        <p>You're welcome to come and check us out! See the calendar for events and open hours.</p>
+      <div class="col-xs-12">
+        <h2>
+          Keyholders
+          <small>$90/month</small>
+        </h2>
         <p>
-          The space is open whenever a key member or officer is at the space.
-          <strong>Our doors are always open Tuesday and Friday evenings</strong>
-          for our business meetings and open project night respectively. There's a 
-          <strong>public monthly Open House on the last Saturday</strong>
-          of every month.
+          Keyholders get a key to the space. That comes with additional responsibilities, the most important of which is
+          <strong>locking up the space when they leave. </strong>
         </p>
         <p>
-          To see if we're open right now, please check with our resident
-          <strong>deliberately-not-very-sentient sensor system,</strong>
-          codenamed
-          <strong>
-            <a <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'text-danger'), array('href', ('/hal'))), 'html5', 'UTF-8'); ?>>HAL.</a>
-          </strong>
-          <a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ('/hal'))), 'html5', 'UTF-8'); ?>>Click to see HAL.</a>
+          Because of the additional responsibility, we ask that prospective keyholders try out the space for a month or two as a General Member before asking for keyed. 
+          Keyholders are vetted and 
+          <strong>must officially be accepted to be keyed during a Tuesday business meeting.</strong>
+          It comes to a vote and always passes (or should). As long as they're not disrespectful to other members or did something alarming, there's no reason why anyone would disagree.
         </p>
         <p>
-          If the date is not on the calendar, it's always safe (and advised) to 
-          <strong>give us a call</strong>
-          to check if--and for how long--the space will be open by the time you arrive.
+          You don't absolutely have to, but it would be nice if you kept the doors open while you're at the space so that General Members can use it.
+        </p>
+      </div>
+      <div class="col-xs-12">
+        <h2>
+          Officers
+          <small>Keyholder + extra work</small>
+        </h2>
+        <p>
+          This is the cream of the crop folks! Officers are Keyholder Members that have the 
+          <strong>responsibility to administrate and manage business affairs of Makers, Artists and Gadgeteers, Inc. </strong>
+        </p>
+        <p>
+          Officers work on a
+          <strong>volunteer</strong>
+          basis. They manage income, pay the bills and maintain the space. It's a tough job.
+        </p>
+        <p>
+          There are a limited number of officer positions that are
+          <strong>voted on during the Annual Meeting</strong>
+          (usually in or around September). Special positions are the President, Secretary and Treasurer. A few other officers help these three do their job.
+        </p>
+        <p>
+          As part of our by laws,
+          <strong>all officers must also be Keyholders</strong>
+          and
+          <strong>serve an annual term</strong>
+          until the next annual meeting. We try to maintain an odd number of officers for voting purposes.
+        </p>
+      </div>
+      <div class="col-xs-12">
+        <h3>
+          Curator
+          <small>General + extra work</small>
+        </h3>
+        <p>
+          There is a special General Member position called the Curator. It provides a key at General Member pricing in exchange for keeping the space open for extra hours in the week. 
+        </p>
+        <p>
+          The Curator changes every once in a while if a new General Member wants to take up the position. If interested, please attend a Tuesday business meeting and ask about it.
+        </p>
+        <p>
+          Sign ups and applications will be posted when a new selection round begins.
         </p>
       </div>
     </div>
-  </div>
-</div>
-<div id="google-calendar" class="containment">
-  <iframe src="https://www.google.com/calendar/embed?src=bjpkvaeg1rjq9u3c6utecq1jos%40group.calendar.google.com&amp;amp;ctz=America/Los_Angeles" style="border: 0" width="100%" height="650" frameborder="0" scrolling="no"></iframe>
-</div>
-<?php include '_pricing.php'; ?>
-<div id="join-newsletter" class="containment">
-  <div class="container">
-    <h1 class="text-center">Did you know?</h1>
-    <h2 class="text-center">We have weekly newsletter that doesn't go out?</h2>
-    <p class="text-center">
-      Why doesn't it go out?
-      <br>
-      Well...because there's not a lot of people signed up...
-      <br>
-      Register now and we'll start planning updates for the newsletter
-      <br>
-      (once we have enough interested members)
-    </p>
-    <form class="form-horizontal" action="//maglaboratory.us12.list-manage.com/subscribe/post" method="post" target="_blank">
-      <div class="form-group">
-        <label <?php echo MtHaml\Runtime::renderAttributes(array(array('class', ('col-xs-4' . ' ' . 'control-label')), array('for', ('MERGE1'))), 'html5', 'UTF-8'); ?>>First Name (optional)</label>
-        <div class="col-xs-8 col-md-4">
-          <input <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-control'), array('type', ('text')), array('value', ('')), array('name', ('MERGE1')), array('placeholder', ('Berry'))), 'html5', 'UTF-8'); ?>>
-        </div>
+    <div class="row">
+      <div class="col-xs-12">
+        <h2>Members Section / Dashboard</h2>
+        <p>
+          All members will have an account created in our
+          <a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ('/members'))), 'html5', 'UTF-8'); ?>>Members Section</a>
+          to manage billing history and basic contact information.
+        </p>
       </div>
-      <div class="form-group">
-        <label <?php echo MtHaml\Runtime::renderAttributes(array(array('class', ('col-xs-4' . ' ' . 'control-label')), array('for', ('MERGE2'))), 'html5', 'UTF-8'); ?>>Last Name (optional)</label>
-        <div class="col-xs-8 col-md-4">
-          <input <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-control'), array('type', ('text')), array('value', ('')), array('name', ('MERGE2')), array('placeholder', ('Cunning'))), 'html5', 'UTF-8'); ?>>
-        </div>
-      </div>
-      <div class="form-group">
-        <label <?php echo MtHaml\Runtime::renderAttributes(array(array('class', ('col-xs-4' . ' ' . 'control-label')), array('for', ('MERGE0'))), 'html5', 'UTF-8'); ?>>Email (required)</label>
-        <div class="col-xs-8 col-md-4">
-          <input <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-control'), array('type', ('email')), array('value', ('')), array('name', ('MERGE0')), array('placeholder', ('diy.workalot@example.com'))), 'html5', 'UTF-8'); ?>>
-        </div>
-      </div>
-      <div class="form-group">
-        <label <?php echo MtHaml\Runtime::renderAttributes(array(array('class', ('col-xs-4' . ' ' . 'control-label')), array('for', ('EMAILTYPE'))), 'html5', 'UTF-8'); ?>>Preferred Format</label>
-        <div class="col-xs-8 col-md-4">
-          <label class="radio-inline">
-            <input <?php echo MtHaml\Runtime::renderAttributes(array(array('type', ('radio')), array('name', ('EMAILTYPE')), array('value', ('html'))), 'html5', 'UTF-8'); ?>>HTML</input>
-          </label>
-          <label class="radio-inline">
-            <input <?php echo MtHaml\Runtime::renderAttributes(array(array('type', ('radio')), array('name', ('EMAILTYPE')), array('value', ('text'))), 'html5', 'UTF-8'); ?>>TEXT</input>
-          </label>
-        </div>
-      </div>
-      <div class="form-group">
-        <div style="position: absolute; left: -5000px;" aria-hidden="true">
-          <input type="text" name="b_c5f2672775054e0a1b3f98dac_4a9f6654cf" tabindex="-1" value="">
-        </div>
-        <div class="col-xs-8 col-md-4 col-xs-offset-4">
-          <input <?php echo MtHaml\Runtime::renderAttributes(array(array('type', ('hidden')), array('name', ('u')), array('value', ('c5f2672775054e0a1b3f98dac'))), 'html5', 'UTF-8'); ?>>
-          <input <?php echo MtHaml\Runtime::renderAttributes(array(array('type', ('hidden')), array('name', ('id')), array('value', ('4a9f6654cf'))), 'html5', 'UTF-8'); ?>>
-          <input <?php echo MtHaml\Runtime::renderAttributes(array(array('class', ('btn' . ' ' . 'btn-primary')), array('type', ('submit')), array('value', ('Subscribe')), array('name', ('subscribe'))), 'html5', 'UTF-8'); ?>>
-        </div>
-      </div>
-    </form>
-  </div>
-</div>
-<div id="footer" class="bg-maglab_map containment">
-  <div <?php echo MtHaml\Runtime::renderAttributes(array(array('style', ('background-color: #fcd89e;'))), 'html5', 'UTF-8'); ?>>
-    <div class="container">
-      <div class="row">
-        <span class="text-center">Copyright &copy; 2011-2016 Makers, Artists, and Gadgeteers Laboratory, Inc</span>
+      <div class="col-xs-12">
+        <h2>Plans</h2>
+        <p>The following are plans for the future concerning membership. They may or may not be implemented:</p>
+        <ul>
+          <li>
+            Every member gets an rfid card. Key members use the same card to open the door. General and Keyed use the cards to activate/reserve a machine.
+            This ensures only members that pass the safety test and verified safe to use machines can be used.
+            Helps avoid dangerous situations like self-maiming and loss of limb from misuse of hardware.
+          </li>
+        </ul>
       </div>
     </div>
   </div>
