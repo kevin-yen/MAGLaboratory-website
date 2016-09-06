@@ -4,7 +4,7 @@
     %meta(charset="utf-8")
     %meta(http-equiv="X-UA-Compatible" content="IE=edge")
     %meta(name="viewport" content="width=device-width, initial-scale=1")
-    - if($meta_description)
+    - if(isset($meta_description))
       %meta(name="description" content=$meta_description)
     %title
       MAG Laboratory -
@@ -45,7 +45,7 @@
               Walnut, CA 91789
               %br
               
-              - if($layout_show_entrances)
+              - if(isset($layout_show_entrances) and $layout_show_entrances)
                 %a(href='#' data-toggle="modal" data-target="#sign-entrance")
                   %span.glyphicon.glyphicon-picture
                   [north entrance]
@@ -102,7 +102,14 @@
             %a.sprite-github(href='https://github.com/MAGLaboratory' target='_blank')
             
     :yield_content
-    - if($layout_show_entrances)
+    
+    - if(!isset($layout_no_footer))
+      #footer.bg-maglab_map.containment
+        .container
+          .row
+            %span.text-center Copyright &copy; 2011-2016 Makers, Artists, and Gadgeteers Laboratory, Inc
+    
+    - if(isset($layout_show_entrances) and $layout_show_entrances)
     
       #sign-entrance.modal.fade(role="dialog" aria-labeledby="signEntranceLabel")
         .modal-dialog.modal-lg

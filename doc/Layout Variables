@@ -1,12 +1,14 @@
 # main.layout
 
-$layout_show_entrances (bool) whether or not to show the [north/south] entrance and their modal code.
+    $layout_show_entrances (bool) whether or not to show the [north/south] entrance and their modal code.
 
-$meta_description (string)
-$title (string)
+    $meta_description (string)
+    $title (string)
+    $layout_no_footer (set) 
+
 
 ## main/_pricing
 
-$skip_membership_link (bool) whether or not to skip the two messages at the top and bottom that links to the membership page
+    $skip_membership_link (bool) whether or not to skip the two messages at the top and bottom that links to the membership page
 
-$pricing_title (string) Title for pricing header, defaults to 'Membership Information'
+    $pricing_title (string) Title for pricing header, defaults to 'Membership Information'

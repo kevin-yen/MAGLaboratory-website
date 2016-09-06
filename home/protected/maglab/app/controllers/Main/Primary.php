@@ -16,7 +16,8 @@ class Primary extends PurifierBase {
   
   function homepage($req, $res){
     return $this->render($res, 'main/homepage.php', 'Welcome', array(
-      'layout_show_entrances' => true
+      'layout_show_entrances' => true,
+      'layout_no_footer' => true
     ));
   }
   

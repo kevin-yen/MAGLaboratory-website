@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <?php if($meta_description) { ?>
+    <?php if(isset($meta_description)) { ?>
       <meta <?php echo MtHaml\Runtime::renderAttributes(array(array('name', 'description'), array('content', $meta_description)), 'html5', 'UTF-8'); ?>>
     <?php } ?>
     <title>
@@ -52,7 +52,7 @@
               <br>
               Walnut, CA 91789
               <br>
-              <?php if($layout_show_entrances) { ?>
+              <?php if(isset($layout_show_entrances) and $layout_show_entrances) { ?>
                 <a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ('#')), array('data-toggle', 'modal'), array('data-target', '#sign-entrance')), 'html5', 'UTF-8'); ?>>
                   <span class="glyphicon glyphicon-picture"></span>
                   [north entrance]
@@ -159,7 +159,16 @@
 //]]>
 </script>
 
-    <?php if($layout_show_entrances) { ?>
+    <?php if(!isset($layout_no_footer)) { ?>
+      <div id="footer" class="bg-maglab_map containment">
+        <div class="container">
+          <div class="row">
+            <span class="text-center">Copyright &copy; 2011-2016 Makers, Artists, and Gadgeteers Laboratory, Inc</span>
+          </div>
+        </div>
+      </div>
+    <?php } ?>
+    <?php if(isset($layout_show_entrances) and $layout_show_entrances) { ?>
       <div id="sign-entrance" class="modal fade" role="dialog" aria-labeledby="signEntranceLabel">
         <div class="modal-dialog modal-lg">
           <div class="modal-content">

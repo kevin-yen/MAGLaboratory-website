@@ -1,5 +1,10 @@
 RewriteEngine On
 
+# If the rule matches a file, skip processing and serve that file
+# We don't have directory index/listing, so no need to check dirs
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule .* - [L]
+
 RewriteRule ^/?haldor/.+$ /haldor-load.php [L]
 RewriteRule ^/?hal/?$ /haldor-load.php [L]
 RewriteRule ^/?hal/.+$ /haldor-load.php [L]
@@ -14,16 +19,12 @@ RewriteRule ^/?~maglab/wiki/index.php$ /wiki/%1 [R=301,L]
 RewriteRule ^/?wiki(/.*)?$ %{DOCUMENT_ROOT}/w/index.php [L]
 #RewriteRule ^/?wiki(/.*)?$ %{DOCUMENT_ROOT}/blank.php [L]
 
-# TODO: These two are just legacy routes, remove later
-RedirectMatch 301 /MagLabHAL/(.*) /hal
-RedirectMatch 301 /readDoorLogs.php /hal
+RewriteCond %{HTTP_HOST} ^preview\.maglaboratory\.org$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^maglab\.sj$ [NC]
+RewriteRule ^(.*)?$ /MainApp.php [L]
 
+RewriteRule ^(.*)?$ /main.php [L]
 
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /main.php [L]
-
-RewriteRule ^$ /main.php [L]
 
 Options All -Indexes
 
