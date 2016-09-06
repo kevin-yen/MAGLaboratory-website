@@ -11,9 +11,9 @@
       MAG Laboratory -
       <?php echo htmlspecialchars($title,ENT_QUOTES,'UTF-8'); ?>
     </title>
-    <link href="/css/bootstrap.min.css" rel="stylesheet">
-    <link href="/css/bootstrap-theme.min.css" rel="stylesheet">
-    <link href="/css/maglab.css" rel="stylesheet">
+    <link href="/css/bootstrap-5a0f735.css" rel="stylesheet">
+    <link href="/css/bootstrap-theme-ae00592.css" rel="stylesheet">
+    <link <?php echo MtHaml\Runtime::renderAttributes(array(array('href', (("/css/maglab.css?c=" . CURRENT_COMMIT))), array('rel', 'stylesheet')), 'html5', 'UTF-8'); ?>>
     <link href="https://fonts.googleapis.com/css?family=Eczar:600|Raleway:400,400i|Bree+Serif" rel="stylesheet">
     <!--[if IE]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>

@@ -2,8 +2,8 @@
 /logs
 /.config
 /wip
-/home/protected/config/config.php
-/home/protected/config/config_*.php
+/home/protected/maglab/config/config.php
+/home/protected/maglab/config/config_*.php
 
 /.sass-cache
 /home/public/css/*.map
