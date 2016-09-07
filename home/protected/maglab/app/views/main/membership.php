@@ -99,7 +99,7 @@
                 <a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ('https://groups.google.com/forum/?fromgroups#!forum/maglaboratory'))), 'html5', 'UTF-8'); ?>>Forum / Mailing list</a>
               </li>
               <li>
-                <a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ('/hal'))), 'html5', 'UTF-8'); ?>>HAL</a>
+                <a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ('/hal'))), 'html5', 'UTF-8'); ?>>Are We Open?</a>
               </li>
               <li>
                 <a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ('/members/procurement'))), 'html5', 'UTF-8'); ?>>Shopping List</a>

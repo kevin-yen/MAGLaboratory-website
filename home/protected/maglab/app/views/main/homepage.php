@@ -99,7 +99,7 @@
                 <a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ('https://groups.google.com/forum/?fromgroups#!forum/maglaboratory'))), 'html5', 'UTF-8'); ?>>Forum / Mailing list</a>
               </li>
               <li>
-                <a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ('/hal'))), 'html5', 'UTF-8'); ?>>HAL</a>
+                <a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ('/hal'))), 'html5', 'UTF-8'); ?>>Are We Open?</a>
               </li>
               <li>
                 <a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ('/members/procurement'))), 'html5', 'UTF-8'); ?>>Shopping List</a>
@@ -197,12 +197,14 @@
         </p>
         <p>
           And for a limited time, we have
-          <strong>a large CNC machine.</strong>
+          <strong>a 4x8 CNC wood router.</strong>
+          A local furniture startup, Fayble, has taken residency at MAG Lab and brought a 4x8 router with them!
+          While they are in house, the cnc router will be available to members for projects.
         </p>
         <p>
           Oh almost forgot, we have
           <strong>a restroom with working toilet, and sink,</strong>
-          and running water. (But please don't drink it.)
+          and running water.
         </p>
       </div>
       <div class="col-xs-12 col-md-4">
