@@ -96,7 +96,7 @@
                 <a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ('/wiki'))), 'html5', 'UTF-8'); ?>>Wiki</a>
               </li>
               <li>
-                <a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ('https://groups.google.com/forum/?fromgroups#!forum/maglaboratory'))), 'html5', 'UTF-8'); ?>>Forum / Mailing list</a>
+                <a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ('https://groups.google.com/forum/?fromgroups#!forum/maglaboratory'))), 'html5', 'UTF-8'); ?>>Forum/Google Group</a>
               </li>
               <li>
                 <a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ('/hal'))), 'html5', 'UTF-8'); ?>>Are We Open?</a>
@@ -198,7 +198,9 @@
         <p>
           And for a limited time, we have
           <strong>a 4x8 CNC wood router.</strong>
-          A local furniture startup, Fayble, has taken residency at MAG Lab and brought a 4x8 router with them!
+          A local furniture startup,
+          <a href="http://faybledesign.com/">Fayble,</a>
+          has taken residency at MAG Lab and brought a 4x8 router with them!
           While they are in house, the cnc router will be available to members for projects.
         </p>
         <p>
