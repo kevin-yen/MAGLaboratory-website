@@ -3,7 +3,8 @@
     "slim/slim": "^3.0",
     "slim/php-view": "^2.0",
     "ezyang/htmlpurifier": "^4.8",
-    "paypal/rest-api-sdk-php": "^1.7"
+    "paypal/rest-api-sdk-php": "^1.7",
+    "morris/lessql": "^0.3.4"
   },
   "autoload": {
     "psr-4": {

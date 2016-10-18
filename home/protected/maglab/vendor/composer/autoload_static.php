@@ -19,6 +19,7 @@ class ComposerStaticInitac49f09f570f8a29adb63669117d1cc3
         ),
         'P' => 
         array (
+            'Psr\\Log\\' => 8,
             'Psr\\Http\\Message\\' => 17,
         ),
         'M' => 
@@ -53,6 +54,10 @@ class ComposerStaticInitac49f09f570f8a29adb63669117d1cc3
         array (
             0 => __DIR__ . '/..' . '/slim/slim/Slim',
         ),
+        'Psr\\Log\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/psr/log/Psr/Log',
+        ),
         'Psr\\Http\\Message\\' => 
         array (
             0 => __DIR__ . '/..' . '/psr/http-message/src',
@@ -86,10 +91,6 @@ class ComposerStaticInitac49f09f570f8a29adb63669117d1cc3
     public static $prefixesPsr0 = array (
         'P' => 
         array (
-            'Psr\\Log\\' => 
-            array (
-                0 => __DIR__ . '/..' . '/psr/log',
-            ),
             'Pimple' => 
             array (
                 0 => __DIR__ . '/..' . '/pimple/pimple/src',
@@ -108,12 +109,17 @@ class ComposerStaticInitac49f09f570f8a29adb63669117d1cc3
         ),
     );
 
+    public static $fallbackDirsPsr0 = array (
+        0 => __DIR__ . '/..' . '/morris/lessql/src',
+    );
+
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInitac49f09f570f8a29adb63669117d1cc3::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInitac49f09f570f8a29adb63669117d1cc3::$prefixDirsPsr4;
             $loader->prefixesPsr0 = ComposerStaticInitac49f09f570f8a29adb63669117d1cc3::$prefixesPsr0;
+            $loader->fallbackDirsPsr0 = ComposerStaticInitac49f09f570f8a29adb63669117d1cc3::$fallbackDirsPsr0;
 
         }, null, ClassLoader::class);
     }

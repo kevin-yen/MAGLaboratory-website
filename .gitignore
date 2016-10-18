@@ -15,3 +15,10 @@
 /home/public/w/resources
 /home/public/w/skins
 /home/public/w/images
+
+# package development/test files not required in production
+.travis.yml
+/home/protected/maglab/vendor/paypal/rest-api-sdk-php/tests
+/home/protected/maglab/vendor/paypal/rest-api-sdk-php/sample
+/home/protected/maglab/vendor/slim/php-view/tests
+

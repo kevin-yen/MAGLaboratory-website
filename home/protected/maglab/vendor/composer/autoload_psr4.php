@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'Slim\\Views\\' => array($vendorDir . '/slim/php-view/src'),
     'Slim\\' => array($vendorDir . '/slim/slim/Slim'),
+    'Psr\\Log\\' => array($vendorDir . '/psr/log/Psr/Log'),
     'Psr\\Http\\Message\\' => array($vendorDir . '/psr/http-message/src'),
     'MtHaml\\' => array($baseDir . '/lib/mthaml'),
     'Models\\' => array($baseDir . '/app/models'),

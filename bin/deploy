@@ -1,0 +1,7 @@
+#!/bin/bash
+
+BIN_PATH=`dirname $(realpath $0)`
+
+DEPLOY_PATH=`dirname $BIN_PATH`
+
+php $DEPLOY_PATH/deploy/deploy.php "$@"
