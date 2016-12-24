@@ -1,0 +1,4 @@
+#!/bin/bash
+
+THIS_DIR=`dirname $0`
+php -d auto_prepend_file=$THIS_DIR/console.php -a
