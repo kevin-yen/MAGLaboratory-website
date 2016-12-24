@@ -297,7 +297,7 @@
     </form>
   </div>
 </div>
-<div id="footer" class="bg-maglab_map containment">
+<div <?php echo MtHaml\Runtime::renderAttributes(array(array('id', 'footer'), array('class', ('bg-maglab_map' . ' ' . 'containment')), array('title', ('Click to open Google Maps to MAGLab'))), 'html5', 'UTF-8'); ?>>
   <div <?php echo MtHaml\Runtime::renderAttributes(array(array('style', ('background-color: #fcd89e;'))), 'html5', 'UTF-8'); ?>>
     <div class="container">
       <div class="row">
@@ -306,6 +306,16 @@
     </div>
   </div>
 </div>
+<script type="text/javascript">
+//<![CDATA[
+  $(function(){
+    $('#footer.bg-maglab_map').click(function(){
+      $('#header address a:first').click();
+    });
+  });
+  
+//]]>
+</script>
 
     <?php if(!isset($layout_no_footer)) { ?>
       <div id="footer" class="containment">
