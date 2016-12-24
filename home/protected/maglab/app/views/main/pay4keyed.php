@@ -38,7 +38,7 @@
     <div id="header">
       <div class="container text-center">
         <div class="row">
-          <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+          <div class="col-xs-12 col-sm-6 col-sm-offset-3">
             <a href="/">
               <image <?php echo MtHaml\Runtime::renderAttributes(array(array('id', 'logo'), array('src', '/images/logo.png'), array('title', ('MAGLab Logo'))), 'html5', 'UTF-8'); ?>></image>
             </a>
