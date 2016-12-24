@@ -1,6 +1,6 @@
-!echo "Commit: 267108e8e21ac5eb0a1baa07e36fa507012b7a64 5d70d4d0e6a6224cc1ff4081462e2bee5f0d0af1"
-mkdir protected/maglab/app/helpers
-put 'protected/maglab/app/haldor.php' 'protected/maglab/app/haldor.php'
-put 'protected/maglab/app/helpers/LessQL.php' 'protected/maglab/app/helpers/LessQL.php'
+!echo "Commit: 5d70d4d0e6a6224cc1ff4081462e2bee5f0d0af1 192ba2117f7618fd913a96d31ae1fd126419e504"
+put 'protected/maglab/app/views/main/donate.php' 'protected/maglab/app/views/main/donate.php'
 put 'protected/maglab/app/views/main/homepage.php' 'protected/maglab/app/views/main/homepage.php'
+put 'protected/maglab/app/views/main/membership.php' 'protected/maglab/app/views/main/membership.php'
+put 'protected/maglab/app/views/main/pay4keyed.php' 'protected/maglab/app/views/main/pay4keyed.php'
 put '/home/httpd/maglabs-www/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
