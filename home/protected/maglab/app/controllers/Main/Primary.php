@@ -7,6 +7,7 @@ use Controllers\PurifierBase as PurifierBase;
 class Primary extends PurifierBase {
   function init(){
     $this->app->get('/', [$this, 'homepage']);
+    $this->app->get('/donate/class_deposit', [$this, 'class_deposit']);
     $this->app->get('/donate', [$this, 'donate']);
     $this->app->get('/subscribe', [$this, 'subscribe']);
     $this->app->get('/membership', [$this, 'membership']);
@@ -32,6 +33,12 @@ class Primary extends PurifierBase {
   function membership($req, $res){
     $this->render($res, 'main/membership.php', 'Membership Information', array(
       'skip_membership_link' => true
+    ));
+  }
+  
+  function class_deposit($req, $res){
+    $this->render($res, 'main/class_deposit.php', 'Class Deposit', array(
+      'deposit_class' => 'Raspberry Pi'
     ));
   }
   
