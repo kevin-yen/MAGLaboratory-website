@@ -1,3 +1,4 @@
-!echo "Commit: 192ba2117f7618fd913a96d31ae1fd126419e504 eb9ad2f926e74cd7b3f169d35a1f7cabf3029905"
-put 'protected/maglab/app/views/main/homepage.php' 'protected/maglab/app/views/main/homepage.php'
+!echo "Commit: eb9ad2f926e74cd7b3f169d35a1f7cabf3029905 4ac847c82bdfd5c19607f06199b3c04fdcb1766d"
+put 'protected/maglab/app/controllers/Main/Primary.php' 'protected/maglab/app/controllers/Main/Primary.php'
+put 'protected/maglab/app/views/main/class_deposit.php' 'protected/maglab/app/views/main/class_deposit.php'
 put '/home/httpd/maglabs-www/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
