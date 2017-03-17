@@ -30,6 +30,6 @@ class Haldor {
     save_payload($req);
     save_switches($req);
     echo 'OK';
-  }  
+  }
 }
 

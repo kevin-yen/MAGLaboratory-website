@@ -1,17 +1,31 @@
 <html>
 <head><title>Haldor Boot</title></head>
 <body>
-  <h1>Bootup</h1>
+  <h1>Haldor</h1>
+  <h2>Bootup</h2>
   <form action="https://maglab.sj/haldor/bootup" method="POST">
     <input value="true" name="test" type="hidden">
     <input type="submit" value="submit">
   </form>
   
-  <h1>Checkup</h1>
+  <h2>Checkup</h2>
   <form action="https://maglab.sj/haldor/checkup" method="POST">
     <input value="payload" name="test" type="hidden">
     <input type="text" placeholder="session">
     <input type="submit" value="submit">
+  </form>
+  <hr/>
+  <h1>Halley</h1>
+  <h2>Bootup</h2>
+  <form action="https://maglab.sj/halley/bootup" method="POST">
+    <input value="true" name="test" type="hidden">
+    <input type="submit" value="submit">
+  </form>
+  
+  <h2>Output</h2>
+  <form action="https://maglab.sj/halley/output" method="POST">
+    <input value="NONE" name="output" type="hidden">
+    <input  type="submit" value="submit">
   </form>
 </body>
 </html>

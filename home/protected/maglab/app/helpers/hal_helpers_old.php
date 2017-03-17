@@ -185,9 +185,9 @@ function insert_switch($sensor, $session){
   }
 }
 
-function parse_halley_output($app){
-  $post = $app->request->post();
-  $session = $app->request->headers->get('X-Session');
+function parse_halley_output($req){
+  $post = $req->getParsedBody();
+  $session = $req->getHeader('X-Session');
   
   $mysqli = get_mysqli();
   if(!$mysqli){ return false; }

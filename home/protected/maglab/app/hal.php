@@ -7,7 +7,8 @@ require_once __DIR__ . '/helpers/hal_helpers_old.php';
 $app = new \Slim\App();
 
 $haldor_controller = new Controllers\Hal\Haldor($app);
-//$halley_controller = new Controllers\Hal\Halley($app);
+$halley_controller = new Controllers\Hal\Halley($app);
+//$hal_controller = new Controllers\Hal\Status($app);
 
 $app->run();
 
