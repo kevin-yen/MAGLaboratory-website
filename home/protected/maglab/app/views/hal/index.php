@@ -149,7 +149,7 @@
             </h1>
             <h2>Details below are outdated. Please check back later.</h2>
           </div>
-          <?php echo $this->partial('hal/_sensors.php', 'latestStatus' => $latestStatus); ?>
+          <?php echo $this->partial('hal/_sensors.php', array('latestStatus' => $latestStatus)); ?>
         </div>
       <?php } elseif($isOpen) { ?>
         <div id="activity_panel" class="panel panel-success">
@@ -159,7 +159,7 @@
               <strong>OPEN</strong>
             </h1>
           </div>
-          <?php echo $this->partial('hal/_sensors.php', 'latestStatus' => $latestStatus); ?>
+          <?php echo $this->partial('hal/_sensors.php', array('latestStatus' => $latestStatus)); ?>
         </div>
       <?php } else { ?>
         <div class="panel panel-danger">
@@ -169,7 +169,7 @@
               <strong>CLOSED</strong>
             </h1>
           </div>
-          <?php echo $this->partial('hal/_sensors.php', 'latestStatus' => $latestStatus); ?>
+          <?php echo $this->partial('hal/_sensors.php', array('latestStatus' => $latestStatus)); ?>
         </div>
       <?php } ?>
     </div>
