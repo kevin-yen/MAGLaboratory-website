@@ -8,13 +8,13 @@ RewriteRule .* - [L]
 RewriteCond %{HTTP_HOST} ^maglaboratory.org$ [NC]
 RewriteRule ^(.*)$ http://www.maglaboratory.org/$1 [L]
 
-RewriteRule ^/?haldor/.+$ /haldor-load.php [L]
-RewriteRule ^/?hal/?$ /haldor-load.php [L]
-RewriteRule ^/?hal/.+$ /haldor-load.php [L]
-RewriteRule ^/?halley/.+$ /haldor-load.php [L]
-
+RewriteCond %{HTTP_HOST} !^www.maglaboratory.org$ [NC]
+RewriteRule . - [S=3]
+# if www.maglaboratory.org {
+RewriteRule ^/?hal /haldor-load.php [L]
 RewriteRule ^/?members/?$ /members-load.php [L]
 RewriteRule ^/?members/.+$ /members-load.php [L]
+# }
 
 RewriteCond %{QUERY_STRING} title=(.*) [NC]
 RewriteRule ^/?~maglab/wiki/index.php$ /wiki/%1 [R=301,L]
@@ -22,12 +22,13 @@ RewriteRule ^/?~maglab/wiki/index.php$ /wiki/%1 [R=301,L]
 RewriteRule ^/?wiki(/.*)?$ %{DOCUMENT_ROOT}/w/index.php [L]
 #RewriteRule ^/?wiki(/.*)?$ %{DOCUMENT_ROOT}/blank.php [L]
 
-RewriteCond %{HTTP_HOST} ^preview\.maglaboratory\.org$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^maglab\.sj$ [NC]
+RewriteCond %{HTTP_HOST} !^preview\.maglaboratory\.org$ [NC]
+RewriteCond %{HTTP_HOST} !^maglab\.sj$ [NC]
+RewriteRule . - [S=2]
+# if development or preview {
+RewriteRule ^/?hal /HalApp.php [L]
 RewriteRule ^(.*)?$ /MainApp.php [L]
-
-RewriteRule ^(.*)?$ /main.php [L]
-
+# }
 
 Options All -Indexes
 
