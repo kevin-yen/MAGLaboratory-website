@@ -140,18 +140,18 @@
     <div class="container">
   <div class="row">
     <div class="col-md-12">
-      <?php if($this->data->isTechBad) { ?>
+      <?php if($isTechBad) { ?>
         <div id="activity_panel" class="panel panel-warning">
           <div class="panel-heading">
             <h1 class="panel-title">
               We are
               <strong>HAVING TECHNICAL DIFFICULTIES</strong>
             </h1>
-            %%h2 Details below are outdated. Please check back later.
+            <h2>Details below are outdated. Please check back later.</h2>
           </div>
           <?php echo $this->partial('hal/_sensors.php'); ?>
         </div>
-      <?php } elseif($this->data->isOpen) { ?>
+      <?php } elseif($isOpen) { ?>
         <div id="activity_panel" class="panel panel-success">
           <div class="panel-heading">
             <h1 class="panel-title">

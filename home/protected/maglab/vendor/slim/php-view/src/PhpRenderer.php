@@ -178,6 +178,18 @@ class PhpRenderer
 
         return $output;
     }
+    
+    public function partial($template, array $data = []){
+      return $this->fetch($template, $data);
+    }
+    
+    public function capture($closure){
+      ob_start();
+      $closure();
+      $output = ob_get_contents();
+      ob_end_clean();
+      return $output;
+    }
 
     /**
      * @param string $template

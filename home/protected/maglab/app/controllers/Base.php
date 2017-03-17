@@ -27,19 +27,6 @@ class Base {
     );
   }
   
-  public function partial($template, $data = []){
-    if(!$this->phpRenderer){ $this->phpRenderer = new \Slim\Views\PhpRenderer(__DIR__ . "/../views/"); }
-    return $this->phpRenderer->fetch($template, array_merge($this->respond, $data));
-  }
-  
-  public function capture($closure){
-    ob_start();
-    $closure();
-    $output = ob_get_contents();
-    ob_end_clean();
-    return $output;
-  }
-  
   public function redirect($res, $target, $code = 302){
     $res = $res->withStatus($code);
     $res = $res->withHeader('Location', $target);

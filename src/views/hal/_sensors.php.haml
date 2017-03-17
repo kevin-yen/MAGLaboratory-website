@@ -8,14 +8,12 @@
         %th
         %th Last Update
     %tbody
-      <?php date_default_timezone_set('America/Los_Angeles'); ?>
-      <?php foreach($this->data->latestStatus as $sensor => $v){ ?>
-      %tr
-        %td <?php echo $sensor; ?>
-        %td <?php echo $v[0]; ?>
-        %td
-          <?php if($v[1]){ ?>
-          %time.timeago{'datetime' => "<?php echo date('c', $v[1]); ?>"}
-          <?php } ?>
-        %td <?php echo($v[1] ? date('M j, Y g:i A T', $v[1]) : 'NEVER'); ?>
-      <?php } ?>
+      - date_default_timezone_set('America/Los_Angeles');
+      - foreach($latestStatus as $sensor => $v)
+        %tr
+          %td= $sensor
+          %td= $v[0]
+          %td
+            - if($v[1])
+              %time.timeago{'datetime' => date('c', $v[1])}
+          %td= $v[1] ? date('M j, Y g:i A T', $v[1]) : 'NEVER'

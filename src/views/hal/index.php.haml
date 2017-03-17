@@ -1,17 +1,16 @@
 .container
   .row
     .col-md-12
-      
-      - if($this->data->isTechBad)
+      - if($isTechBad)
         #activity_panel.panel.panel-warning
           .panel-heading
             %h1.panel-title
               We are
               %strong HAVING TECHNICAL DIFFICULTIES
           
-            %%h2 Details below are outdated. Please check back later.
+            %h2 Details below are outdated. Please check back later.
           != $this->partial('hal/_sensors.php')
-      - elseif($this->data->isOpen)
+      - elseif($isOpen)
         #activity_panel.panel.panel-success
           .panel-heading
             %h1.panel-title
