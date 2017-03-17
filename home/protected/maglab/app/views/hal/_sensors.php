@@ -10,7 +10,7 @@
     </thead>
     <tbody>
       <?php date_default_timezone_set('America/Los_Angeles'); ?>
-      <?php foreach($this->data->latestStatus as $sensor => $v) { ?>
+      <?php foreach($latestStatus as $sensor => $v) { ?>
         <tr>
           <td><?php echo htmlspecialchars($sensor,ENT_QUOTES,'UTF-8'); ?></td>
           <td><?php echo htmlspecialchars($v[0],ENT_QUOTES,'UTF-8'); ?></td>
