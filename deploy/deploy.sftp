@@ -1,4 +1,2 @@
-!echo "Commit: 98d34defb73f17a1f5962b8ad71228ab38787b39 fa22ea8c5607df4e26c6866a129d00d4a89ec5de"
-put 'protected/maglab/app/views/hal/_sensors.php' 'protected/maglab/app/views/hal/_sensors.php'
-put 'protected/maglab/app/views/hal/index.php' 'protected/maglab/app/views/hal/index.php'
+!echo "Commit: fa22ea8c5607df4e26c6866a129d00d4a89ec5de 2779c739f297879544cfecb0ecb48b5253374b59"
 put '/home/httpd/maglabs-www/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
