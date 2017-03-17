@@ -94,8 +94,8 @@ class PhpRenderer extends RendererAbstract
 
         $content = $this->trimInlineComments($node->getContent());
 
-        if (!$node->isBlock()) {
-            if (preg_match('~[:;]\s*$~', $content)) {
+        if (!$node->isBlock() or $node->isWrappedBlock()) {
+            if (preg_match('~[:;]\s*$~', $content) or $node->isWrappedBlock()) {
                 $this->write(sprintf('<?php %s ?>' , $content));
             } else {
                 $this->write(sprintf('<?php %s; ?>' , $content));

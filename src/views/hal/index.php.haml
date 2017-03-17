@@ -1,0 +1,41 @@
+.container{:style => 'margin-top: 100px;'}
+  .row
+    .col-md-12
+      
+      - if($this->data->isTechBad)
+        #activity_panel.panel.panel-warning
+          .panel-heading
+            %h1.panel-title
+              We are
+              %strong HAVING TECHNICAL DIFFICULTIES
+          
+            %%h2 Details below are outdated. Please check back later.
+          != $this->partial('hal/_sensors.php')
+      - elseif($this->data->isOpen)
+        #activity_panel.panel.panel-success
+          .panel-heading
+            %h1.panel-title
+              We are
+              %strong OPEN
+          != $this->partial('hal/_sensors.php')
+      - else
+        .panel.panel-danger
+          .panel-heading
+            %h1.panel-title
+              We are
+              %strong CLOSED
+          != $this->partial('hal/_sensors.php')
+      
+
+%script{:src => '/js/timeago.js'}
+
+:javascript
+  $(function(){
+    $('time.timeago').timeago();
+  });
+  
+- $head_content = $this->capture(function()
+  :css
+    #activity_panel td { font-size: 18px; }
+    #activity_panel th { font-size: 20px; }
+    #activity_panel .panel-title { line-height: normal; font-size: 50px; }

@@ -8,7 +8,7 @@ function get_mysqli(){
     return $mysqli;
   } else {
     try {
-      $mysqli = new mysqli(mysql_host, mysql_user, mysql_pass, mysql_db);
+      $mysqli = new mysqli(MYSQL_HOST, MYSQL_USER, MYSQL_PASS, MYSQL_DB);
     } catch (Exception $e){
       $mysqli = false;
     }
@@ -262,7 +262,8 @@ function timeline_graph_json($from, $to){
 function get_latest($sensor){
   $mysqli = get_mysqli();
   if($stmt = $mysqli->prepare("SELECT UNIX_TIMESTAMP(progress_at), UNIX_TIMESTAMP(end_at), UNIX_TIMESTAMP(mark_at), last_value FROM haldor WHERE sensor = ? ORDER BY progress_at DESC LIMIT 1")){
-    $stmt->bind_param('s', str_replace(' ', '_', $sensor));
+    $sensor_name = str_replace(' ', '_', $sensor);
+    $stmt->bind_param('s', $sensor_name);
     $stmt->execute();
     if($res = $stmt->get_result()){
       $data = $res->fetch_all()[0];

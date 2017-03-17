@@ -8,7 +8,7 @@ $app = new \Slim\App();
 
 $haldor_controller = new Controllers\Hal\Haldor($app);
 $halley_controller = new Controllers\Hal\Halley($app);
-//$hal_controller = new Controllers\Hal\Status($app);
+$status_controller = new Controllers\Hal\Status($app);
 
 $app->run();
 
