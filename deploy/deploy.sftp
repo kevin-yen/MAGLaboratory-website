@@ -1,17 +1,6 @@
-!echo "Commit: 4ac847c82bdfd5c19607f06199b3c04fdcb1766d 8cdc89531867a06503bd6098718a0fa2df008c20"
-mkdir protected/maglab/app/controllers/Hal
-mkdir protected/maglab/app/views/hal
+!echo "Commit: 8cdc89531867a06503bd6098718a0fa2df008c20 98d34defb73f17a1f5962b8ad71228ab38787b39"
 put 'protected/maglab/app/controllers/Base.php' 'protected/maglab/app/controllers/Base.php'
-put 'protected/maglab/app/controllers/Hal/Haldor.php' 'protected/maglab/app/controllers/Hal/Haldor.php'
-put 'protected/maglab/app/controllers/Hal/Halley.php' 'protected/maglab/app/controllers/Hal/Halley.php'
-put 'protected/maglab/app/controllers/Hal/Status.php' 'protected/maglab/app/controllers/Hal/Status.php'
-put 'protected/maglab/app/hal.php' 'protected/maglab/app/hal.php'
-rm 'protected/maglab/app/haldor.php'
-put 'protected/maglab/app/helpers/hal_helpers_old.php' 'protected/maglab/app/helpers/hal_helpers_old.php'
 put 'protected/maglab/app/views/hal/_sensors.php' 'protected/maglab/app/views/hal/_sensors.php'
-put 'protected/maglab/app/views/hal/chart.php' 'protected/maglab/app/views/hal/chart.php'
 put 'protected/maglab/app/views/hal/index.php' 'protected/maglab/app/views/hal/index.php'
-put 'public/.htaccess' 'public/.htaccess'
-put 'public/HalApp.php' 'public/HalApp.php'
-rm 'public/HaldorApp.php'
+put 'protected/maglab/vendor/slim/php-view/src/PhpRenderer.php' 'protected/maglab/vendor/slim/php-view/src/PhpRenderer.php'
 put '/home/httpd/maglabs-www/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
