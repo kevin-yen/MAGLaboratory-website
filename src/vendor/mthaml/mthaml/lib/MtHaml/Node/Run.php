@@ -53,11 +53,13 @@ class Run extends NestAbstract
     public function isWrappedBlock()
     {
         $content = $this->getContent();
-        if($content and preg_match('/{\s*$/', $content)){
-          return true;
-        } else {
-          return false;
-        }
+        return ($content and preg_match('/{\s*$/', $content));
+    }
+    
+    public function isCaptureBlock()
+    {
+      $content = $this->getContent();
+      return ($content and preg_match('/>*<\s*$/', $content));
     }
 
     public function accept(NodeVisitorInterface $visitor)

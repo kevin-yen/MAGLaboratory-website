@@ -137,7 +137,7 @@
         </ul>
       </div>
     </div>
-    <div <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'container'), array('style', ('margin-top: 100px;'))), 'html5', 'UTF-8'); ?>>
+    <div class="container">
   <div class="row">
     <div class="col-md-12">
       <?php if($this->data->isTechBad) { ?>
@@ -184,14 +184,15 @@
     
 //]]>
 </script>
-<?php $head_content = $this->capture(function(){; ?>
-<style type="text/css">
-/*<![CDATA[*/
-  #activity_panel td { font-size: 18px; }
-  #activity_panel th { font-size: 20px; }
-  #activity_panel .panel-title { line-height: normal; font-size: 50px; }
-/*]]>*/
-</style>
+<?php $head_content = $this->capture(function(){ ?>
+  <style type="text/css">
+  /*<![CDATA[*/
+    #activity_panel td { font-size: 18px; }
+    #activity_panel th { font-size: 20px; }
+    #activity_panel .panel-title { line-height: normal; font-size: 50px; }
+    
+  /*]]>*/
+  </style>
 <?php }); ?>
 
     <?php if(!isset($layout_no_footer)) { ?>

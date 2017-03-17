@@ -93,9 +93,14 @@ class PhpRenderer extends RendererAbstract
         $this->addDebugInfos($node);
 
         $content = $this->trimInlineComments($node->getContent());
-
-        if (!$node->isBlock() or $node->isWrappedBlock()) {
-            if (preg_match('~[:;]\s*$~', $content) or $node->isWrappedBlock()) {
+        
+        if($node->isWrappedBlock()){
+          $this->write(sprintf('<?php %s ?>' , $content));
+        } elseif ($node->isCaptureBlock()) {
+          $new_content = str_replace('>*<', 'function(){', $content);
+          $this->write(sprintf('<?php %s ?>', $new_content));
+        } elseif (!$node->isBlock()) {
+            if (preg_match('~[:;]\s*$~', $content)) {
                 $this->write(sprintf('<?php %s ?>' , $content));
             } else {
                 $this->write(sprintf('<?php %s; ?>' , $content));
@@ -116,7 +121,9 @@ class PhpRenderer extends RendererAbstract
 
     public function leaveTopBlock(Run $node)
     {
-        if ($node->isBlock()) {
+        if($node->isCaptureBlock()){
+            $this->write('<?php }); ?>');
+        } elseif ($node->isBlock()) {
             $this->write('<?php } ?>');
         }
     }
