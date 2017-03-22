@@ -1,5 +1,3 @@
-!echo "Commit: 4b07808e7a7a5966abd056711f52297685cd9c60 a1b31fe67865d052dfb6a5a4a52821d1d6fbf0d0"
-put 'protected/maglab/app/views/hal/index.php' 'protected/maglab/app/views/hal/index.php'
-put 'protected/maglab/app/views/main/_map_footer.php' 'protected/maglab/app/views/main/_map_footer.php'
-put 'protected/maglab/app/views/main/homepage.php' 'protected/maglab/app/views/main/homepage.php'
+!echo "Commit: a1b31fe67865d052dfb6a5a4a52821d1d6fbf0d0 877d7ef8a4a9db52277489a48b492fd606ad6153"
+put 'public/.htaccess' 'public/.htaccess'
 put '/home/httpd/maglabs-www/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
