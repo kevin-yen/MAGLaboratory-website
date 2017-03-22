@@ -15,6 +15,12 @@ use MtHaml\Node\Filter;
 
 class PhpRenderer extends RendererAbstract
 {
+
+    public function yielding($name, $content){
+      $this->env->getOptions['yield_' . $name] = $content;
+    }
+    
+    
     protected function escapeLanguage($string, $context)
     {
         // If there is a '?' at the begining of the string, it could become

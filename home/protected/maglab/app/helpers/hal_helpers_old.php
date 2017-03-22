@@ -72,9 +72,9 @@ function authenticate($req) {
   
   global $secret;
   $input = file_get_contents('php://input');
-  $session = $req->getHeader('X-Session');
+  $session = $req->getHeaderLine('X-Session');
   $hmac = hash_hmac('sha256', $input . $session, $secret, false);
-  if($hmac != $req->getHeader('X-Checksum')){
+  if($hmac != $req->getHeaderLine('X-Checksum')){
     die("AUTH FAIL");
   } else {
     return true;
@@ -83,7 +83,7 @@ function authenticate($req) {
 
 function save_payload($req){
   $post = $req->getParsedBody();
-  $session = $req->getHeader('X-Session');
+  $session = $req->getHeaderLine('X-Session');
   
   $mysqli = get_mysqli();
   if(!$mysqli){ return false; }
@@ -99,7 +99,7 @@ function save_payload($req){
 
 function save_switches($req) {
   $post = $req->getParsedBody();
-  $session = $req->getHeader('X-Session');
+  $session = $req->getHeaderLine('X-Session');
   $checks = ['Front_Door', 'Main_Door', 'Office_Motion', 'Shop_Motion', 'Open_Switch', 'Temperature'];
 
   mark_old_switches();
@@ -187,7 +187,7 @@ function insert_switch($sensor, $session){
 
 function parse_halley_output($req){
   $post = $req->getParsedBody();
-  $session = $req->getHeader('X-Session');
+  $session = $req->getHeaderLine('X-Session');
   
   $mysqli = get_mysqli();
   if(!$mysqli){ return false; }
