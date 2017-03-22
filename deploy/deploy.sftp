@@ -1,3 +1,16 @@
-!echo "Commit: a1b31fe67865d052dfb6a5a4a52821d1d6fbf0d0 877d7ef8a4a9db52277489a48b492fd606ad6153"
+!echo "Commit: 877d7ef8a4a9db52277489a48b492fd606ad6153 b053268498950b9b389a6ef872ace09934135012"
+mkdir protected/maglab/app/views/test
+put 'protected/maglab/app/helpers/hal_helpers_old.php' 'protected/maglab/app/helpers/hal_helpers_old.php'
+put 'protected/maglab/app/views/hal/_sensors.php' 'protected/maglab/app/views/hal/_sensors.php'
+put 'protected/maglab/app/views/hal/chart.php' 'protected/maglab/app/views/hal/chart.php'
+put 'protected/maglab/app/views/hal/index.php' 'protected/maglab/app/views/hal/index.php'
+put 'protected/maglab/app/views/main/_map_footer.php' 'protected/maglab/app/views/main/_map_footer.php'
+put 'protected/maglab/app/views/main/_pricing.php' 'protected/maglab/app/views/main/_pricing.php'
+put 'protected/maglab/app/views/main/class_deposit.php' 'protected/maglab/app/views/main/class_deposit.php'
+put 'protected/maglab/app/views/main/donate.php' 'protected/maglab/app/views/main/donate.php'
+put 'protected/maglab/app/views/main/homepage.php' 'protected/maglab/app/views/main/homepage.php'
+put 'protected/maglab/app/views/main/membership.php' 'protected/maglab/app/views/main/membership.php'
+put 'protected/maglab/app/views/main/pay4keyed.php' 'protected/maglab/app/views/main/pay4keyed.php'
+put 'protected/maglab/app/views/test/1.php' 'protected/maglab/app/views/test/1.php'
 put 'public/.htaccess' 'public/.htaccess'
 put '/home/httpd/maglabs-www/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
