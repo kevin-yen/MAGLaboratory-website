@@ -21,6 +21,9 @@
     <![endif]-->
     <script src="/js/jquery-2.2.4.min.js"></script>
     <script src="/js/bootstrap-471c05a.js"></script>
+    <?php if(isset($head_content)) { ?>
+      <?php echo htmlspecialchars($head_content,ENT_QUOTES,'UTF-8'); ?>
+    <?php } ?>
   </head>
   <body>
     <script type="text/javascript">

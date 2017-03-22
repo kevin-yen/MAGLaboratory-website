@@ -1,19 +1,18 @@
 
-.panel-body
-  %table.table-striped.table-hover{:style => 'width: 100%;'}
-    %thead
+%table.table-striped.table-hover{:style => 'width: 100%;'}
+  %thead
+    %tr
+      %th Sensor
+      %th Status
+      %th
+      %th Last Update
+  %tbody
+    - date_default_timezone_set('America/Los_Angeles');
+    - foreach($latestStatus as $sensor => $v)
       %tr
-        %th Sensor
-        %th Status
-        %th
-        %th Last Update
-    %tbody
-      - date_default_timezone_set('America/Los_Angeles');
-      - foreach($latestStatus as $sensor => $v)
-        %tr
-          %td= $sensor
-          %td= $v[0]
-          %td
-            - if($v[1])
-              %time.timeago{'datetime' => date('c', $v[1])}
-          %td= $v[1] ? date('M j, Y g:i A T', $v[1]) : 'NEVER'
+        %td= $sensor
+        %td= $v[0]
+        %td
+          - if($v[1])
+            %time.timeago{'datetime' => date('c', $v[1])}
+        %td= $v[1] ? date('M j, Y g:i A T', $v[1]) : 'NEVER'

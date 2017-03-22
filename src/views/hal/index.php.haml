@@ -1,28 +1,24 @@
-.container
-  .row
-    .col-md-12
-      - if($isTechBad)
-        #activity_panel.panel.panel-warning
-          .panel-heading
-            %h1.panel-title
+.containment
+  .container
+    .row
+      .col-md-12#activity_panel
+        - if($isTechBad)
+          .alert.alert-danger
+            %h1
               We are
               %strong HAVING TECHNICAL DIFFICULTIES
-          
-            %h2 Details below are outdated. Please check back later.
+            
+          %h2 Details below are outdated. Please check back later.
           != $this->partial('hal/_sensors.php', array('latestStatus' => $latestStatus))
-      - elseif($isOpen)
-        #activity_panel.panel.panel-success
-          .panel-heading
-            %h1.panel-title
-              We are
-              %strong OPEN
+        - else if($isOpen)
+          %h1.bg-success
+            We are
+            %strong OPEN
           != $this->partial('hal/_sensors.php', array('latestStatus' => $latestStatus))
-      - else
-        .panel.panel-danger
-          .panel-heading
-            %h1.panel-title
-              We are
-              %strong CLOSED
+        - else
+          %h1.bg-warning
+            We are
+            %strong CLOSED
           != $this->partial('hal/_sensors.php', array('latestStatus' => $latestStatus))
       
 
@@ -33,8 +29,7 @@
     $('time.timeago').timeago();
   });
   
-- $head_content = $this->capture(>*<
-  :css
-    #activity_panel td { font-size: 18px; }
-    #activity_panel th { font-size: 20px; }
-    #activity_panel .panel-title { line-height: normal; font-size: 50px; }
+-# $head_content = $this->capture(>*<
+-# This way of setting head_content doesn't work because the renderer renders the full page as php
+-# which means the full header gets rendered before the body yield.
+-# $head_content needs to be set before the render call, anything in this template is inside the template in the middle of the php script

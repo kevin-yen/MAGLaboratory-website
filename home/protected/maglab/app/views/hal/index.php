@@ -21,6 +21,9 @@
     <![endif]-->
     <script src="/js/jquery-2.2.4.min.js"></script>
     <script src="/js/bootstrap-471c05a.js"></script>
+    <?php if(isset($head_content)) { ?>
+      <?php echo htmlspecialchars($head_content,ENT_QUOTES,'UTF-8'); ?>
+    <?php } ?>
   </head>
   <body>
     <script type="text/javascript">
@@ -137,41 +140,33 @@
         </ul>
       </div>
     </div>
-    <div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <?php if($isTechBad) { ?>
-        <div id="activity_panel" class="panel panel-warning">
-          <div class="panel-heading">
-            <h1 class="panel-title">
+    <div class="containment">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12" id="activity_panel">
+        <?php if($isTechBad) { ?>
+          <div class="alert alert-danger">
+            <h1>
               We are
               <strong>HAVING TECHNICAL DIFFICULTIES</strong>
             </h1>
-            <h2>Details below are outdated. Please check back later.</h2>
           </div>
+          <h2>Details below are outdated. Please check back later.</h2>
           <?php echo $this->partial('hal/_sensors.php', array('latestStatus' => $latestStatus)); ?>
-        </div>
-      <?php } elseif($isOpen) { ?>
-        <div id="activity_panel" class="panel panel-success">
-          <div class="panel-heading">
-            <h1 class="panel-title">
-              We are
-              <strong>OPEN</strong>
-            </h1>
-          </div>
+        <?php } else if($isOpen) { ?>
+          <h1 class="bg-success">
+            We are
+            <strong>OPEN</strong>
+          </h1>
           <?php echo $this->partial('hal/_sensors.php', array('latestStatus' => $latestStatus)); ?>
-        </div>
-      <?php } else { ?>
-        <div class="panel panel-danger">
-          <div class="panel-heading">
-            <h1 class="panel-title">
-              We are
-              <strong>CLOSED</strong>
-            </h1>
-          </div>
+        <?php } else { ?>
+          <h1 class="bg-warning">
+            We are
+            <strong>CLOSED</strong>
+          </h1>
           <?php echo $this->partial('hal/_sensors.php', array('latestStatus' => $latestStatus)); ?>
-        </div>
-      <?php } ?>
+        <?php } ?>
+      </div>
     </div>
   </div>
 </div>
@@ -188,8 +183,9 @@
   <style type="text/css">
   /*<![CDATA[*/
     #activity_panel td { font-size: 18px; }
-    #activity_panel th { font-size: 20px; }
+    #activity_panel th { font-size: 20px; text-align: center; }
     #activity_panel .panel-title { line-height: normal; font-size: 50px; }
+    #activity_panel { text-align: center; }
     
   /*]]>*/
   </style>
