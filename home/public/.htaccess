@@ -24,8 +24,9 @@ RewriteRule ^/?wiki(/.*)?$ %{DOCUMENT_ROOT}/w/index.php [L]
 
 RewriteCond %{HTTP_HOST} !^preview\.maglaboratory\.org$ [NC]
 RewriteCond %{HTTP_HOST} !^maglab\.sj$ [NC]
-RewriteRule . - [S=1]
+RewriteRule . - [S=2]
 # if development or preview {
+RewriteRule ^/?hal /HalApp.php [L]
 RewriteRule ^(.*)?$ /MainApp.php [L]
 # }
 

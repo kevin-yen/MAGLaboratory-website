@@ -121,7 +121,8 @@ abstract class RendererAbstract extends NodeVisitorAbstract
 
     protected function writeIndentation()
     {
-        $this->output .= str_repeat(' ', $this->indent * 2);
+        if($this->env->getOptions()['indent'])
+          $this->output .= str_repeat(' ', $this->indent * 2);
 
         return $this;
     }

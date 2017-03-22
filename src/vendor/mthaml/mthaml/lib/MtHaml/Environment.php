@@ -20,6 +20,7 @@ class Environment
         'cdata' => true,
         'autoclose' => array('meta', 'img', 'link', 'br', 'hr', 'input', 'area', 'param', 'col', 'base'),
         'charset' => 'UTF-8',
+        'indent' => true,
         'enable_dynamic_attrs' => true,
     );
 
