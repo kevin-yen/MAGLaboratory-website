@@ -11,14 +11,16 @@
           %h2 Details below are outdated. Please check back later.
           != $this->partial('hal/_sensors.php', array('latestStatus' => $latestStatus))
         - else if($isOpen)
-          %h1.bg-success
-            We are
-            %strong OPEN
+          .alert.alert-success
+            %h1
+              We are
+              %strong OPEN
           != $this->partial('hal/_sensors.php', array('latestStatus' => $latestStatus))
         - else
-          %h1.bg-warning
-            We are
-            %strong CLOSED
+          .alert.alert-warning
+            %h1
+              We are
+              %strong CLOSED
           != $this->partial('hal/_sensors.php', array('latestStatus' => $latestStatus))
       
 

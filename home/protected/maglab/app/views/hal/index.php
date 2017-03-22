@@ -154,16 +154,20 @@
           <h2>Details below are outdated. Please check back later.</h2>
           <?php echo $this->partial('hal/_sensors.php', array('latestStatus' => $latestStatus)); ?>
         <?php } else if($isOpen) { ?>
-          <h1 class="bg-success">
-            We are
-            <strong>OPEN</strong>
-          </h1>
+          <div class="alert alert-success">
+            <h1>
+              We are
+              <strong>OPEN</strong>
+            </h1>
+          </div>
           <?php echo $this->partial('hal/_sensors.php', array('latestStatus' => $latestStatus)); ?>
         <?php } else { ?>
-          <h1 class="bg-warning">
-            We are
-            <strong>CLOSED</strong>
-          </h1>
+          <div class="alert alert-warning">
+            <h1>
+              We are
+              <strong>CLOSED</strong>
+            </h1>
+          </div>
           <?php echo $this->partial('hal/_sensors.php', array('latestStatus' => $latestStatus)); ?>
         <?php } ?>
       </div>
@@ -179,17 +183,6 @@
     
 //]]>
 </script>
-<?php $head_content = $this->capture(function(){ ?>
-  <style type="text/css">
-  /*<![CDATA[*/
-    #activity_panel td { font-size: 18px; }
-    #activity_panel th { font-size: 20px; text-align: center; }
-    #activity_panel .panel-title { line-height: normal; font-size: 50px; }
-    #activity_panel { text-align: center; }
-    
-  /*]]>*/
-  </style>
-<?php }); ?>
 
     <?php if(!isset($layout_no_footer)) { ?>
       <div id="footer" class="containment">
