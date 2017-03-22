@@ -18,7 +18,6 @@ class Status extends PurifierBase {
     
     return $this->render($res, 'hal/index.php', 'HAL 2017 Status', array(
       'layout_show_entrances' => true,
-      'layout_no_footer' => true,
       'isOpen' => is_maglabs_open($latest),
       'isTechBad' => is_tech_bad($latest),
       'latestStatus' => $latest,

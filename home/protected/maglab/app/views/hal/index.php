@@ -152,7 +152,7 @@
             </h1>
           </div>
           <h2>Details below are outdated. Please check back later.</h2>
-          <?php echo $this->partial('hal/_sensors.php', array('latestStatus' => $latestStatus)); ?>
+          <?php include('_sensors.php'); ?>
         <?php } else if($isOpen) { ?>
           <div class="alert alert-success">
             <h1>
@@ -160,7 +160,7 @@
               <strong>OPEN</strong>
             </h1>
           </div>
-          <?php echo $this->partial('hal/_sensors.php', array('latestStatus' => $latestStatus)); ?>
+          <?php include('_sensors.php'); ?>
         <?php } else { ?>
           <div class="alert alert-warning">
             <h1>
@@ -168,7 +168,7 @@
               <strong>CLOSED</strong>
             </h1>
           </div>
-          <?php echo $this->partial('hal/_sensors.php', array('latestStatus' => $latestStatus)); ?>
+          <?php include('_sensors.php'); ?>
         <?php } ?>
       </div>
     </div>

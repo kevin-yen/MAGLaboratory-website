@@ -9,19 +9,19 @@
               %strong HAVING TECHNICAL DIFFICULTIES
             
           %h2 Details below are outdated. Please check back later.
-          != $this->partial('hal/_sensors.php', array('latestStatus' => $latestStatus))
+          - include('_sensors.php')
         - else if($isOpen)
           .alert.alert-success
             %h1
               We are
               %strong OPEN
-          != $this->partial('hal/_sensors.php', array('latestStatus' => $latestStatus))
+          - include('_sensors.php')
         - else
           .alert.alert-warning
             %h1
               We are
               %strong CLOSED
-          != $this->partial('hal/_sensors.php', array('latestStatus' => $latestStatus))
+          - include('_sensors.php')
       
 
 %script{:src => '/js/timeago.js'}
