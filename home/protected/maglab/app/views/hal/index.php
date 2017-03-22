@@ -183,6 +183,7 @@
     
 //]]>
 </script>
+<?php echo $this->partial('main/_map_footer.php'); ?>
 
     <?php if(!isset($layout_no_footer)) { ?>
       <div id="footer" class="containment">

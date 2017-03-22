@@ -35,3 +35,5 @@
 -# This way of setting head_content doesn't work because the renderer renders the full page as php
 -# which means the full header gets rendered before the body yield.
 -# $head_content needs to be set before the render call, anything in this template is inside the template in the middle of the php script
+
+!= $this->partial('main/_map_footer.php')
