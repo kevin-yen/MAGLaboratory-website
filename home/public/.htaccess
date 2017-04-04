@@ -30,5 +30,7 @@ RewriteRule ^/?hal /HalApp.php [L]
 RewriteRule ^(.*)?$ /MainApp.php [L]
 # }
 
+
+RewriteRule ^(.*)?$ /MainApp.php [L]
 Options All -Indexes
 
