@@ -196,14 +196,6 @@ houses a mill, lathe, drill press, grinder, jig saw, forge and other destructive
 chances are we have a machine for your needs.
 </p>
 <p>
-And for a limited time, we have
-<strong>a 4x8 CNC wood router.</strong>
-A local furniture startup,
-<a href="http://faybledesign.com/">Fayble,</a>
-has taken residency at MAG Lab and brought a 4x8 router with them!
-While they are in house, the cnc router will be available to members for projects.
-</p>
-<p>
 Oh almost forgot, we have
 <strong>a restroom with working toilet, and sink,</strong>
 and running water.
