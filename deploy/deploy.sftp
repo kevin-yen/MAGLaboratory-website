@@ -1,3 +1,3 @@
-!echo "Commit: b053268498950b9b389a6ef872ace09934135012 38c8fc3a1a39552a0396c6a8a9a172e3b24fd7a6"
-put 'public/.htaccess' 'public/.htaccess'
+!echo "Commit: 38c8fc3a1a39552a0396c6a8a9a172e3b24fd7a6 241a5f477f6090893f768151e11ee1e4e9753445"
+put 'protected/maglab/app/views/main/homepage.php' 'protected/maglab/app/views/main/homepage.php'
 put '/home/httpd/maglabs-www/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
