@@ -95,47 +95,48 @@
 
 - include '_pricing.php';
 
-#join-newsletter.containment
-  .container
-    %h1.text-center Did you know?
-    %h2.text-center We have weekly newsletter that doesn't go out?
-    %p.text-center
-      Why doesn't it go out?
-      %br
-      Well...because there's not a lot of people signed up...
-      %br
-      Register now and we'll start planning updates for the newsletter
-      %br
-      (once we have enough interested members)
-    %form.form-horizontal(action="//maglaboratory.us12.list-manage.com/subscribe/post" method="post" target="_blank")
-      .form-group
-        %label.col-xs-4.control-label(for='MERGE1') First Name (optional)
-        .col-xs-8.col-md-4
-          %input.form-control(type='text' value='' name='MERGE1' placeholder='Berry')
-      .form-group
-        %label.col-xs-4.control-label(for='MERGE2') Last Name (optional)
-        .col-xs-8.col-md-4
-          %input.form-control(type='text' value='' name='MERGE2' placeholder='Cunning')
-      .form-group
-        %label.col-xs-4.control-label(for='MERGE0') Email (required)
-        .col-xs-8.col-md-4
-          %input.form-control(type='email' value='' name='MERGE0' placeholder='diy.workalot@example.com')
-      .form-group
-        %label.col-xs-4.control-label(for='EMAILTYPE') Preferred Format
-        .col-xs-8.col-md-4
-          %label.radio-inline
-            %input(type='radio' name='EMAILTYPE' value='html') HTML
-          %label.radio-inline
-            %input(type='radio' name='EMAILTYPE' value='text') TEXT
-      .form-group
-        -# This is for bot checking, they don't fill in this field
-        
-        %div(style="position: absolute; left: -5000px;" aria-hidden="true")
-          %input(type="text" name="b_c5f2672775054e0a1b3f98dac_4a9f6654cf" tabindex="-1" value="")
-        .col-xs-8.col-md-4.col-xs-offset-4
-          %input(type='hidden' name='u' value='c5f2672775054e0a1b3f98dac')
-          %input(type='hidden' name='id' value='4a9f6654cf')
-          %input.btn.btn-primary(type='submit' value='Subscribe' name='subscribe')
+-#
+  #join-newsletter.containment
+    .container
+      %h1.text-center Did you know?
+      %h2.text-center We have weekly newsletter that doesn't go out?
+      %p.text-center
+        Why doesn't it go out?
+        %br
+        Well...because there's not a lot of people signed up...
+        %br
+        Register now and we'll start planning updates for the newsletter
+        %br
+        (once we have enough interested members)
+      %form.form-horizontal(action="//maglaboratory.us12.list-manage.com/subscribe/post" method="post" target="_blank")
+        .form-group
+          %label.col-xs-4.control-label(for='MERGE1') First Name (optional)
+          .col-xs-8.col-md-4
+            %input.form-control(type='text' value='' name='MERGE1' placeholder='Berry')
+        .form-group
+          %label.col-xs-4.control-label(for='MERGE2') Last Name (optional)
+          .col-xs-8.col-md-4
+            %input.form-control(type='text' value='' name='MERGE2' placeholder='Cunning')
+        .form-group
+          %label.col-xs-4.control-label(for='MERGE0') Email (required)
+          .col-xs-8.col-md-4
+            %input.form-control(type='email' value='' name='MERGE0' placeholder='diy.workalot@example.com')
+        .form-group
+          %label.col-xs-4.control-label(for='EMAILTYPE') Preferred Format
+          .col-xs-8.col-md-4
+            %label.radio-inline
+              %input(type='radio' name='EMAILTYPE' value='html') HTML
+            %label.radio-inline
+              %input(type='radio' name='EMAILTYPE' value='text') TEXT
+        .form-group
+          -# This is for bot checking, they don't fill in this field
+          
+          %div(style="position: absolute; left: -5000px;" aria-hidden="true")
+            %input(type="text" name="b_c5f2672775054e0a1b3f98dac_4a9f6654cf" tabindex="-1" value="")
+          .col-xs-8.col-md-4.col-xs-offset-4
+            %input(type='hidden' name='u' value='c5f2672775054e0a1b3f98dac')
+            %input(type='hidden' name='id' value='4a9f6654cf')
+            %input.btn.btn-primary(type='submit' value='Subscribe' name='subscribe')
         
 
 - include('_map_footer.php')

@@ -233,62 +233,6 @@ to check if--and for how long--the space will be open by the time you arrive.
 <iframe src="https://www.google.com/calendar/embed?src=bjpkvaeg1rjq9u3c6utecq1jos%40group.calendar.google.com&amp;amp;ctz=America/Los_Angeles" style="border: 0" width="100%" height="650" frameborder="0" scrolling="no"></iframe>
 </div>
 <?php include '_pricing.php'; ?>
-<div id="join-newsletter" class="containment">
-<div class="container">
-<h1 class="text-center">Did you know?</h1>
-<h2 class="text-center">We have weekly newsletter that doesn't go out?</h2>
-<p class="text-center">
-Why doesn't it go out?
-<br>
-Well...because there's not a lot of people signed up...
-<br>
-Register now and we'll start planning updates for the newsletter
-<br>
-(once we have enough interested members)
-</p>
-<form class="form-horizontal" action="//maglaboratory.us12.list-manage.com/subscribe/post" method="post" target="_blank">
-<div class="form-group">
-<label <?php echo MtHaml\Runtime::renderAttributes(array(array('class', ('col-xs-4' . ' ' . 'control-label')), array('for', ('MERGE1'))), 'html5', 'UTF-8'); ?>>First Name (optional)</label>
-<div class="col-xs-8 col-md-4">
-<input <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-control'), array('type', ('text')), array('value', ('')), array('name', ('MERGE1')), array('placeholder', ('Berry'))), 'html5', 'UTF-8'); ?>>
-</div>
-</div>
-<div class="form-group">
-<label <?php echo MtHaml\Runtime::renderAttributes(array(array('class', ('col-xs-4' . ' ' . 'control-label')), array('for', ('MERGE2'))), 'html5', 'UTF-8'); ?>>Last Name (optional)</label>
-<div class="col-xs-8 col-md-4">
-<input <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-control'), array('type', ('text')), array('value', ('')), array('name', ('MERGE2')), array('placeholder', ('Cunning'))), 'html5', 'UTF-8'); ?>>
-</div>
-</div>
-<div class="form-group">
-<label <?php echo MtHaml\Runtime::renderAttributes(array(array('class', ('col-xs-4' . ' ' . 'control-label')), array('for', ('MERGE0'))), 'html5', 'UTF-8'); ?>>Email (required)</label>
-<div class="col-xs-8 col-md-4">
-<input <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-control'), array('type', ('email')), array('value', ('')), array('name', ('MERGE0')), array('placeholder', ('diy.workalot@example.com'))), 'html5', 'UTF-8'); ?>>
-</div>
-</div>
-<div class="form-group">
-<label <?php echo MtHaml\Runtime::renderAttributes(array(array('class', ('col-xs-4' . ' ' . 'control-label')), array('for', ('EMAILTYPE'))), 'html5', 'UTF-8'); ?>>Preferred Format</label>
-<div class="col-xs-8 col-md-4">
-<label class="radio-inline">
-<input <?php echo MtHaml\Runtime::renderAttributes(array(array('type', ('radio')), array('name', ('EMAILTYPE')), array('value', ('html'))), 'html5', 'UTF-8'); ?>>HTML</input>
-</label>
-<label class="radio-inline">
-<input <?php echo MtHaml\Runtime::renderAttributes(array(array('type', ('radio')), array('name', ('EMAILTYPE')), array('value', ('text'))), 'html5', 'UTF-8'); ?>>TEXT</input>
-</label>
-</div>
-</div>
-<div class="form-group">
-<div style="position: absolute; left: -5000px;" aria-hidden="true">
-<input type="text" name="b_c5f2672775054e0a1b3f98dac_4a9f6654cf" tabindex="-1" value="">
-</div>
-<div class="col-xs-8 col-md-4 col-xs-offset-4">
-<input <?php echo MtHaml\Runtime::renderAttributes(array(array('type', ('hidden')), array('name', ('u')), array('value', ('c5f2672775054e0a1b3f98dac'))), 'html5', 'UTF-8'); ?>>
-<input <?php echo MtHaml\Runtime::renderAttributes(array(array('type', ('hidden')), array('name', ('id')), array('value', ('4a9f6654cf'))), 'html5', 'UTF-8'); ?>>
-<input <?php echo MtHaml\Runtime::renderAttributes(array(array('class', ('btn' . ' ' . 'btn-primary')), array('type', ('submit')), array('value', ('Subscribe')), array('name', ('subscribe'))), 'html5', 'UTF-8'); ?>>
-</div>
-</div>
-</form>
-</div>
-</div>
 <?php include('_map_footer.php'); ?>
 
 <?php if(!isset($layout_no_footer)) { ?>
