@@ -1,0 +1,28 @@
+.containment
+  .container
+    .row
+      %h1 Jobs / Gigs / Postings
+      %a(href="/jobs/new") Add Entry
+      
+    - if(empty($listings) or $listings->num_rows == 0)
+      .row
+        No entries found.
+    - else
+      - while($listing = $listings->fetch_object())
+        .row
+          .container
+            .row
+              .col-sm-8.col-xs-12
+                Title
+              .col-sm-4.col-xs-12
+                Company
+            .row
+              .col-xs-12
+                Description
+            .row
+              .col-sm-8.col-xs-12
+                Location
+              .col-sm-4.col-xs-12
+                Pay
+                Actions
+    

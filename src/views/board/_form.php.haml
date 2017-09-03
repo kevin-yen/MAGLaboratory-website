@@ -1,0 +1,35 @@
+- if(!isset($form))
+  - $form = array();
+- if(!isset($formErrors))
+  - $formErrors = array();
+
+%form(action="/jobs" method="POST")
+  .form-group
+    %label(for="title") Title (required)
+    %input.form-control(type="text" name="title" value="#{$form['title']}")
+    - if($formErrors['title'])
+      %span.text-danger= $formErrors['title']
+  .form-group
+    %label(for="company") Company / Person (required)
+    %input.form-control(type="text" name="company" value="#{$form['company']}")
+    - if($formErrors['company'])
+      %span.text-danger= $formErrors['company']
+  .form-group
+    %label(for="location") Location
+    %input.form-control(type="text" name="location" value="#{$form['location']}")
+  .form-group
+    %label(for="pay") Pay
+    %input.form-control(type="text" name="pay" value="#{$form['pay']}")
+  .form-group
+    %label(for="end_date") End Date (MM/DD/YYYY)
+    %input.form-control(type="date" name="end_date" value="#{$form['end_date']}")
+    - if($formErrors['end_date'])
+      %span.text-danger= $formErrors['end_date']
+  .form-group
+    %label(for="description") Description (required)
+    - if($formErrors['description'])
+      %span.text-danger= $formErrors['description']
+    %textarea.form-control(name="description" rows=10)
+      = $form['description']
+  .form-group
+    %button.btn.btn-primary(name="Create") Create

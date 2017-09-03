@@ -9,6 +9,7 @@ final class Maria {
     static $inst = null;
     if ($inst === null) {
       $inst = new Maria();
+      $inst->connection();
     }
     return $inst;
   }
@@ -34,25 +35,32 @@ final class Maria {
   }
   
   function mysqli_or_die(){
-    $mysqli = $this->get_mysqli();
+    $mysqli = $this->connection();
     if($mysqli){ return $mysqli; }
     else { die('unable to connect to database'); }
   }
   
-  function mysqli_prepare($query){
+  function prepare($query){
     $mysqli = $this->mysqli_or_die();
     $stmt = $mysqli->prepare($query);
     
     if($stmt){ return $stmt; } else { die("Can't prepare this query."); }
   }
+  
+  function findAll($query, $error = false){
+    $mysqli = $this->mysqli_or_die();
+    $res = $mysqli->query($query);
+    if(!$res){ return $error; }
+    else { return $res; }
+  }
 
-  function mysqli_results($stmt, $kind = MYSQLI_ASSOC){
+  function results($stmt, $kind = MYSQLI_ASSOC){
     $stmt->execute();
     $result = $stmt->get_result();
     return $result->fetch_all($kind);
   }
   
-  function mysqli_result($stmt, $kind = MYSQLI_ASSOC){
+  function result($stmt, $kind = MYSQLI_ASSOC){
     $stmt->execute();
     $result = $stmt->get_result();
     return $result->fetch_array($kind);

@@ -24,12 +24,15 @@ RewriteRule ^/?wiki(/.*)?$ %{DOCUMENT_ROOT}/w/index.php [L]
 
 RewriteCond %{HTTP_HOST} !^preview\.maglaboratory\.org$ [NC]
 RewriteCond %{HTTP_HOST} !^maglab\.sj$ [NC]
-RewriteRule . - [S=2]
+RewriteRule . - [S=3]
 # if development or preview {
 RewriteRule ^/?hal /HalApp.php [L]
+RewriteRule ^/?jobs /JobBoardApp.php [L]
 RewriteRule ^(.*)?$ /MainApp.php [L]
 # }
 
+
+RewriteRule ^/?jobs /JobBoardApp.php [L]
 
 RewriteRule ^(.*)?$ /MainApp.php [L]
 Options All -Indexes
