@@ -1,3 +1,7 @@
-!echo "Commit: b0cab16f3b3c334ad9228f0e5196b46c38a471b6 458ba4eaa8e121b4e6991fcbd0625f085a67de52"
+!echo "Commit: 458ba4eaa8e121b4e6991fcbd0625f085a67de52 b345635e27255439ba220d937204407805eb49ff"
+put 'protected/maglab/app/controllers/JobBoard/Listing.php' 'protected/maglab/app/controllers/JobBoard/Listing.php'
+put 'protected/maglab/app/views/board/_form.php' 'protected/maglab/app/views/board/_form.php'
 put 'protected/maglab/app/views/board/index.php' 'protected/maglab/app/views/board/index.php'
+put 'protected/maglab/app/views/board/show.php' 'protected/maglab/app/views/board/show.php'
+put 'protected/maglab/app/views/emails/job_board.php' 'protected/maglab/app/views/emails/job_board.php'
 put '/home/httpd/maglabs-www/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
