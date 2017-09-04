@@ -1,0 +1,10 @@
+%h1 Your Job Board Posting
+
+%p
+  Here's the link to edit your job board posting. Don't share it with anyone unless you want them to be able to edit and delete the posting.
+
+%p
+  %a(href="#{ROOT_URL}/jobs/#{$listing['id']}/edit/#{$listing['edit_code']}")= "#{ROOT_URL}/jobs/#{$listing['id']}/edit/#{$listing['edit_code']}"
+
+%p
+  Thanks for making the posting!
