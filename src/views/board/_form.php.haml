@@ -3,7 +3,7 @@
 - if(!isset($formErrors))
   - $formErrors = array();
 
-%form(action="/jobs" method="POST")
+%form(action="#{$form['id'] ? "/jobs/{$form['id']}/edit/{$form['edit_code']}" : "/jobs"}" method="POST")
   .form-group
     %label(for="title") Title (required)
     %input.form-control(type="text" name="title" value="#{$form['title']}")
@@ -27,9 +27,15 @@
       %span.text-danger= $formErrors['end_date']
   .form-group
     %label(for="description") Description (required)
+    %small.form-text You can use markdown (like on reddit) to style.
     - if($formErrors['description'])
       %span.text-danger= $formErrors['description']
     %textarea.form-control(name="description" rows=10)
       = $form['description']
+  .form-group
+    %label(for="owner") Owner (your email, required if you want to edit this posting later)
+    %input.form-control(type="email" name="owner" value="#{$form['owner']}")
+    - if($formErrors['owner'])
+      %span.text-danger= $formErrors['owner']
   .form-group
     %button.btn.btn-primary(name="Create") Create

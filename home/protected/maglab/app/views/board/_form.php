@@ -4,7 +4,7 @@
 <?php if(!isset($formErrors)) { ?>
 <?php $formErrors = array(); ?>
 <?php } ?>
-<form action="/jobs" method="POST">
+<form <?php echo MtHaml\Runtime::renderAttributes(array(array('action', ($form['id'] ? "/jobs/{$form['id']}/edit/{$form['edit_code']}" : "/jobs")), array('method', 'POST')), 'html5', 'UTF-8'); ?>>
 <div class="form-group">
 <label for="title">Title (required)</label>
 <input <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-control'), array('type', 'text'), array('name', 'title'), array('value', ($form['title']))), 'html5', 'UTF-8'); ?>>
@@ -36,12 +36,20 @@
 </div>
 <div class="form-group">
 <label for="description">Description (required)</label>
+<small class="form-text">You can use markdown (like on reddit) to style.</small>
 <?php if($formErrors['description']) { ?>
 <span class="text-danger"><?php echo htmlspecialchars($formErrors['description'],ENT_QUOTES,'UTF-8'); ?></span>
 <?php } ?>
 <textarea <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-control'), array('name', 'description'), array('rows', 10)), 'html5', 'UTF-8'); ?>>
 <?php echo htmlspecialchars($form['description'],ENT_QUOTES,'UTF-8'); ?>
 </textarea>
+</div>
+<div class="form-group">
+<label for="owner">Owner (your email, required if you want to edit this posting later)</label>
+<input <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-control'), array('type', 'email'), array('name', 'owner'), array('value', ($form['owner']))), 'html5', 'UTF-8'); ?>>
+<?php if($formErrors['owner']) { ?>
+<span class="text-danger"><?php echo htmlspecialchars($formErrors['owner'],ENT_QUOTES,'UTF-8'); ?></span>
+<?php } ?>
 </div>
 <div class="form-group">
 <button class="btn btn-primary" name="Create">Create</button>

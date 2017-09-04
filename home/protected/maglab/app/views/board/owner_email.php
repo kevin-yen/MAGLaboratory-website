@@ -137,58 +137,7 @@ Menu
 </ul>
 </div>
 </div>
-<div class="containment">
-<div class="container">
-<div class="row">
-<h1>Jobs / Gigs / Postings</h1>
-<a href="/jobs/new">Add Entry</a>
-<?php raise($listings); ?>
-</div>
-<?php if(empty($listings) or $listings->num_rows == 0) { ?>
-<div class="row">
-No entries found.
-</div>
-<?php } else { ?>
-<?php $Parsedown = new Parsedown(); ?>
-<?php while($listing = $listings->fetch_object()) { ?>
-<?php var_dump($listing); ?>
-<div class="row">
-<div class="container">
-<div class="row">
-<div class="col-sm-8 col-xs-12">
-<strong><?php echo htmlspecialchars($listing->title,ENT_QUOTES,'UTF-8'); ?></strong>
-<?php if(!empty($listing->more_info_link)) { ?>
-<?php $more_info = filter_var($listing->more_info_link, FILTER_SANITIZE_URL); ?>
-<?php if($more_info) { ?>
-<a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ($listing->more_info_link))), 'html5', 'UTF-8'); ?>>more info</a>
-<?php } ?>
-<?php } ?>
-</div>
-<div class="col-sm-4 col-xs-12">
-<?php echo htmlspecialchars($listing->company,ENT_QUOTES,'UTF-8'); ?>
-</div>
-</div>
-<div class="row">
-<div class="col-xs-12">
-<?php if(!empty($listing->description)) { ?>
-<?php echo $purifier->purify($Parsedown->text($listing->description)); ?>
-<?php } ?>
-</div>
-</div>
-<div class="row">
-<div class="col-sm-8 col-xs-12">
-<?php echo htmlspecialchars($listing->location,ENT_QUOTES,'UTF-8'); ?>
-</div>
-<div class="col-sm-4 col-xs-12">
-<?php echo htmlspecialchars($listing->pay,ENT_QUOTES,'UTF-8'); ?>
-</div>
-</div>
-</div>
-</div>
-<?php } ?>
-<?php } ?>
-</div>
-</div>
+<h1>Hi!</h1>
 
 <?php if(!isset($layout_no_footer)) { ?>
 <div id="footer" class="containment">

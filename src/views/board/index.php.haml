@@ -4,25 +4,34 @@
       %h1 Jobs / Gigs / Postings
       %a(href="/jobs/new") Add Entry
       
+      - raise($listings)
     - if(empty($listings) or $listings->num_rows == 0)
       .row
         No entries found.
     - else
+      - $Parsedown = new Parsedown();
       - while($listing = $listings->fetch_object())
+        - var_dump($listing)
+        
         .row
           .container
             .row
               .col-sm-8.col-xs-12
-                Title
+                %strong= $listing->title
+                - if(!empty($listing->more_info_link))
+                  - $more_info = filter_var($listing->more_info_link, FILTER_SANITIZE_URL);
+                  - if($more_info)
+                    %a(href="#{$listing->more_info_link}") more info
               .col-sm-4.col-xs-12
-                Company
+                = $listing->company
             .row
               .col-xs-12
-                Description
+                - if(!empty($listing->description))
+                  != $purifier->purify($Parsedown->text($listing->description))
             .row
               .col-sm-8.col-xs-12
-                Location
+                = $listing->location
               .col-sm-4.col-xs-12
-                Pay
-                Actions
+                = $listing->pay
+                
     

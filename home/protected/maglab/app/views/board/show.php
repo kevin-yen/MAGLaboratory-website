@@ -137,6 +137,38 @@ Menu
 </ul>
 </div>
 </div>
+<div class="containment">
+<div class="container">
+<?php if(!$listing) { ?>
+<div class="row">
+<h1 class="text-danger">This listing no longer exists</h1>
+</div>
+<?php } else { ?>
+<div class="row">
+<h1><?php echo htmlspecialchars($listing->title,ENT_QUOTES,'UTF-8'); ?></h1>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-6"><?php echo htmlspecialchars($listing->company,ENT_QUOTES,'UTF-8'); ?></div>
+<div class="col-xs-12 col-sm-6"><?php echo htmlspecialchars($listing->location,ENT_QUOTES,'UTF-8'); ?></div>
+</div>
+<div class="row">
+<div class="col-xs-12 col-sm-6"><?php echo htmlspecialchars($listing->pay,ENT_QUOTES,'UTF-8'); ?></div>
+<div class="col-xs-12 col-sm-6">
+<?php if(!empty($listing->more_info_link)) { ?>
+<?php $more_info = filter_var($listing->more_info_link, FILTER_SANITIZE_URL); ?>
+<?php if($more_info) { ?>
+<a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ($listing->more_info_link))), 'html5', 'UTF-8'); ?>>more info</a>
+<?php } ?>
+<?php } ?>
+</div>
+</div>
+<div class="row">
+<?php $Parsedown = new Parsedown(); ?>
+<?php echo $purifier->purify($Parsedown->text($listing->description)); ?>
+</div>
+<?php } ?>
+</div>
+</div>
 
 <?php if(!isset($layout_no_footer)) { ?>
 <div id="footer" class="containment">

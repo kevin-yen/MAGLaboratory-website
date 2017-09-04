@@ -63,7 +63,11 @@ final class Maria {
   function result($stmt, $kind = MYSQLI_ASSOC){
     $stmt->execute();
     $result = $stmt->get_result();
-    return $result->fetch_array($kind);
+    if($kind == 0){
+      return $result->fetch_object();
+    } else {
+      return $result->fetch_array($kind);
+    }
   }
 
 }

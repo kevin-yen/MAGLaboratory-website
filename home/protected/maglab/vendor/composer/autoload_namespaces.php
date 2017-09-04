@@ -8,6 +8,7 @@ $baseDir = dirname($vendorDir);
 return array(
     'Pimple' => array($vendorDir . '/pimple/pimple/src'),
     'PayPal' => array($vendorDir . '/paypal/rest-api-sdk-php/lib'),
+    'Parsedown' => array($vendorDir . '/erusev/parsedown'),
     'HTMLPurifier' => array($vendorDir . '/ezyang/htmlpurifier/library'),
     '' => array($vendorDir . '/morris/lessql/src'),
 );

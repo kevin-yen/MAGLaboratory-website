@@ -1,0 +1,22 @@
+.containment
+  .container
+    - if(!$listing)
+      .row
+        %h1.text-danger This listing no longer exists
+    - else
+      .row
+        %h1= $listing->title
+      .row
+        .col-xs-12.col-sm-6= $listing->company
+        .col-xs-12.col-sm-6= $listing->location
+      .row
+        .col-xs-12.col-sm-6= $listing->pay
+        .col-xs-12.col-sm-6
+          - if(!empty($listing->more_info_link))
+            - $more_info = filter_var($listing->more_info_link, FILTER_SANITIZE_URL);
+            - if($more_info)
+              %a(href="#{$listing->more_info_link}") more info
+      .row
+        - $Parsedown = new Parsedown();
+        != $purifier->purify($Parsedown->text($listing->description))
+        

@@ -15,10 +15,24 @@ class Base {
   }
 
   function init(){}
+  
+  function getRenderer(){
+    if(!$this->phpRenderer){ $this->phpRenderer = new \Slim\Views\PhpRenderer(__DIR__ . "/../views/"); }
+    return $this->phpRenderer;
+  }
 
   public function render($res, $template, $title, $data = []){
-    if(!$this->phpRenderer){ $this->phpRenderer = new \Slim\Views\PhpRenderer(__DIR__ . "/../views/"); }
-    return $this->phpRenderer->render($res, $template,
+    return $this->getRenderer()->render($res, $template,
+      array_merge(
+        array('title' => $title),
+        $this->respond,
+        $data
+      )
+    );
+  }
+  
+  public function renderToString($template, $title, $data = []){
+    return $this->getRenderer()->fetch($template,
       array_merge(
         array('title' => $title),
         $this->respond,
@@ -34,7 +48,7 @@ class Base {
     return $res;
   }
   
-  public function email_html($to, $subject, $html){
+  public function emailHtml($to, $subject, $html){
     $headers  = 'MIME-Version: 1.0' . "\r\n";
     $headers .= 'Content-type: text/html; charset=UTF-8' . "\r\n";
     $headers .= 'From: MAGLaboratory.org <website@maglaboratory.org>' . "\r\n";
