@@ -137,6 +137,12 @@ Menu
 </ul>
 </div>
 </div>
+<div class="containment">
+<div class="container">
+<h1>Editing <?php echo htmlspecialchars($listing->title,ENT_QUOTES,'UTF-8'); ?></h1>
+<?php include("_form.php"); ?>
+</div>
+</div>
 
 <?php if(!isset($layout_no_footer)) { ?>
 <div id="footer" class="containment">

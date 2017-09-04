@@ -52,6 +52,37 @@
 <?php } ?>
 </div>
 <div class="form-group">
+<?php if($form['id']) { ?>
+<input type="hidden" name="_METHOD" value="PUT">
+<button class="btn btn-primary" name="Update">Update</button>
+<?php } else { ?>
 <button class="btn btn-primary" name="Create">Create</button>
+<?php } ?>
 </div>
 </form>
+<?php if($form['id']) { ?>
+<div class="row">
+Click the button below to delete this posting. This can not be undone!
+</div>
+<form action="/jobs/{$form[&#039;id&#039;]}/edit/{$form[&#039;edit_code&#039;]}" method="POST">
+<div class="form-group">
+<input type="hidden" name="_METHOD" value="DELETE">
+<button class="btn btn-danger" id="delete-posting" name="Delete">Delete this Posting</button>
+</div>
+</form>
+<script type="text/javascript">
+//<![CDATA[
+$(function(){
+  $('#delete-posting').click(function(e){
+    if(confirm("Are you sure you want to delete this?")){
+      return true;
+    } else {
+      e.preventDefault();
+      return false;
+    }
+  });
+});
+
+//]]>
+</script>
+<?php } ?>

@@ -14,17 +14,17 @@ class Listing extends PurifierBase {
     $this->app->get('/jobs/{id}', [$this, 'show'])
       ->add([$this, 'getListing']);
     $this->app->get('/jobs/{id}/edit/{edit_code}', [$this, 'edit'])
-      ->add([$this, 'getListing'])
-      ->add([$this, 'editCheck']);
+      ->add([$this, 'editCheck'])
+      ->add([$this, 'getListing']);
     $this->app->put('/jobs/{id}/edit/{edit_code}', [$this, 'update'])
-      ->add([$this, 'getListing'])
-      ->add([$this, 'editCheck']);
+      ->add([$this, 'editCheck'])
+      ->add([$this, 'getListing']);
     $this->app->delete('/jobs/{id}/edit/{edit_code}', [$this, 'destroy'])
-      ->add([$this, 'getListing'])
-      ->add([$this, 'editCheck']);
+      ->add([$this, 'editCheck'])
+      ->add([$this, 'getListing']);
     $this->app->get('/jobs/{id}/test/{edit_code}', [$this, 'test'])
-      ->add([$this, 'getListing'])
-      ->add([$this, 'editCheck']);
+      ->add([$this, 'editCheck'])
+      ->add([$this, 'getListing']);
   }
   
   function index($req, $res){
@@ -88,15 +88,54 @@ class Listing extends PurifierBase {
   }
   
   function edit($req, $res){
-    if($req->getAttribute('editCheck')){
-      return $this->render($res, 'board/edit.php', 'Edit Job Listing', array());
-    } else {
-      return $this->render($res, 'board/noEdit.php', 'Unauthorized', array());
-    }
+    $listing = $req->getAttribute('listing');
+    return $this->render($res, 'board/edit.php', 'Edit Job Listing', array(
+      'form' => (array)$listing
+    ));
   }
   
   function update($req, $res){
-  
+    $form = $req->getParsedBody();
+    $formErrors = array();
+    $listing = $req->getAttribute('listing');
+    $listing_id = $listing->id;
+    $updated = false;
+    
+    $this->formCheck($form, $formErrors);
+
+    if(empty($formErrors)){
+      $stmt = $this->db->prepare("UPDATE `jobs_board` "
+        . "SET `end_date` = FROM_UNIXTIME(?), `title` = ?, `company` = ?, `location` = ?, "
+        . "`pay` = ?, `description` = ?, `more_info_link` = ?, `owner` = ? "
+        . "WHERE id = ? LIMIT 1");
+
+      $stmt->bind_param('isssssssi',
+        $form['end_date_i'],
+        $form['title'],
+        $form['company'],
+        $form['location'],
+        $form['pay'],
+        $form['description'],
+        $form['more_info_link'],
+        $form['owner'],
+        $listing_id);
+      if($stmt->execute() and $stmt->affected_rows > 0){
+        $updated = true;
+      }
+    }
+    
+    if($updated){
+      return $this->redirect($res, "/jobs/{$listing_id}");
+      #return $this->render($res, 'board/edit.php', 'Edit Job Listing', array(
+      #  'form' => $form,
+      #  'successfulCreate' => true
+      #));
+    } else {
+      return $this->render($res, 'board/edit.php', 'Edit Job Listing', array(
+        'form' => $form,
+        'formErrors' => $formErrors
+      ));
+    }
   }
   
   function show($req, $res, $args){
@@ -125,8 +164,19 @@ class Listing extends PurifierBase {
   
   function editCheck($req, $res, $next){
     $edit_code = $req->getAttribute('route')->getArgument('edit_code');
-    $request = $req->withAttribute('editCheck', false);
-    $response = $next($request, $res);
+    $listing = $req->getAttribute('listing');
+    $editCheck = false;
+    
+    if($listing and !empty($listing->edit_code)){
+      $editCheck = ($listing->edit_code == $edit_code);
+    }
+    
+    if($editCheck){
+      $response = $next($req, $res);
+    } else {
+      $response = $this->render($res, 'board/noEdit.php', 'Unauthorized');
+    }
+    
     return $response;
   }
   
