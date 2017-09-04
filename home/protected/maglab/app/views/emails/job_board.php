@@ -21,6 +21,16 @@
 <?php } ?>
 <tr>
 <td>
+<h1>Your Job Board Posting</h1>
+<p>
+Here's the link to edit your job board posting. Don't share it with anyone unless you want them to be able to edit and delete the posting.
+</p>
+<p>
+<a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', (ROOT_URL . '/jobs/' . ($listing['id']) . '/edit/' . ($listing['edit_code'])))), 'html5', 'UTF-8'); ?>><?php echo htmlspecialchars("#{ROOT_URL}/jobs/#{$listing['id']}/edit/#{$listing['edit_code']}",ENT_QUOTES,'UTF-8'); ?></a>
+</p>
+<p>
+Thanks for making the posting!
+</p>
 
 </td>
 </tr>

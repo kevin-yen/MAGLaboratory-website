@@ -15,7 +15,7 @@
           - if(!empty($listing->more_info_link))
             - $more_info = filter_var($listing->more_info_link, FILTER_SANITIZE_URL);
             - if($more_info)
-              %a(href="#{$listing->more_info_link}") more info
+              %a(href="#{$listing->more_info_link}" target="_blank") more info / apply
       .row
         - $Parsedown = new Parsedown();
         != $purifier->purify($Parsedown->text($listing->description))

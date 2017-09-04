@@ -5,14 +5,14 @@
 <?php $formErrors = array(); ?>
 <?php } ?>
 <form <?php echo MtHaml\Runtime::renderAttributes(array(array('action', ($form['id'] ? "/jobs/{$form['id']}/edit/{$form['edit_code']}" : "/jobs")), array('method', 'POST')), 'html5', 'UTF-8'); ?>>
-<div class="form-group">
+<div <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-group'), array('class', ($formErrors['title'] ? 'has-danger bg-danger' : ''))), 'html5', 'UTF-8'); ?>>
 <label for="title">Title (required)</label>
 <input <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-control'), array('type', 'text'), array('name', 'title'), array('value', ($form['title']))), 'html5', 'UTF-8'); ?>>
 <?php if($formErrors['title']) { ?>
 <span class="text-danger"><?php echo htmlspecialchars($formErrors['title'],ENT_QUOTES,'UTF-8'); ?></span>
 <?php } ?>
 </div>
-<div class="form-group">
+<div <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-group'), array('class', ($formErrors['company'] ? 'has-danger bg-danger' : ''))), 'html5', 'UTF-8'); ?>>
 <label for="company">Company / Person (required)</label>
 <input <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-control'), array('type', 'text'), array('name', 'company'), array('value', ($form['company']))), 'html5', 'UTF-8'); ?>>
 <?php if($formErrors['company']) { ?>
@@ -27,24 +27,31 @@
 <label for="pay">Pay</label>
 <input <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-control'), array('type', 'text'), array('name', 'pay'), array('value', ($form['pay']))), 'html5', 'UTF-8'); ?>>
 </div>
-<div class="form-group">
+<div <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-group'), array('class', ($formErrors['end_date'] ? 'has-danger bg-danger' : ''))), 'html5', 'UTF-8'); ?>>
 <label for="end_date">End Date (MM/DD/YYYY)</label>
 <input <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-control'), array('type', 'date'), array('name', 'end_date'), array('value', ($form['end_date']))), 'html5', 'UTF-8'); ?>>
 <?php if($formErrors['end_date']) { ?>
 <span class="text-danger"><?php echo htmlspecialchars($formErrors['end_date'],ENT_QUOTES,'UTF-8'); ?></span>
 <?php } ?>
 </div>
-<div class="form-group">
+<div <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-group'), array('class', ($formErrors['description'] ? 'has-danger bg-danger' : ''))), 'html5', 'UTF-8'); ?>>
 <label for="description">Description (required)</label>
 <small class="form-text">You can use markdown (like on reddit) to style.</small>
-<?php if($formErrors['description']) { ?>
-<span class="text-danger"><?php echo htmlspecialchars($formErrors['description'],ENT_QUOTES,'UTF-8'); ?></span>
-<?php } ?>
 <textarea <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-control'), array('name', 'description'), array('rows', 10)), 'html5', 'UTF-8'); ?>>
 <?php echo htmlspecialchars($form['description'],ENT_QUOTES,'UTF-8'); ?>
 </textarea>
+<?php if($formErrors['description']) { ?>
+<span class="text-danger"><?php echo htmlspecialchars($formErrors['description'],ENT_QUOTES,'UTF-8'); ?></span>
+<?php } ?>
 </div>
-<div class="form-group">
+<div <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-group'), array('class', ($formErrors['more_info_link'] ? 'has-danger bg-danger' : ''))), 'html5', 'UTF-8'); ?>>
+<label for="more_info_link">More Info / Apply page (URL, must be http or https)</label>
+<input <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-control'), array('type', 'url'), array('name', 'more_info_link'), array('value', ($form['more_info_link']))), 'html5', 'UTF-8'); ?>>
+<?php if($formErrors['more_info_link']) { ?>
+<span class="text-danger"><?php echo htmlspecialchars($formErrors['more_info_link'],ENT_QUOTES,'UTF-8'); ?></span>
+<?php } ?>
+</div>
+<div <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-group'), array('class', ($formErrors['owner'] ? 'has-danger bg-danger' : ''))), 'html5', 'UTF-8'); ?>>
 <label for="owner">Owner (your email, required if you want to edit this posting later)</label>
 <input <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-control'), array('type', 'email'), array('name', 'owner'), array('value', ($form['owner']))), 'html5', 'UTF-8'); ?>>
 <?php if($formErrors['owner']) { ?>

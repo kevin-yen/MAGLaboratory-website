@@ -4,12 +4,12 @@
   - $formErrors = array();
 
 %form(action="#{$form['id'] ? "/jobs/{$form['id']}/edit/{$form['edit_code']}" : "/jobs"}" method="POST")
-  .form-group
+  .form-group(class="#{$formErrors['title'] ? 'has-danger bg-danger' : ''}")
     %label(for="title") Title (required)
     %input.form-control(type="text" name="title" value="#{$form['title']}")
     - if($formErrors['title'])
       %span.text-danger= $formErrors['title']
-  .form-group
+  .form-group(class="#{$formErrors['company'] ? 'has-danger bg-danger' : ''}")
     %label(for="company") Company / Person (required)
     %input.form-control(type="text" name="company" value="#{$form['company']}")
     - if($formErrors['company'])
@@ -20,19 +20,24 @@
   .form-group
     %label(for="pay") Pay
     %input.form-control(type="text" name="pay" value="#{$form['pay']}")
-  .form-group
+  .form-group(class="#{$formErrors['end_date'] ? 'has-danger bg-danger' : ''}")
     %label(for="end_date") End Date (MM/DD/YYYY)
     %input.form-control(type="date" name="end_date" value="#{$form['end_date']}")
     - if($formErrors['end_date'])
       %span.text-danger= $formErrors['end_date']
-  .form-group
+  .form-group(class="#{$formErrors['description'] ? 'has-danger bg-danger' : ''}")
     %label(for="description") Description (required)
     %small.form-text You can use markdown (like on reddit) to style.
-    - if($formErrors['description'])
-      %span.text-danger= $formErrors['description']
     %textarea.form-control(name="description" rows=10)
       = $form['description']
-  .form-group
+    - if($formErrors['description'])
+      %span.text-danger= $formErrors['description']
+  .form-group(class="#{$formErrors['more_info_link'] ? 'has-danger bg-danger' : ''}")
+    %label(for="more_info_link") More Info / Apply page (URL, must be http or https)
+    %input.form-control(type="url" name="more_info_link" value="#{$form['more_info_link']}")
+    - if($formErrors['more_info_link'])
+      %span.text-danger= $formErrors['more_info_link']
+  .form-group(class="#{$formErrors['owner'] ? 'has-danger bg-danger' : ''}")
     %label(for="owner") Owner (your email, required if you want to edit this posting later)
     %input.form-control(type="email" name="owner" value="#{$form['owner']}")
     - if($formErrors['owner'])

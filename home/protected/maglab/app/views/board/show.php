@@ -157,7 +157,7 @@ Menu
 <?php if(!empty($listing->more_info_link)) { ?>
 <?php $more_info = filter_var($listing->more_info_link, FILTER_SANITIZE_URL); ?>
 <?php if($more_info) { ?>
-<a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ($listing->more_info_link))), 'html5', 'UTF-8'); ?>>more info</a>
+<a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ($listing->more_info_link)), array('target', '_blank')), 'html5', 'UTF-8'); ?>>more info / apply</a>
 <?php } ?>
 <?php } ?>
 </div>

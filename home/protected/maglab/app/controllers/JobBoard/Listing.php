@@ -212,6 +212,15 @@ class Listing extends PurifierBase {
         $formErrors['owner'] = 'This is not a valid email address.';
       }
     }
+    if(!empty($form['more_info_link'])){
+      if(!filter_var($form['more_info_link'], FILTER_VALIDATE_URL)){
+        $formErrors['more_info_link'] = 'This is not a valid link.';
+      }
+      $scheme = explode("://", $form['more_info_link'])[0];
+      if($scheme != "http" and $scheme != "https"){
+        $formErrors['more_info_link'] = 'This is not a valid link.';
+      }
+    }
   }
   
   protected function generateEditCode() { 
