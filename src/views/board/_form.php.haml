@@ -47,7 +47,7 @@
 - if($form['id'])
   .row
     Click the button below to delete this posting. This can not be undone!
-  %form(action="/jobs/{$form['id']}/edit/{$form['edit_code']}" method="POST")
+  %form(action="/jobs/#{$form['id']}/edit/#{$form['edit_code']}" method="POST")
     .form-group
       %input(type="hidden" name="_METHOD" value="DELETE")
       %button.btn.btn-danger#delete-posting(name="Delete") Delete this Posting

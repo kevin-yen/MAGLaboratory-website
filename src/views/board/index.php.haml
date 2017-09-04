@@ -4,14 +4,12 @@
       %h1 Jobs / Gigs / Postings
       %a(href="/jobs/new") Add Entry
       
-      - raise($listings)
     - if(empty($listings) or $listings->num_rows == 0)
       .row
         No entries found.
     - else
       - $Parsedown = new Parsedown();
       - while($listing = $listings->fetch_object())
-        - var_dump($listing)
         
         .row
           .container

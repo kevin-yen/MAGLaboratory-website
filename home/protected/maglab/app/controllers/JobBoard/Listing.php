@@ -146,6 +146,17 @@ class Listing extends PurifierBase {
   }
   
   function destroy($req, $res){
+    $listing = $req->getAttribute('listing');
+    
+    $stmt = $this->db->prepare("DELETE FROM `jobs_board` WHERE id = ? LIMIT 1");
+    $stmt->bind_param('i', $listing->id);
+    if($stmt->execute() and $stmt->affected_rows > 0){
+      return $this->redirect($res, "/jobs");
+    } else {
+      return $this->render($res, 'board/edit.php', 'Edit Job Listing', array(
+        'form' => (array)$listing
+      ));
+    }
     
   }
   

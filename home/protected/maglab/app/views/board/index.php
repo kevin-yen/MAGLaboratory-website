@@ -142,7 +142,6 @@ Menu
 <div class="row">
 <h1>Jobs / Gigs / Postings</h1>
 <a href="/jobs/new">Add Entry</a>
-<?php raise($listings); ?>
 </div>
 <?php if(empty($listings) or $listings->num_rows == 0) { ?>
 <div class="row">
@@ -151,7 +150,6 @@ No entries found.
 <?php } else { ?>
 <?php $Parsedown = new Parsedown(); ?>
 <?php while($listing = $listings->fetch_object()) { ?>
-<?php var_dump($listing); ?>
 <div class="row">
 <div class="container">
 <div class="row">

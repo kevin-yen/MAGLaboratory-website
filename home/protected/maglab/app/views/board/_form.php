@@ -64,7 +64,7 @@
 <div class="row">
 Click the button below to delete this posting. This can not be undone!
 </div>
-<form action="/jobs/{$form[&#039;id&#039;]}/edit/{$form[&#039;edit_code&#039;]}" method="POST">
+<form <?php echo MtHaml\Runtime::renderAttributes(array(array('action', ('/jobs/' . ($form['id']) . '/edit/' . ($form['edit_code']))), array('method', 'POST')), 'html5', 'UTF-8'); ?>>
 <div class="form-group">
 <input type="hidden" name="_METHOD" value="DELETE">
 <button class="btn btn-danger" id="delete-posting" name="Delete">Delete this Posting</button>
