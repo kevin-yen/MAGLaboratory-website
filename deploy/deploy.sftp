@@ -1,38 +1,3 @@
-!echo "Commit: 241a5f477f6090893f768151e11ee1e4e9753445 b0cab16f3b3c334ad9228f0e5196b46c38a471b6"
-mkdir protected/maglab/app/controllers/JobBoard
-mkdir protected/maglab/app/views/board
-mkdir protected/maglab/app/views/emails
-mkdir protected/maglab/vendor/erusev
-mkdir protected/maglab/vendor/erusev/parsedown
-put 'protected/maglab/app/controllers/Base.php' 'protected/maglab/app/controllers/Base.php'
-put 'protected/maglab/app/controllers/JobBoard/Listing.php' 'protected/maglab/app/controllers/JobBoard/Listing.php'
-put 'protected/maglab/app/controllers/PurifierBase.php' 'protected/maglab/app/controllers/PurifierBase.php'
-put 'protected/maglab/app/job_board.php' 'protected/maglab/app/job_board.php'
-put 'protected/maglab/app/models/Maria.php' 'protected/maglab/app/models/Maria.php'
-put 'protected/maglab/app/views/board/Untitled File' 'protected/maglab/app/views/board/Untitled File'
-put 'protected/maglab/app/views/board/_form.php' 'protected/maglab/app/views/board/_form.php'
-put 'protected/maglab/app/views/board/add.php' 'protected/maglab/app/views/board/add.php'
-put 'protected/maglab/app/views/board/edit.php' 'protected/maglab/app/views/board/edit.php'
+!echo "Commit: b0cab16f3b3c334ad9228f0e5196b46c38a471b6 458ba4eaa8e121b4e6991fcbd0625f085a67de52"
 put 'protected/maglab/app/views/board/index.php' 'protected/maglab/app/views/board/index.php'
-put 'protected/maglab/app/views/board/noEdit.php' 'protected/maglab/app/views/board/noEdit.php'
-put 'protected/maglab/app/views/board/owner_email.php' 'protected/maglab/app/views/board/owner_email.php'
-put 'protected/maglab/app/views/board/show.php' 'protected/maglab/app/views/board/show.php'
-put 'protected/maglab/app/views/emails/Untitled File' 'protected/maglab/app/views/emails/Untitled File'
-put 'protected/maglab/app/views/emails/job_board.php' 'protected/maglab/app/views/emails/job_board.php'
-put 'protected/maglab/app/views/main/class_deposit.php' 'protected/maglab/app/views/main/class_deposit.php'
-put 'protected/maglab/app/views/main/donate.php' 'protected/maglab/app/views/main/donate.php'
-put 'protected/maglab/app/views/main/homepage.php' 'protected/maglab/app/views/main/homepage.php'
-put 'protected/maglab/app/views/main/membership.php' 'protected/maglab/app/views/main/membership.php'
-put 'protected/maglab/app/views/main/pay4keyed.php' 'protected/maglab/app/views/main/pay4keyed.php'
-put 'protected/maglab/composer.json' 'protected/maglab/composer.json'
-put 'protected/maglab/composer.lock' 'protected/maglab/composer.lock'
-put 'protected/maglab/vendor/composer/autoload_namespaces.php' 'protected/maglab/vendor/composer/autoload_namespaces.php'
-put 'protected/maglab/vendor/composer/autoload_static.php' 'protected/maglab/vendor/composer/autoload_static.php'
-put 'protected/maglab/vendor/composer/installed.json' 'protected/maglab/vendor/composer/installed.json'
-put 'protected/maglab/vendor/erusev/parsedown/LICENSE.txt' 'protected/maglab/vendor/erusev/parsedown/LICENSE.txt'
-put 'protected/maglab/vendor/erusev/parsedown/Parsedown.php' 'protected/maglab/vendor/erusev/parsedown/Parsedown.php'
-put 'protected/maglab/vendor/erusev/parsedown/README.md' 'protected/maglab/vendor/erusev/parsedown/README.md'
-put 'protected/maglab/vendor/erusev/parsedown/composer.json' 'protected/maglab/vendor/erusev/parsedown/composer.json'
-put 'public/.htaccess' 'public/.htaccess'
-put 'public/JobBoardApp.php' 'public/JobBoardApp.php'
 put '/home/httpd/maglabs-www/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
