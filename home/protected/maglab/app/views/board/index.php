@@ -149,12 +149,15 @@ No entries found.
 </div>
 <?php } else { ?>
 <?php $Parsedown = new Parsedown(); ?>
+<?php $i = 0; ?>
+<?php $colors = array('#cefbbd', '#f0f9c3', '#beedee', '#ffdcb8'); ?>
 <?php while($listing = $listings->fetch_object()) { ?>
-<div class="row">
+<div <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'row'), array('style', ('background-color: ' . ($colors[$i%4]) . ';'))), 'html5', 'UTF-8'); ?>>
+<?php $i++; ?>
 <div class="container">
 <div class="row">
 <div class="col-sm-8 col-xs-12">
-<strong><?php echo htmlspecialchars($listing->title,ENT_QUOTES,'UTF-8'); ?></strong>
+<h1><?php echo htmlspecialchars($listing->title,ENT_QUOTES,'UTF-8'); ?></h1>
 <?php if(!empty($listing->more_info_link)) { ?>
 <?php $more_info = filter_var($listing->more_info_link, FILTER_SANITIZE_URL); ?>
 <?php if($more_info) { ?>

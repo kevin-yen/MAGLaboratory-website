@@ -9,13 +9,16 @@
         No entries found.
     - else
       - $Parsedown = new Parsedown();
+      - $i = 0
+      - $colors = array('#cefbbd', '#f0f9c3', '#beedee', '#ffdcb8')
       - while($listing = $listings->fetch_object())
         
-        .row
+        .row(style="background-color: #{$colors[$i%4]};")
+          - $i++
           .container
             .row
               .col-sm-8.col-xs-12
-                %strong= $listing->title
+                %h1= $listing->title
                 - if(!empty($listing->more_info_link))
                   - $more_info = filter_var($listing->more_info_link, FILTER_SANITIZE_URL);
                   - if($more_info)
