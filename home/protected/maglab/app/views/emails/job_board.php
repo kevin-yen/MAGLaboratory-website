@@ -23,13 +23,17 @@
 <td>
 <h1>Your Job Board Posting</h1>
 <p>
-Here's the link to edit your job board posting. Don't share it with anyone unless you want them to be able to edit and delete the posting.
+Here's the link to edit your job board posting. Don't share it with anyone (unless you want them to be able to edit and delete the posting).
 </p>
 <p>
 <a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', (ROOT_URL . '/jobs/' . ($listing['id']) . '/edit/' . ($listing['edit_code'])))), 'html5', 'UTF-8'); ?>><?php echo htmlspecialchars("#{ROOT_URL}/jobs/#{$listing['id']}/edit/#{$listing['edit_code']}",ENT_QUOTES,'UTF-8'); ?></a>
 </p>
 <p>
 Thanks for making the posting!
+</p>
+<p>
+Makers, Artists and Gadgeteers Laboratory is a non-profit organization that relies on donations to operate. If you find this job board useful, please consider making a donation. It is completely optional, but any amount is appreciated.
+<a href="https://www.maglaboratory.org/donate">Click here to donate with Paypal</a>
 </p>
 
 </td>

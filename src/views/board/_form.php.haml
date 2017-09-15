@@ -6,15 +6,21 @@
 %form(action="#{$form['id'] ? "/jobs/{$form['id']}/edit/{$form['edit_code']}" : "/jobs"}" method="POST")
   .form-group(class="#{$formErrors['type'] ? 'has-danger bg-danger' : ''}")
     %label(for="type") Is this a job posting (company/business) or a personal project?
-    %select.form-control(name="type")
-      - if($form['type'] == 'Business')
-        %option(value="Business" selected="selected") Job Posting (Business)
-      - else
-        %option(value="Business") Job Posting (Business)
-      - if($form['type'] == 'Project')
-        %option(value="Project" selected="selected") Project (Personal)
-      - else
-        %option(value="Project") Project (Personal)
+    .radio
+      %label
+        - if($form['type'] == 'Business' || $form['type'] != 'Project')
+          %input(type="radio" name="type" id="type_Business" value="Business" checked)
+        - else
+          %input(type="radio" name="type" id="type_Business" value="Business")
+        Job Posting (Business/Company)
+    .radio
+      %label
+        - if($form['type'] == 'Project')
+          %input(type="radio" name="type" id="type_Project" value="Project" checked)
+        - else
+          %input(type="radio" name="type" id="type_Project" value="Project")
+        Project (Personal or Group)
+
   .form-group(class="#{$formErrors['title'] ? 'has-danger bg-danger' : ''}")
     %label(for="title") Title (required)
     %input.form-control(type="text" name="title" value="#{$form['title']}")
@@ -37,7 +43,7 @@
     - if($formErrors['end_date'])
       %span.text-danger= $formErrors['end_date']
   .form-group(class="#{$formErrors['description'] ? 'has-danger bg-danger' : ''}")
-    %label(for="description") Description (required). Don't forget instructions on how to apply!
+    %label(for="description") Description (required). Remember instructions on how to apply!
     %small.form-text You can use markdown (like on reddit) to style.
     %textarea.form-control(name="description" rows=10)
       = $form['description']
