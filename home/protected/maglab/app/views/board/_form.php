@@ -5,6 +5,21 @@
 <?php $formErrors = array(); ?>
 <?php } ?>
 <form <?php echo MtHaml\Runtime::renderAttributes(array(array('action', ($form['id'] ? "/jobs/{$form['id']}/edit/{$form['edit_code']}" : "/jobs")), array('method', 'POST')), 'html5', 'UTF-8'); ?>>
+<div <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-group'), array('class', ($formErrors['type'] ? 'has-danger bg-danger' : ''))), 'html5', 'UTF-8'); ?>>
+<label for="type">Is this a job posting (company/business) or a personal project?</label>
+<select class="form-control" name="type">
+<?php if($form['type'] == 'Business') { ?>
+<option value="Business" selected="selected">Job Posting (Business)</option>
+<?php } else { ?>
+<option value="Business">Job Posting (Business)</option>
+<?php } ?>
+<?php if($form['type'] == 'Project') { ?>
+<option value="Project" selected="selected">Project (Personal)</option>
+<?php } else { ?>
+<option value="Project">Project (Personal)</option>
+<?php } ?>
+</select>
+</div>
 <div <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-group'), array('class', ($formErrors['title'] ? 'has-danger bg-danger' : ''))), 'html5', 'UTF-8'); ?>>
 <label for="title">Title (required)</label>
 <input <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-control'), array('type', 'text'), array('name', 'title'), array('value', ($form['title']))), 'html5', 'UTF-8'); ?>>
@@ -13,7 +28,7 @@
 <?php } ?>
 </div>
 <div <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-group'), array('class', ($formErrors['company'] ? 'has-danger bg-danger' : ''))), 'html5', 'UTF-8'); ?>>
-<label for="company">Company / Person (required)</label>
+<label for="company">Company / Group / Person (required)</label>
 <input <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-control'), array('type', 'text'), array('name', 'company'), array('value', ($form['company']))), 'html5', 'UTF-8'); ?>>
 <?php if($formErrors['company']) { ?>
 <span class="text-danger"><?php echo htmlspecialchars($formErrors['company'],ENT_QUOTES,'UTF-8'); ?></span>
@@ -24,7 +39,7 @@
 <input <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-control'), array('type', 'text'), array('name', 'location'), array('value', ($form['location']))), 'html5', 'UTF-8'); ?>>
 </div>
 <div class="form-group">
-<label for="pay">Pay</label>
+<label for="pay">Pay/Compensation (if any)</label>
 <input <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-control'), array('type', 'text'), array('name', 'pay'), array('value', ($form['pay']))), 'html5', 'UTF-8'); ?>>
 </div>
 <div <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-group'), array('class', ($formErrors['end_date'] ? 'has-danger bg-danger' : ''))), 'html5', 'UTF-8'); ?>>
@@ -35,7 +50,7 @@
 <?php } ?>
 </div>
 <div <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-group'), array('class', ($formErrors['description'] ? 'has-danger bg-danger' : ''))), 'html5', 'UTF-8'); ?>>
-<label for="description">Description (required)</label>
+<label for="description">Description (required). Don't forget instructions on how to apply!</label>
 <small class="form-text">You can use markdown (like on reddit) to style.</small>
 <textarea <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'form-control'), array('name', 'description'), array('rows', 10)), 'html5', 'UTF-8'); ?>>
 <?php echo htmlspecialchars($form['description'],ENT_QUOTES,'UTF-8'); ?>

@@ -18,12 +18,13 @@
           .container
             .row
               .col-sm-8.col-xs-12
-                %h1= $listing->title
+                %h1= $listing->title 
                 - if(!empty($listing->more_info_link))
                   - $more_info = filter_var($listing->more_info_link, FILTER_SANITIZE_URL);
                   - if($more_info)
                     %a(href="#{$listing->more_info_link}" target="_blank") more info / apply
               .col-sm-4.col-xs-12
+                %span.label(class="#{$listing->type == 'Business' ? 'label-primary' : 'label-info'}")= $listing->type
                 = $listing->company
             .row
               .col-xs-12

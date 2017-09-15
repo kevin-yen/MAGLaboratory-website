@@ -4,13 +4,24 @@
   - $formErrors = array();
 
 %form(action="#{$form['id'] ? "/jobs/{$form['id']}/edit/{$form['edit_code']}" : "/jobs"}" method="POST")
+  .form-group(class="#{$formErrors['type'] ? 'has-danger bg-danger' : ''}")
+    %label(for="type") Is this a job posting (company/business) or a personal project?
+    %select.form-control(name="type")
+      - if($form['type'] == 'Business')
+        %option(value="Business" selected="selected") Job Posting (Business)
+      - else
+        %option(value="Business") Job Posting (Business)
+      - if($form['type'] == 'Project')
+        %option(value="Project" selected="selected") Project (Personal)
+      - else
+        %option(value="Project") Project (Personal)
   .form-group(class="#{$formErrors['title'] ? 'has-danger bg-danger' : ''}")
     %label(for="title") Title (required)
     %input.form-control(type="text" name="title" value="#{$form['title']}")
     - if($formErrors['title'])
       %span.text-danger= $formErrors['title']
   .form-group(class="#{$formErrors['company'] ? 'has-danger bg-danger' : ''}")
-    %label(for="company") Company / Person (required)
+    %label(for="company") Company / Group / Person (required)
     %input.form-control(type="text" name="company" value="#{$form['company']}")
     - if($formErrors['company'])
       %span.text-danger= $formErrors['company']
@@ -18,7 +29,7 @@
     %label(for="location") Location
     %input.form-control(type="text" name="location" value="#{$form['location']}")
   .form-group
-    %label(for="pay") Pay
+    %label(for="pay") Pay/Compensation (if any)
     %input.form-control(type="text" name="pay" value="#{$form['pay']}")
   .form-group(class="#{$formErrors['end_date'] ? 'has-danger bg-danger' : ''}")
     %label(for="end_date") End Date (MM/DD/YYYY)
@@ -26,7 +37,7 @@
     - if($formErrors['end_date'])
       %span.text-danger= $formErrors['end_date']
   .form-group(class="#{$formErrors['description'] ? 'has-danger bg-danger' : ''}")
-    %label(for="description") Description (required)
+    %label(for="description") Description (required). Don't forget instructions on how to apply!
     %small.form-text You can use markdown (like on reddit) to style.
     %textarea.form-control(name="description" rows=10)
       = $form['description']

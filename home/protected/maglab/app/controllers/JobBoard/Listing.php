@@ -28,7 +28,7 @@ class Listing extends PurifierBase {
   }
   
   function index($req, $res){
-    $listings = $this->db->findAll("SELECT * FROM `jobs_board` WHERE `end_date` IS NULL OR `end_date` > NOW();");
+    $listings = $this->db->findAll("SELECT * FROM `jobs_board` WHERE `end_date` IS NULL OR `end_date` > NOW() ORDER BY id DESC;");
     
     return $this->render($res, 'board/index.php', 'Jobs Listing', array(
       'layout_show_entrances' => true,
@@ -49,10 +49,10 @@ class Listing extends PurifierBase {
     
     if(empty($formErrors)){
       $stmt = $this->db->prepare("INSERT INTO `jobs_board` "
-        . "(`created_at`, `end_date`, `title`, `company`, `location`, `pay`, `description`, `more_info_link`, `owner`, `edit_code`)"
-        . " VALUES (NOW(), FROM_UNIXTIME(?), ?, ?, ?, ?, ?, ?, ?, ?)");
+        . "(`created_at`, `end_date`, `title`, `company`, `location`, `pay`, `description`, `more_info_link`, `owner`, `edit_code`, `type`)"
+        . " VALUES (NOW(), FROM_UNIXTIME(?), ?, ?, ?, ?, ?, ?, ?, ?, ?)");
       $edit_code = $this->generateEditCode();
-      $stmt->bind_param('issssssss',
+      $stmt->bind_param('isssssssss',
         $form['end_date_i'],
         $form['title'],
         $form['company'],
@@ -61,7 +61,8 @@ class Listing extends PurifierBase {
         $form['description'],
         $form['more_info_link'],
         $form['owner'],
-        $edit_code);
+        $edit_code,
+        $form['type']);
       if($stmt->execute() and $stmt->affected_rows > 0){
         $listing_id = $stmt->insert_id;
         if(!empty($form['owner'])){
@@ -106,10 +107,10 @@ class Listing extends PurifierBase {
     if(empty($formErrors)){
       $stmt = $this->db->prepare("UPDATE `jobs_board` "
         . "SET `end_date` = FROM_UNIXTIME(?), `title` = ?, `company` = ?, `location` = ?, "
-        . "`pay` = ?, `description` = ?, `more_info_link` = ?, `owner` = ? "
+        . "`pay` = ?, `description` = ?, `more_info_link` = ?, `owner` = ?, `type` = ? "
         . "WHERE id = ? LIMIT 1");
 
-      $stmt->bind_param('isssssssi',
+      $stmt->bind_param('issssssssi',
         $form['end_date_i'],
         $form['title'],
         $form['company'],
@@ -118,6 +119,7 @@ class Listing extends PurifierBase {
         $form['description'],
         $form['more_info_link'],
         $form['owner'],
+        $form['type'],
         $listing_id);
       if($stmt->execute() and $stmt->affected_rows > 0){
         $updated = true;
