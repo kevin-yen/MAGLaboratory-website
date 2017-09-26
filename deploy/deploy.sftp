@@ -1,6 +1,7 @@
-!echo "Commit: b345635e27255439ba220d937204407805eb49ff 5b3375f6dd96e35b52a7b4b5947347135e153163"
-put 'protected/maglab/app/controllers/JobBoard/Listing.php' 'protected/maglab/app/controllers/JobBoard/Listing.php'
-put 'protected/maglab/app/views/board/_form.php' 'protected/maglab/app/views/board/_form.php'
-put 'protected/maglab/app/views/board/index.php' 'protected/maglab/app/views/board/index.php'
-put 'protected/maglab/app/views/emails/job_board.php' 'protected/maglab/app/views/emails/job_board.php'
+!echo "Commit: 5b3375f6dd96e35b52a7b4b5947347135e153163 68bc617be861c54394adfe0d5e1b326aa6874461"
+mkdir public/forms
+mkdir public/forms/images
+put 'public/forms/donations.html' 'public/forms/donations.html'
+put 'public/forms/images/image1.png' 'public/forms/images/image1.png'
+put 'public/forms/jquery-3.2.1.min.js' 'public/forms/jquery-3.2.1.min.js'
 put '/home/httpd/maglabs-www/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
