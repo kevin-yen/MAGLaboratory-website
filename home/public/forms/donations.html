@@ -1,0 +1,787 @@
+<html>
+
+<head>
+    <meta content="text/html; charset=UTF-8" http-equiv="content-type">
+    <style type="text/css">
+        @import url('https://themes.googleusercontent.com/fonts/css?kit=RFda8w1V0eDZheqfcyQ4EGJcBjHzwD8zlm7Ug26Hp_5cmBXkn2YZ6_5MjUyWx1FQ');
+        ol {
+            margin: 0;
+            padding: 0
+        }
+        
+        table td,
+        table th {
+            padding: 0
+        }
+        
+        #form {
+          position: fixed;
+          top: 50px;
+          right: 0px;
+        }
+        
+        @media print {
+          #form { display: none; }
+        }
+        
+        .c17.x90 {
+          text-align: right;
+        }
+        
+        .c19 {
+            border-right-style: solid;
+            padding: 5pt 5pt 5pt 5pt;
+            border-bottom-color: #000000;
+            border-top-width: 0pt;
+            border-right-width: 0pt;
+            border-left-color: #000000;
+            vertical-align: top;
+            border-right-color: #000000;
+            border-left-width: 0pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 0pt;
+            width: 188.2pt;
+            border-top-color: #000000;
+            border-bottom-style: solid
+        }
+        
+        .c26 {
+            border-right-style: solid;
+            padding: 5pt 5pt 5pt 5pt;
+            border-bottom-color: #000000;
+            border-top-width: 1pt;
+            border-right-width: 1pt;
+            border-left-color: #000000;
+            vertical-align: top;
+            border-right-color: #000000;
+            border-left-width: 1pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 1pt;
+            width: 468pt;
+            border-top-color: #000000;
+            border-bottom-style: solid
+        }
+        
+        .c28 {
+            border-right-style: solid;
+            padding: 5pt 5pt 5pt 5pt;
+            border-bottom-color: #000000;
+            border-top-width: 0pt;
+            border-right-width: 0pt;
+            border-left-color: #000000;
+            vertical-align: middle;
+            border-right-color: #000000;
+            border-left-width: 0pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 0pt;
+            width: 189pt;
+            border-top-color: #000000;
+            border-bottom-style: solid
+        }
+        
+        .c1 {
+            border-right-style: solid;
+            padding: 5pt 5pt 5pt 5pt;
+            border-bottom-color: #000000;
+            border-top-width: 0pt;
+            border-right-width: 0pt;
+            border-left-color: #000000;
+            vertical-align: top;
+            border-right-color: #000000;
+            border-left-width: 0pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 0pt;
+            width: 132.8pt;
+            border-top-color: #000000;
+            border-bottom-style: solid
+        }
+        
+        .c3 {
+            border-right-style: solid;
+            padding: 5pt 5pt 5pt 5pt;
+            border-bottom-color: #000000;
+            border-top-width: 0pt;
+            border-right-width: 0pt;
+            border-left-color: #000000;
+            vertical-align: top;
+            border-right-color: #000000;
+            border-left-width: 0pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 0pt;
+            width: 468pt;
+            border-top-color: #000000;
+            border-bottom-style: solid
+        }
+        
+        .c21 {
+            border-right-style: solid;
+            padding: 5pt 5pt 5pt 5pt;
+            border-bottom-color: #000000;
+            border-top-width: 0pt;
+            border-right-width: 0pt;
+            border-left-color: #000000;
+            vertical-align: top;
+            border-right-color: #000000;
+            border-left-width: 0pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 0pt;
+            width: 87.8pt;
+            border-top-color: #000000;
+            border-bottom-style: solid
+        }
+        
+        .c24 {
+            border-right-style: solid;
+            padding: 5pt 5pt 5pt 5pt;
+            border-bottom-color: #000000;
+            border-top-width: 0pt;
+            border-right-width: 0pt;
+            border-left-color: #000000;
+            vertical-align: top;
+            border-right-color: #000000;
+            border-left-width: 0pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 0pt;
+            width: 59.2pt;
+            border-top-color: #000000;
+            border-bottom-style: solid
+        }
+        
+        .c14 {
+            border-right-style: solid;
+            padding: 5pt 5pt 5pt 5pt;
+            border-bottom-color: #000000;
+            border-top-width: 0pt;
+            border-right-width: 0pt;
+            border-left-color: #000000;
+            vertical-align: top;
+            border-right-color: #000000;
+            border-left-width: 0pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 0pt;
+            width: 279pt;
+            border-top-color: #000000;
+            border-bottom-style: solid
+        }
+        
+        .c11 {
+            border-right-style: solid;
+            padding: 5pt 5pt 5pt 5pt;
+            border-bottom-color: #000000;
+            border-top-width: 0pt;
+            border-right-width: 0pt;
+            border-left-color: #000000;
+            vertical-align: top;
+            border-right-color: #000000;
+            border-left-width: 0pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 0pt;
+            width: 94.1pt;
+            border-top-color: #000000;
+            border-bottom-style: solid
+        }
+        
+        .c7 {
+            border-right-style: solid;
+            padding: 5pt 5pt 5pt 5pt;
+            border-bottom-color: #000000;
+            border-top-width: 0pt;
+            border-right-width: 0pt;
+            border-left-color: #000000;
+            vertical-align: top;
+            border-right-color: #000000;
+            border-left-width: 0pt;
+            border-top-style: solid;
+            border-left-style: solid;
+            border-bottom-width: 0pt;
+            width: 57.2pt;
+            border-top-color: #000000;
+            border-bottom-style: solid
+        }
+        
+        .c13 {
+            color: #000000;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 6pt;
+            font-family: "Merriweather";
+            font-style: normal
+        }
+        
+        .c30 {
+            color: #000000;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 8pt;
+            font-family: "Varela Round";
+            font-style: normal
+        }
+        
+        .c2 {
+            color: #000000;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 8pt;
+            font-family: "Merriweather";
+            font-style: normal
+        }
+        
+        .c5 {
+            color: #000000;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 10pt;
+            font-family: "Varela Round";
+            font-style: normal
+        }
+        
+        .c23 {
+            color: #000000;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 11pt;
+            font-family: "Arial";
+            font-style: normal
+        }
+        
+        .c27 {
+            color: #000000;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 18pt;
+            font-family: "Arial";
+            font-style: normal
+        }
+        
+        .c9 {
+            color: #000000;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 11pt;
+            font-family: "Merriweather";
+            font-style: normal
+        }
+        
+        .c20 {
+            color: #000000;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 26pt;
+            font-family: "Arial";
+            font-style: normal
+        }
+        
+        .c18 {
+            color: #000000;
+            font-weight: 400;
+            text-decoration: none;
+            vertical-align: baseline;
+            font-size: 8pt;
+            font-family: "Arial";
+            font-style: normal
+        }
+        
+        .c12 {
+            padding-top: 0pt;
+            padding-bottom: 3pt;
+            line-height: 1.15;
+            page-break-after: avoid;
+            text-align: justify;
+            height: 11pt
+        }
+        
+        .c10 {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.15;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+        
+        .c4 {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.0;
+            text-align: left;
+            height: 11pt
+        }
+        
+        .c29 {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.15;
+            page-break-after: avoid;
+            text-align: center !important;
+        }
+        
+        .c17 {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.0;
+            text-align: left
+        }
+        
+        .c8 {
+            border-spacing: 0;
+            border-collapse: collapse;
+            margin-right: auto
+        }
+        
+        .c15 {
+            padding-top: 0pt;
+            padding-bottom: 0pt;
+            line-height: 1.0;
+            text-align: center
+        }
+        
+        .c22 {
+            background-color: #ffffff;
+            max-width: 512pt;
+            padding: 0pt 50pt 0pt 50pt
+        }
+        
+        .c25 {
+            font-size: 18pt;
+            font-family: "Ultra";
+            font-weight: 400
+        }
+        
+        .c6 {
+            height: 0pt
+        }
+        
+        .c16 {
+            height: 11pt
+        }
+        
+        .c0 {
+            height: 21pt
+        }
+        
+        .title {
+            padding-top: 0pt;
+            color: #000000;
+            font-size: 26pt;
+            padding-bottom: 3pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+        
+        .subtitle {
+            padding-top: 0pt;
+            color: #666666;
+            font-size: 15pt;
+            padding-bottom: 16pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+        
+        li {
+            color: #000000;
+            font-size: 11pt;
+            font-family: "Arial"
+        }
+        
+        p {
+            margin: 0;
+            color: #000000;
+            font-size: 11pt;
+            font-family: "Arial"
+        }
+        
+        h1 {
+            padding-top: 20pt;
+            color: #000000;
+            font-size: 20pt;
+            padding-bottom: 6pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+        
+        h2 {
+            padding-top: 18pt;
+            color: #000000;
+            font-size: 16pt;
+            padding-bottom: 6pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+        
+        h3 {
+            padding-top: 16pt;
+            color: #434343;
+            font-size: 14pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+        
+        h4 {
+            padding-top: 14pt;
+            color: #666666;
+            font-size: 12pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+        
+        h5 {
+            padding-top: 12pt;
+            color: #666666;
+            font-size: 11pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+        
+        h6 {
+            padding-top: 12pt;
+            color: #666666;
+            font-size: 11pt;
+            padding-bottom: 4pt;
+            font-family: "Arial";
+            line-height: 1.15;
+            page-break-after: avoid;
+            font-style: italic;
+            orphans: 2;
+            widows: 2;
+            text-align: left
+        }
+    </style>
+  <script src="./jquery-3.2.1.min.js"></script>
+</head>
+
+<body class="c22">
+  <div>
+    <div>
+        <p class="c10 c16"><span class="c18"></span></p>
+        <a id="t.7aabfc55651c2c2d6218668e671eed12a5c05895"></a>
+        <a id="t.5"></a>
+        <table class="c8">
+            <tbody>
+                <tr class="c6">
+                    <td class="c26" colspan="1" rowspan="1">
+                        <p class="c17"><span class="c23">Treasurer use only. Entered on: _______________ Entry: ________________________</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="c10 c16"><span class="c23"></span></p>
+    </div>
+    <p class="c10 c16"><span class="c18"></span></p>
+    <a id="t.f176d046abe4a545fb42c13e415ce35a17b1a558"></a>
+    <a id="t.0"></a>
+    <table class="c8">
+        <tbody>
+            <tr class="c0">
+                <td class="c24" colspan="1" rowspan="1">
+                    <p class="c17"><span class="c2">Date:</span></p>
+                </td>
+                <td class="c1" colspan="1" rowspan="1">
+                    <p class="c17"><span class="c2 date">__________________</span></p>
+                </td>
+                <td class="c21" colspan="1" rowspan="1">
+                    <p class="c17"><span class="c2">Received by (sign):</span></p>
+                </td>
+                <td class="c19" colspan="2" rowspan="1">
+                    <p class="c17"><span class="c2 received_by">__________________________</span></p>
+                </td>
+            </tr>
+            <tr class="c0">
+                <td class="c24" colspan="1" rowspan="1">
+                    <p class="c17"><span class="c2">Name:</span></p>
+                </td>
+                <td class="c1" colspan="1" rowspan="1">
+                    <p class="c17"><span class="c2 donor_name">__________________</span></p>
+                </td>
+                <td class="c21" colspan="1" rowspan="1">
+                    <p class="c17"><span class="c2">Organization:</span></p>
+                </td>
+                <td class="c19" colspan="2" rowspan="1">
+                    <p class="c17"><span class="c2 donor_org">__________________________</span></p>
+                </td>
+            </tr>
+            <tr class="c0">
+                <td class="c3" colspan="5" rowspan="1">
+                    <a id="t.066c886ca2e7fcef01cdb744817b493e309aa20d"></a>
+                    <a id="t.1"></a>
+                    <table class="c8">
+                        <tbody>
+                            <tr class="c6">
+                                <td class="c7" colspan="1" rowspan="1">
+                                    <p class="c17 x90"><span class="c2">Cash:</span></p>
+                                </td>
+                                <td class="c7" colspan="1" rowspan="1">
+                                    <p class="c17"><span class="c2 donate_cash">$______</span></p>
+                                </td>
+                                <td class="c7" colspan="1" rowspan="1">
+                                    <p class="c17 x90"><span class="c2">Check:</span></p>
+                                </td>
+                                <td class="c7" colspan="1" rowspan="1">
+                                    <p class="c17"><span class="c2 donate_check">$______</span></p>
+                                </td>
+                                <td class="c7" colspan="1" rowspan="1">
+                                    <p class="c17 x90"><span class="c2">Credit:</span></p>
+                                </td>
+                                <td class="c7" colspan="1" rowspan="1">
+                                    <p class="c17"><span class="c2 donate_credit">$______</span></p>
+                                </td>
+                                <td class="c7" colspan="1" rowspan="1">
+                                    <p class="c17 x90"><span class="c2">Other:</span></p>
+                                </td>
+                                <td class="c7" colspan="1" rowspan="1">
+                                    <p class="c17"><span class="c2 donate_other">$______</span></p>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+            <tr class="c0">
+                <td class="c3" colspan="5" rowspan="1">
+                    <p class="c17"><span class="c2">Description of received goods or services (if any):</span></p>
+                    <p class="c4"><span class="c2"></span></p>
+                    <p class="c4" style="min-height: 11pt; height: auto;"><span class="c2 received_by_maglab"></span></p>
+                    <hr>
+                </td>
+            </tr>
+            <tr class="c0">
+                <td class="c3" colspan="5" rowspan="1">
+                    <p class="c17"><span class="c2">Description of goods or services provided by MAGLab (if any, include monetary estimated value):</span></p>
+                    <p class="c4"><span class="c2"></span></p>
+                    <p class="c4" style="min-height: 11pt; height: auto;"><span class="c2 provided_by_maglab"></span></p>
+                    <hr>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <p class="c10 c16"><span class="c23"></span></p>
+    <p class="c10"><span class="c30">Fill out exactly as above, and detach bottom as receipt for donator (if requested). Top half for Internal Use Only.</span></p>
+    <hr>
+    </div>
+    <div style="page-break-inside:avoid;">
+      <p class="c10 c16"><span class="c9"></span></p>
+      <a id="t.a41fb3638f2d8a481d4922d2ee3f1dfcb7eb6ad5"></a>
+      <a id="t.2"></a>
+      <table class="c8">
+          <tbody>
+              <tr class="c6">
+                  <td class="c14" colspan="1" rowspan="1">
+                      <p class="c10"><span style="overflow: hidden; display: inline-block; margin: 0.00px 0.00px; border: 0.00px solid #000000; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px); width: 356.50px; height: 115.00px;"><img alt="" src="images/image1.png" style="width: 356.50px; height: 115.00px; margin-left: 0.00px; margin-top: 0.00px; transform: rotate(0.00rad) translateZ(0px); -webkit-transform: rotate(0.00rad) translateZ(0px);" title=""></span></p>
+                  </td>
+                  <td class="c28" colspan="1" rowspan="1">
+                      <p class="c15"><span class="c5">Makers, Artists and Gadgeteers Laboratory Inc.</span></p>
+                      <p class="c15 c16"><span class="c5"></span></p>
+                      <p class="c15"><span class="c5">3960 E Valley Blvd. Unit G,</span></p>
+                      <p class="c15"><span class="c5">Walnut, CA 91789</span></p>
+                      <p class="c15"><span class="c5">&nbsp;(626) 262 - 4522</span></p>
+                      <p class="c15"><span class="c5">www.maglaboratory.org</span></p>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+      <p class="c12 title" id="h.cnszsmkcs7ka"><span class="c18"></span></p>
+      <p class="c29 title" id="h.11rx8q80ubko"><span class="c25">Donation Receipt</span></p>
+      <a id="t.f176d046abe4a545fb42c13e415ce35a17b1a558"></a>
+      <a id="t.3"></a>
+      <table class="c8">
+          <tbody>
+              <tr class="c0">
+                  <td class="c24" colspan="1" rowspan="1">
+                      <p class="c17"><span class="c2">Date:</span></p>
+                  </td>
+                  <td class="c1" colspan="1" rowspan="1">
+                      <p class="c17"><span class="c2 date">__________________</span></p>
+                  </td>
+                  <td class="c21" colspan="1" rowspan="1">
+                      <p class="c17"><span class="c2">Received by (sign):</span></p>
+                  </td>
+                  <td class="c19" colspan="2" rowspan="1">
+                      <p class="c17"><span class="c2 received_by">__________________________</span></p>
+                  </td>
+              </tr>
+              <tr class="c0">
+                  <td class="c24" colspan="1" rowspan="1">
+                      <p class="c17"><span class="c2">Name:</span></p>
+                  </td>
+                  <td class="c1" colspan="1" rowspan="1">
+                      <p class="c17"><span class="c2 donor_name">__________________</span></p>
+                  </td>
+                  <td class="c21" colspan="1" rowspan="1">
+                      <p class="c17"><span class="c2">Organization:</span></p>
+                  </td>
+                  <td class="c19" colspan="2" rowspan="1">
+                      <p class="c17"><span class="c2 donor_org">__________________________</span></p>
+                  </td>
+              </tr>
+              <tr class="c0">
+                  <td class="c3" colspan="5" rowspan="1">
+                      <a id="t.066c886ca2e7fcef01cdb744817b493e309aa20d"></a>
+                      <a id="t.4"></a>
+                      <table class="c8">
+                          <tbody>
+                              <tr class="c6">
+                                  <td class="c7" colspan="1" rowspan="1">
+                                      <p class="c17 x90"><span class="c2">Cash:</span></p>
+                                  </td>
+                                  <td class="c7" colspan="1" rowspan="1">
+                                      <p class="c17"><span class="c2 donate_cash">$______</span></p>
+                                  </td>
+                                  <td class="c7" colspan="1" rowspan="1">
+                                      <p class="c17 x90"><span class="c2">Check:</span></p>
+                                  </td>
+                                  <td class="c7" colspan="1" rowspan="1">
+                                      <p class="c17"><span class="c2 donate_check">$______</span></p>
+                                  </td>
+                                  <td class="c7" colspan="1" rowspan="1">
+                                      <p class="c17 x90"><span class="c2">Credit:</span></p>
+                                  </td>
+                                  <td class="c7" colspan="1" rowspan="1">
+                                      <p class="c17"><span class="c2 donate_credit">$______</span></p>
+                                  </td>
+                                  <td class="c7" colspan="1" rowspan="1">
+                                      <p class="c17 x90"><span class="c2">Other:</span></p>
+                                  </td>
+                                  <td class="c7" colspan="1" rowspan="1">
+                                      <p class="c17"><span class="c2 donate_other">$______</span></p>
+                                  </td>
+                              </tr>
+                          </tbody>
+                      </table>
+                  </td>
+              </tr>
+              <tr class="c0">
+                  <td class="c3" colspan="5" rowspan="1">
+                      <p class="c17"><span class="c2">Description of received goods or services (if any):</span></p>
+                    <p class="c4"><span class="c2"></span></p>
+                      <p class="c4" style="min-height: 11pt;height:auto;"><span class="c2 received_by_maglab"></span></p>
+                      <hr>
+                  </td>
+              </tr>
+              <tr class="c0">
+                  <td class="c3" colspan="5" rowspan="1">
+                      <p class="c17"><span class="c2">Description of goods or services provided by MAGLab (if any, include monetary estimated value):</span></p>
+                      <p class="c4"><span class="c2"></span></p>
+                      <p class="c4" style="min-height: 11pt; height:auto;"><span class="c2 provided_by_maglab"></span></p>
+                      <hr>
+                  </td>
+              </tr>
+          </tbody>
+      </table>
+    </div>
+    <div id="form">
+      <p><label>Date: </label> <input type="date" id="date"></p>
+      <p><label>Received By: </label> <input type="text" id="received_by"></p>
+      <p><label>Donor Name: </label> <input type="text" id="donor_name"></p>
+      <p><label>Donor Org:</label> <input type="text" id="donor_org"></p>
+      <p><label>Cash</label> <input type="number" id="donate_cash"></p>
+      <p><label>Check</label> <input type="number" id="donate_check"></p>
+      <p><label>Credit</label> <input type="number" id="donate_credit"></p>
+      <p><label>Other</label> <input type="number" id="donate_other"></p>
+      <p><label>Received by Maglab: </label> <br><textarea id="received_by_maglab" rows=5></textarea></p>
+      <p><label>Provided by Maglab: </label> <br><textarea id="provided_by_maglab" rows=5></textarea></p>
+    </div>
+
+<script type="text/javascript">
+$(function(){
+  $.each([".provided_by_maglab", ".received_by_maglab", ".donate_cash", ".donate_check", ".donate_credit", ".donate_other", ".date", ".received_by", ".donor_name", ".donor_org"], function(i, val){
+    $(val).each(function(){
+      $(this).data('orig', $(this).text());
+    });
+  });
+  
+  $('#provided_by_maglab,#received_by_maglab').on('change keyup', function(e){
+    var $this = $(this);
+    var $field = $('.' + $this.attr('id'));
+    
+    $field.each(function(){
+      $(this).html($this.val().replace(/\n\r?/g, "<br>"));
+    });
+    
+    if($this.val() == ""){
+      $field.each(function(){
+        $(this).text($(this).data('orig'));
+      });
+    }
+  });
+
+  $('#donate_cash, #donate_check, #donate_credit, #donate_other').on('change keyup', function(e){
+    var $this = $(this);
+    var $field = $('.' + $this.attr('id'));
+    
+    $field.each(function(){
+      $(this).text( '$ ' + $this.val());
+    });
+    
+    if($this.val() == ""){
+      $field.each(function(){
+        $(this).text($(this).data('orig'));
+      });
+    }
+  });
+
+  $('#date, #received_by, #donor_name, #donor_org').on('change keyup', function(e){
+    var $this = $(this);
+    var $field = $('.' + $this.attr('id'));
+    
+    $field.each(function(){
+      $(this).text($this.val());
+    });
+    
+    if($this.val() == ""){
+      $field.each(function(){
+        $(this).text($(this).data('orig'));
+      });
+    }
+  });
+});
+</script>
+</body>
+
+</html>
