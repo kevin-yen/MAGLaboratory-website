@@ -143,6 +143,10 @@ Menu
 <div class="containment">
 <div class="container">
 <div class="row">
+<h1 class="text-center">A Preprogrammed Message From HAL</h1>
+<div class="col-md-12">
+<p>The information presented on this HAL page is likely false and or otherwise inadequate.  The open switch is entirely human controlled and remains on or off depending on human interaction, environmental factors, cat interaction, geological activity, atmospheric content, the observer effect and quantum superposition, force majeure, and/or other phenomena that are not described.</p>
+</div>
 <div class="col-md-12" id="activity_panel">
 <?php if($isTechBad) { ?>
 <div class="alert alert-danger">
@@ -152,7 +156,6 @@ We are
 </h1>
 </div>
 <h2>Details below are outdated. Please check back later.</h2>
-<?php include('_sensors.php'); ?>
 <?php } else if($isOpen) { ?>
 <div class="alert alert-success">
 <h1>
@@ -160,7 +163,6 @@ We are
 <strong>OPEN</strong>
 </h1>
 </div>
-<?php include('_sensors.php'); ?>
 <?php } else { ?>
 <div class="alert alert-warning">
 <h1>
@@ -168,8 +170,9 @@ We are
 <strong>CLOSED</strong>
 </h1>
 </div>
-<?php include('_sensors.php'); ?>
 <?php } ?>
+<h2 class="text-center">Sensor Status</h2>
+<?php include('_sensors.php'); ?>
 </div>
 </div>
 </div>
