@@ -1,3 +1,2 @@
-!echo "Commit: 68bc617be861c54394adfe0d5e1b326aa6874461 f75e6f7c88c1173b33034c9dc02541a81432b3f5"
-put 'public/forms/donations.pdf' 'public/forms/donations.pdf'
+!echo "Commit: f75e6f7c88c1173b33034c9dc02541a81432b3f5 d8538fc32b112c82ae6c5bca16f25ba8f6b347f3"
 put '/home/httpd/maglabs-www/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
