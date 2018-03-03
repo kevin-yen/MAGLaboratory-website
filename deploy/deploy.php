@@ -14,7 +14,9 @@ define('PROJECT_ROOT', __DIR__ . '/..');
 
 # This is the username and host part that you use to login.
 # eg: user5_testsite@ssh.phx.nearlyfreespeech.net
-define('SSH_USERHOST', 'swut4ewr2_maglabs@nfsn');
+if(!defined('SSH_USERHOST')){
+  define('SSH_USERHOST', 'swut4ewr2_maglabs@nfsn');
+}
 
 # This is the path to the NFSN deployer.
 # TODO: write this as a library

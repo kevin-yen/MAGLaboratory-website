@@ -5,6 +5,8 @@
 /home/protected/maglab/config/config.php
 /home/protected/maglab/config/config_*.php
 
+/deploy/config.php
+
 /.sass-cache
 /home/public/css/*.map
 
