@@ -203,8 +203,9 @@ and running water.
 </div>
 <div class="col-xs-12 col-md-4">
 <h2 class="text-center">When</h2>
-<p>You're welcome to come and check us out! See the calendar for events and open hours.</p>
+<p>You're welcome to come and check us out!</p>
 <p>
+We don't always plan our open hours... 
 The space is open whenever a key member or officer is at the space.
 <strong>Our doors are always open Tuesday and Friday evenings</strong>
 for our business meetings and open project night respectively. There's a 
@@ -231,6 +232,7 @@ to check if--and for how long--the space will be open by the time you arrive.
 </div>
 <div id="google-calendar" class="containment">
 <iframe src="https://www.google.com/calendar/embed?src=bjpkvaeg1rjq9u3c6utecq1jos%40group.calendar.google.com&amp;amp;ctz=America/Los_Angeles" style="border: 0" width="100%" height="650" frameborder="0" scrolling="no"></iframe>
+<p>The calendar does not list unplanned open times that occur when a keyed member is present.</p>
 </div>
 <?php include '_pricing.php'; ?>
 <?php include('_map_footer.php'); ?>
