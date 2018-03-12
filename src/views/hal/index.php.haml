@@ -1,6 +1,10 @@
 .containment
   .container
     .row
+      %h1.text-center A Preprogrammed Message From HAL
+      .col-md-12
+        %p The information presented on this HAL page is likely false and or otherwise inadequate.  The open switch is entirely human controlled and remains on or off depending on human interaction, environmental factors, cat interaction, geological activity, atmospheric content, the observer effect and quantum superposition, force majeure, and/or other phenomena that are not described.
+      
       .col-md-12#activity_panel
         - if($isTechBad)
           .alert.alert-danger
@@ -9,19 +13,19 @@
               %strong HAVING TECHNICAL DIFFICULTIES
             
           %h2 Details below are outdated. Please check back later.
-          - include('_sensors.php')
         - else if($isOpen)
           .alert.alert-success
             %h1
               We are
               %strong OPEN
-          - include('_sensors.php')
         - else
           .alert.alert-warning
             %h1
               We are
               %strong CLOSED
-          - include('_sensors.php')
+        
+        %h2.text-center Sensor Status
+        - include('_sensors.php')
       
 
 %script{:src => '/js/timeago.js'}

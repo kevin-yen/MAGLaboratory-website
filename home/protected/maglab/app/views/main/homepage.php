@@ -205,7 +205,7 @@ and running water.
 <h2 class="text-center">When</h2>
 <p>You're welcome to come and check us out!</p>
 <p>
-We don't always plan our open hours... 
+We don't always plan our open hours...
 The space is open whenever a key member or officer is at the space.
 <strong>Our doors are always open Tuesday and Friday evenings</strong>
 for our business meetings and open project night respectively. There's a 
