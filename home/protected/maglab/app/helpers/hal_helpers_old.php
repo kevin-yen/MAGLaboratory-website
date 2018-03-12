@@ -357,12 +357,8 @@ function latest_changes(){
 
 function is_maglabs_open($latest){
   # Space is open when:
-  # a) a door is open (main or front)
-  # b) one of the following is true: open switch ON, movement in last 20 minutes
-  $movement = $latest['Open Switch'][2] | $latest['Office Motion'][2] | $latest['Shop Motion'][2];
-  $doors = $latest['Front Door'][2] | $latest['Main Door'][2];
-  
-  return $movement && $doors;
+  # a) the open switch is flipped "on"
+  return $latest['Open Switch'][2];
 }
 
 function is_tech_bad(&$latest){
