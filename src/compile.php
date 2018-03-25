@@ -2,7 +2,7 @@
 
 require __DIR__ . "/vendor/autoload.php";
 
-require_once '/home/work/.local/lib/php/haml_compile.php';
+require_once './compilerlib/haml_compile.php';
 
 $coffeeFilter = new MtHaml\Filter\CoffeeScript(new CoffeeScript\Compiler);
 $yieldFilter = new MtHaml\Filter\YieldContent();
