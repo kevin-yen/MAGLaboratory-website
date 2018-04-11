@@ -1,2 +1,3 @@
-!echo "Commit: 996fc175269b91c78968808748fa259730db58d6 1396df69b8555f5d9f8ecdd979d16b3b0a0836b3"
-put '/home/httpd/maglabs-www/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
+!echo "Commit: 1396df69b8555f5d9f8ecdd979d16b3b0a0836b3 f37f8d4643c8b086c684307338d21c923cc32c78"
+put 'protected/maglab/app/helpers/hal_helpers_old.php' 'protected/maglab/app/helpers/hal_helpers_old.php'
+put '/home/brandon/website/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
