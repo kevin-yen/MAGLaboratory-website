@@ -20,7 +20,7 @@ if(!defined('SSH_USERHOST')){
 
 # This is the path to the NFSN deployer.
 # TODO: write this as a library
-define('DEPLOYER_PATH', '/home/work/.local/lib/php/nfsn_deploy.php');
+define('DEPLOYER_PATH', DEPLOY_DIRECTORY . '/nfsn_deploy.php');
 
 # This defines the path to the marker file and its target path relative to /home
 # The marker file gets some special replacements
