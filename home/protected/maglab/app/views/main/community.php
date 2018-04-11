@@ -140,112 +140,29 @@ Menu
 <div class="containment">
 <div class="container">
 <div class="row">
-<h1 class="text-center">ABOUT US</h1>
-<div class="col-xs-12 col-md-4">
-<h2 class="text-center">Who</h2>
+<h1 class="text-center">COMMUNITY</h1>
+<div class="col-xs-12">
 <p>
-We are a 501(c)(3) non-profit
-<a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ('http://en.wikipedia.org/wiki/Hackerspace'))), 'html5', 'UTF-8'); ?>>hackerspace / makerspace</a>
-and collaborative workspace based in Pomona, CA.
+Mag Laboratory is dedicated to maintaining strong relationships with the maker community.
+In order to further this symbiosis, we are more than happy to provide resources and expertise to various projects in the local area.
 </p>
+<h2 class="text-center">Walnut Valley Robotics 2018</h2>
 <p>
-We enojoy 
-<a href="/community">giving back to the community </a>
-by providing a creative space and project help and guidance.
-</p>
-<p>
-People come to our space to 
-<strong>work</strong>
-on projects,
-<strong>explore</strong>
-their inner artists,
-<strong>make</strong>
-cool gadgets, and
-<strong>interact</strong>
-with a community of like-minded individuals.
-</p>
-<p>
-We are makers, artists, DIYers, hobbyists, combat robot creators, ham radio amateurs, tech enthusiasts and...well...
-<strong>just normal people, doing stuff regular people do.</strong>
-(except MAG Cat, he has cat duties.)
-</p>
-<p>
-Join us and work on your projects here.
-<strong>Share it. Inspire others! Get inspired.</strong>
-They might share some tips and tricks or even be interested in joining your project. There's a lot of expertise in our members and many are happy to share their knowledge.
-</p>
-<p>
-And if you don't like us enough to join in holy makermony, you're still welcome visit anytime.
-<strong>Check the calendar, Facebook and Meetup page</strong>
-to see what MAGLab is doing.
+Mag Laboratory is glad that we made a difference by welding together Walnut Valley Robotics' robot frame.
 </p>
 </div>
 <div class="col-xs-12 col-md-4">
-<h2 class="text-center">What</h2>
-<p>
-We have 
-<strong>a wall full of general-purpose tools and supplies</strong>
-like screw drivers, tape measures, drills, hammers, saws, and much more
-</p>
-<p>
-The (partially) sound-insulated
-<strong>presentation room with AC,</strong>
-a projector and whiteboard services our meetings.
-<strong>The electronics room</strong>
-has a lazer cutter, 3d printers, variable power supplies, oscilloscopes, a logic analyzer, soldering iron and other electro-doodads.
-</p>
-<p>
-<strong>The workshop</strong>
-houses a mill, lathe, drill press, grinder, jig saw, forge and other destructive machines. If you're
-<strong>woodworking or metalworking,</strong>
-chances are we have a machine for your needs.
-</p>
-<p>
-We have
-<strong>a restroom with working toilet, and sink,</strong>
-and running water.
-</p>
-<p>
-You could say that we have
-<strong>everything and a kitchen sink</strong>
-.
-</p>
+<img <?php echo MtHaml\Runtime::renderAttributes(array(array('src', ('/images/community/weld-left.jpg')), array('alt', 'Aluminum weld for Walnut Valley Robotics 2018'), array('style', 'width:100%;height:auto;')), 'html5', 'UTF-8'); ?>>
 </div>
 <div class="col-xs-12 col-md-4">
-<h2 class="text-center">When</h2>
-<p>You're welcome to come and check us out!</p>
-<p>
-We don't always plan our open hours...
-The space is open whenever a key member or officer is at the space.
-<strong>Our doors are always open Tuesday and Friday evenings</strong>
-for our business meetings and open project night respectively. There's a 
-<strong>public monthly Open House on the last Saturday</strong>
-of every month.
-</p>
-<p>
-To see if we're open right now, please check with our resident
-<strong>deliberately-not-very-sentient sensor system,</strong>
-codenamed
-<strong>
-<a <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'text-danger'), array('href', ('/hal'))), 'html5', 'UTF-8'); ?>>HAL.</a>
-</strong>
-<a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ('/hal'))), 'html5', 'UTF-8'); ?>>Click to see HAL.</a>
-</p>
-<p>
-If the date is not on the calendar, it's always safe (and advised) to 
-<strong>give us a call</strong>
-to check if--and for how long--the space will be open by the time you arrive.
-</p>
+<img <?php echo MtHaml\Runtime::renderAttributes(array(array('src', ('/images/community/weld-right.jpg')), array('alt', 'Ground aluminum weld for Walnut valley Robotics 2018'), array('style', 'width:100%;height:auto;')), 'html5', 'UTF-8'); ?>>
+</div>
+<div class="col-xs-12 col-md-4">
+<iframe <?php echo MtHaml\Runtime::renderAttributes(array(array('width', '360'), array('height', '203'), array('src', 'https://www.youtube.com/embed/KHmrYeaqBys?rel=0'), array('frameborder', '0'), array('allow', 'autoplay;encrypted-media'), array('allowfullscreen', TRUE)), 'html5', 'UTF-8'); ?>></iframe>
 </div>
 </div>
 </div>
 </div>
-<div id="google-calendar" class="containment">
-<iframe src="https://www.google.com/calendar/embed?src=bjpkvaeg1rjq9u3c6utecq1jos%40group.calendar.google.com&amp;amp;ctz=America/Los_Angeles" style="border: 0" width="100%" height="650" frameborder="0" scrolling="no"></iframe>
-<p>The calendar does not list unplanned open times that occur when a keyed member is present.</p>
-</div>
-<?php include '_pricing.php'; ?>
-<?php include('_map_footer.php'); ?>
 
 <?php if(!isset($layout_no_footer)) { ?>
 <div id="footer" class="containment">
