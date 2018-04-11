@@ -100,7 +100,7 @@ function save_payload($req){
 function save_switches($req) {
   $post = $req->getParsedBody();
   $session = $req->getHeaderLine('X-Session');
-  $checks = ['Pod_Bay_Door', 'Main_Door', 'Office_Motion', 'Shop_Motion', 'Open_Switch', 'Temperature'];
+  $checks = ['Front_Door', 'Pod_Bay_Door', 'Office_Motion', 'Shop_Motion', 'Open_Switch', 'Temperature'];
 
   mark_old_switches();
 
@@ -277,8 +277,8 @@ function get_latest($sensor){
 function latest_changes(){
   $change_items = array(
     'Open Switch' => [],
+    'Front Door' => [],
     'Pod Bay Door' => [],
-    'Main Door' => [],
     'Office Motion' => [],
     'Shop Motion' => [],
     'Temperature' => []
