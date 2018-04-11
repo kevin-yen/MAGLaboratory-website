@@ -12,7 +12,7 @@ class Primary extends PurifierBase {
     $this->app->get('/subscribe', [$this, 'subscribe']);
     $this->app->get('/membership', [$this, 'membership']);
     $this->app->get('/membership/pay4keyed', [$this, 'pay4keyed']);
-    
+    $this->app->get('/community', [$this, 'community']);
   }
   
   function homepage($req, $res){
@@ -44,5 +44,9 @@ class Primary extends PurifierBase {
   
   function pay4keyed($req, $res){
     $this->render($res, 'main/pay4keyed.php', 'Pay for Keyed Membership');
+  }
+
+  function community($req, $res){
+    $this->render($res, 'main/community.php', 'Community');
   }
 }
