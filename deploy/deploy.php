@@ -4,8 +4,13 @@
 # This is the directory where we will output deploy.sftp
 define('DEPLOY_DIRECTORY', __DIR__);
 
+include(DEPLOY_DIRECTORY . '/config.php');
+
 # Set to true if you want to confirm deployment before sending sftp commands
-define('DEPLOY_TEST', false);
+# Recommended you set this in config.php
+if(!defined('DEPLOY_TEST')){
+  define('DEPLOY_TEST', false);
+}
 
 # This is the project directory. If you have deploy.php in the root directory
 # then you can leave this alone, otherwise change it to the correct path.
@@ -14,8 +19,11 @@ define('PROJECT_ROOT', __DIR__ . '/..');
 
 # This is the username and host part that you use to login.
 # eg: user5_testsite@ssh.phx.nearlyfreespeech.net
+# This variable can (and should) be set in config.php
+# cp config.php.example config.php
+# and edit as necessary with your username and path to nfsn
 if(!defined('SSH_USERHOST')){
-  define('SSH_USERHOST', 'swut4ewr2_maglabs@nfsn');
+  define('SSH_USERHOST', 'nfsn');
 }
 
 # This is the path to the NFSN deployer.
