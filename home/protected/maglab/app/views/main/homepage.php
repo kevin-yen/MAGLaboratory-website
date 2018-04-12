@@ -149,7 +149,7 @@ We are a 501(c)(3) non-profit
 and collaborative workspace based in Pomona, CA.
 </p>
 <p>
-We enojoy 
+We enjoy 
 <a href="/community">giving back to the community </a>
 by providing a creative space and project help and guidance.
 </p>
