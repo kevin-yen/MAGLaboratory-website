@@ -175,7 +175,6 @@ function update_switch($sensor, $session, $value){
   $query = null;
   
   $last = last_sensor_value($sensor, $session);
-  file_put_contents("/tmp/halDebug-{$sensor}", serialize($last));
   
   if(empty($last)){ # No active entry, insert new.
     insert_switch($sensor, $session, $ival);
@@ -299,7 +298,7 @@ function timeline_graph_json($from, $to){
 
 function get_latest($sensor){
   $mysqli = get_mysqli();
-  if($stmt = $mysqli->prepare("SELECT UNIX_TIMESTAMP(progress_at), UNIX_TIMESTAMP(end_at), UNIX_TIMESTAMP(mark_at), last_value, UNIX_TIMESTAMP(start_at) FROM haldor WHERE sensor = ? ORDER BY progress_at DESC LIMIT 1")){
+  if($stmt = $mysqli->prepare("SELECT UNIX_TIMESTAMP(progress_at), UNIX_TIMESTAMP(end_at), UNIX_TIMESTAMP(mark_at), last_value, UNIX_TIMESTAMP(start_at) FROM haldor WHERE sensor = ? ORDER BY id DESC LIMIT 1")){
     $sensor_name = str_replace(' ', '_', $sensor);
     $stmt->bind_param('s', $sensor_name);
     $stmt->execute();
