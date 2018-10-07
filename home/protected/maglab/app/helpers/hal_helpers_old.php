@@ -299,7 +299,7 @@ function timeline_graph_json($from, $to){
 
 function get_latest($sensor){
   $mysqli = get_mysqli();
-  if($stmt = $mysqli->prepare("SELECT UNIX_TIMESTAMP(progress_at), UNIX_TIMESTAMP(end_at), UNIX_TIMESTAMP(mark_at), last_value FROM haldor WHERE sensor = ? ORDER BY progress_at DESC LIMIT 1")){
+  if($stmt = $mysqli->prepare("SELECT UNIX_TIMESTAMP(progress_at), UNIX_TIMESTAMP(end_at), UNIX_TIMESTAMP(mark_at), last_value, UNIX_TIMESTAMP(start_at) FROM haldor WHERE sensor = ? ORDER BY progress_at DESC LIMIT 1")){
     $sensor_name = str_replace(' ', '_', $sensor);
     $stmt->bind_param('s', $sensor_name);
     $stmt->execute();
@@ -340,7 +340,7 @@ function latest_changes(){
     if(strpos($sensor, 'Door') !== false){
       if($data[3] == '1' and $data[1] == null){
         array_push($value, 'Open');
-        array_push($value, $data[0]);
+        array_push($value, $data[4]);
         array_push($value, true);
       } else {
         array_push($value, 'Closed');
@@ -354,7 +354,7 @@ function latest_changes(){
         array_push($value, 'Moving');
         array_push($value, $data[0]);
         array_push($value, true);
-      } elseif($now - 20*60 < $data[0] && ($data[1] or $data[2])){
+      } elseif($now - 20*60 < $data[0] && $data[3] != '0'){
         array_push($value, 'Moving');
         array_push($value, $data[0]);
         array_push($value, true);
@@ -366,13 +366,13 @@ function latest_changes(){
     }
     
     if(strpos($sensor, 'Switch') !== false){
-      if($data[1] == null && $data[3] == '1'){
+      if($data[3] == '1'){
         array_push($value, 'Flipped ON');
-        array_push($value, $data[0]);
+        array_push($value, $data[4]);
         array_push($value, true);
       } else {
         array_push($value, 'Flipped OFF');
-        array_push($value, $data[1] | $data[2]);
+        array_push($value, $data[0] | $data[1] | $data[2]);
         array_push($value, false);
       }
     }
