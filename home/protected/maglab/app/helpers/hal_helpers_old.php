@@ -343,7 +343,7 @@ function latest_changes(){
         array_push($value, true);
       } else {
         array_push($value, 'Closed');
-        array_push($value, $data[4] | $data[1] | $data[2]);
+        array_push($value, $data[4]);
         array_push($value, false);
       }
     }
@@ -371,14 +371,14 @@ function latest_changes(){
         array_push($value, true);
       } else {
         array_push($value, 'Flipped OFF');
-        array_push($value, $data[4] | $data[0] | $data[1] | $data[2]);
+        array_push($value, $data[4]);
         array_push($value, false);
       }
     }
     
     if($sensor == 'Temperature'){
       array_push($value, '' . sprintf("%.2f °C/ %.2f °F", (($data[3] | 0) / 1000), ((($data[3] | 0) / 1000)*1.8 + 32)));
-      array_push($value, $data[0] | $data[2] | $data[1] );
+      array_push($value, $data[4] );
     }
     
     if($value[1] and $value[1] > $last_update_time){
