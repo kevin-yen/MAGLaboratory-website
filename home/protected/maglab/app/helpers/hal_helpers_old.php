@@ -344,7 +344,7 @@ function latest_changes(){
         array_push($value, true);
       } else {
         array_push($value, 'Closed');
-        array_push($value, $data[1] | $data[2]);
+        array_push($value, $data[4] | $data[1] | $data[2]);
         array_push($value, false);
       }
     }
