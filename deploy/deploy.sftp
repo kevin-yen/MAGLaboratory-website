@@ -1,3 +1,3 @@
-!echo "Commit: 8c4f641400ed485fd8ca5d5adf8f2bc3d3a2ab13 a4a8ee93c667e35f5e0af09e89d7caa2d05137d2"
+!echo "Commit: a4a8ee93c667e35f5e0af09e89d7caa2d05137d2 9d8220e424b7efb94a0d615ba3b77ceeb214e3a8"
 put 'protected/maglab/app/helpers/hal_helpers_old.php' 'protected/maglab/app/helpers/hal_helpers_old.php'
 put '/home/httpd/maglabs-www/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
