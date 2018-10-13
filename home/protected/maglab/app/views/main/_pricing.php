@@ -92,7 +92,7 @@ to
 </ul>
 </div>
 <div class="panel-footer text-center">
-<strong>$40/month</strong>
+<strong>$50/month</strong>
 <br>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
@@ -125,7 +125,7 @@ to
 </ul>
 </div>
 <div class="panel-footer text-center">
-<strong>$90/month</strong>
+<strong>$100/month</strong>
 <br>
 <a <?php echo MtHaml\Runtime::renderAttributes(array(array('class', ('btn' . ' ' . 'btn-primary')), array('href', ('mailto:contact@maglaboratory.org'))), 'html5', 'UTF-8'); ?>>Ask an officer</a>
 <br>
