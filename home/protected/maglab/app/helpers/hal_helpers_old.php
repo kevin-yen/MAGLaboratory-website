@@ -124,33 +124,70 @@ function mark_old_switches(){
 
 }
 
+function last_sensor_value($sensor, $session){
+  $mysqli = get_mysqli();
+  if(!$mysqli){ return false; }
+  
+  $query = "SELECT id, last_value FROM haldor WHERE sensor = ? AND end_at IS NULL AND session = ? LIMIT 1";
+  
+  if($stmt = $mysqli->prepare($query)){
+    $stmt->bind_param('ss', $sensor, $session);
+    $stmt->execute();
+    if($res = $stmt->get_result()){
+      $data = $res->fetch_all();
+      return $data[0];
+    }
+    
+  }
+  
+  return NULL;
+}
+
+function close_sensor_entry($sensor_id){
+  $mysqli = get_mysqli();
+  if(!$mysqli){ return false; }
+  
+  $query = "UPDATE haldor SET end_at = NOW() WHERE id = ? AND end_at IS NULL";
+  if($stmt = $mysqli->prepare($query)){
+    $stmt->bind_param('i', $sensor_id);
+    $stmt->execute();
+    $stmt->close();
+  }
+}
+
+function progress_sensor_entry($sensor_id){
+  $mysqli = get_mysqli();
+  if(!$mysqli){ return false; }
+  
+  $query = "UPDATE haldor SET progress_count = progress_count + 1, progress_at = NOW() WHERE id = ? AND end_at IS NULL";
+  if($stmt = $mysqli->prepare($query)){
+    $stmt->bind_param('i', $sensor_id);
+    $stmt->execute();
+    $stmt->close();
+  }
+}
+
 function update_switch($sensor, $session, $value){
   $mysqli = get_mysqli();
   if(!$mysqli){ return false; }
   
   $ival = (int)$value;
   $query = null;
-  if($ival < 1){
-    # TODO: Treat Motion type sensors differently because they're instantaneous
-    # Item is no longer open, mark end_at
-    $query = "UPDATE haldor SET progress_count = progress_count + 1, end_at = NOW(), last_value = ? WHERE sensor = ? AND end_at IS NULL AND session = ?";
-  } else {
-    $query = "UPDATE haldor SET last_value = ?, progress_count = progress_count + 1, progress_at = NOW() WHERE sensor = ? AND end_at IS NULL AND session = ?";
+  
+  $last = last_sensor_value($sensor, $session);
+  
+  if(empty($last)){ # No active entry, insert new.
+    insert_switch($sensor, $session, $ival);
+    return;
   }
   
-  if($stmt = $mysqli->prepare($query)){
-    $stmt->bind_param('sss', $value, $sensor, $session);
-    $stmt->execute();
-    if($ival >= 1 && $mysqli->affected_rows == 0){
-      insert_switch($sensor, $session);
-      # If we couldn't update when sensor is on, it means this is newly activated
-      # so we'll have to do an insert.
-      # If it's off, we don't care
-    }
-    
-    $stmt->close();
+  if($ival != (int)$last[1]){
+    # Item has changed. Close last value and mark change by inserting new value.
+    close_sensor_entry($last[0]);
+    insert_switch($sensor, $session, $ival);
   } else {
-    return false;
+    #Item has not changed. Save it as a progress update
+    progress_sensor_entry($last[0]);
   }
 }
 
@@ -172,12 +209,12 @@ function set_boot_switch($req, $session){
   insert_switch('Boot', $session);
 }
 
-function insert_switch($sensor, $session){
+function insert_switch($sensor, $session, $value = '0'){
   $mysqli = get_mysqli();
   if(!$mysqli){ return false; }
   
-  if($stmt = $mysqli->prepare("INSERT INTO haldor (sensor, start_at, progress_at, session, created_at) VALUES (?, NOW(), NOW(), ?, NOW())")){
-    $stmt->bind_param('ss', $sensor, $session);
+  if($stmt = $mysqli->prepare("INSERT INTO haldor (sensor, last_value, start_at, progress_at, session, created_at) VALUES (?, ?, NOW(), NOW(), ?, NOW())")){
+    $stmt->bind_param('sss', $sensor, $value, $session);
     $stmt->execute();
     $stmt->close();
   } else {
@@ -261,7 +298,7 @@ function timeline_graph_json($from, $to){
 
 function get_latest($sensor){
   $mysqli = get_mysqli();
-  if($stmt = $mysqli->prepare("SELECT UNIX_TIMESTAMP(progress_at), UNIX_TIMESTAMP(end_at), UNIX_TIMESTAMP(mark_at), last_value FROM haldor WHERE sensor = ? ORDER BY progress_at DESC LIMIT 1")){
+  if($stmt = $mysqli->prepare("SELECT UNIX_TIMESTAMP(progress_at), UNIX_TIMESTAMP(end_at), UNIX_TIMESTAMP(mark_at), last_value, UNIX_TIMESTAMP(start_at) FROM haldor WHERE sensor = ? ORDER BY id DESC LIMIT 1")){
     $sensor_name = str_replace(' ', '_', $sensor);
     $stmt->bind_param('s', $sensor_name);
     $stmt->execute();
@@ -300,48 +337,48 @@ function latest_changes(){
     
     # Doors are either open or closed. Easy
     if(strpos($sensor, 'Door') !== false){
-      if($data[1] == null && $data[2] == null){
+      if($data[3] == '1' and $data[1] == null){
         array_push($value, 'Open');
-        array_push($value, $data[0]);
+        array_push($value, $data[4]);
         array_push($value, true);
       } else {
         array_push($value, 'Closed');
-        array_push($value, $data[1] | $data[2]);
+        array_push($value, $data[4]);
         array_push($value, false);
       }
     }
     
     if(strpos($sensor, 'Motion') !== false){
-      if($data[1] == null && $data[2] == null){
+      if($data[1] == null && $data[3] == '1'){
         array_push($value, 'Moving');
         array_push($value, $data[0]);
         array_push($value, true);
-      } elseif($now - 20*60 < $data[0] && ($data[1] or $data[2])){
+      } elseif($now - 20*60 < $data[0] && $data[3] != '0'){
         array_push($value, 'Moving');
         array_push($value, $data[0]);
         array_push($value, true);
       } else {
         array_push($value, 'No Movement since');
-        array_push($value, $data[0]);
+        array_push($value, $data[4]);
         array_push($value, false);
       }
     }
     
     if(strpos($sensor, 'Switch') !== false){
-      if($data[1] == null && $data[2] == null){
+      if($data[3] == '1'){
         array_push($value, 'Flipped ON');
-        array_push($value, $data[0]);
+        array_push($value, $data[4]);
         array_push($value, true);
       } else {
         array_push($value, 'Flipped OFF');
-        array_push($value, $data[1] | $data[2]);
+        array_push($value, $data[4]);
         array_push($value, false);
       }
     }
     
     if($sensor == 'Temperature'){
       array_push($value, '' . sprintf("%.2f °C/ %.2f °F", (($data[3] | 0) / 1000), ((($data[3] | 0) / 1000)*1.8 + 32)));
-      array_push($value, $data[2] | $data[1] | $data[0]);
+      array_push($value, $data[4] );
     }
     
     if($value[1] and $value[1] > $last_update_time){
