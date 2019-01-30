@@ -1,8 +1,10 @@
-!echo "Commit: b314559239cb3309ca0822ac89ab9a311a61e266 31342d7ff155863cb0a31856634c11d628f99298"
-put 'protected/maglab/app/views/main/class_deposit.php' 'protected/maglab/app/views/main/class_deposit.php'
-put 'protected/maglab/app/views/main/community.php' 'protected/maglab/app/views/main/community.php'
-put 'protected/maglab/app/views/main/donate.php' 'protected/maglab/app/views/main/donate.php'
-put 'protected/maglab/app/views/main/homepage.php' 'protected/maglab/app/views/main/homepage.php'
-put 'protected/maglab/app/views/main/membership.php' 'protected/maglab/app/views/main/membership.php'
-put 'protected/maglab/app/views/main/pay4keyed.php' 'protected/maglab/app/views/main/pay4keyed.php'
+!echo "Commit: 31342d7ff155863cb0a31856634c11d628f99298 0cc4bc6827a47975a1ca03b056488237b2f72bc0"
+put 'protected/maglab/app/views/board/add.php' 'protected/maglab/app/views/board/add.php'
+put 'protected/maglab/app/views/board/edit.php' 'protected/maglab/app/views/board/edit.php'
+put 'protected/maglab/app/views/board/index.php' 'protected/maglab/app/views/board/index.php'
+put 'protected/maglab/app/views/board/noEdit.php' 'protected/maglab/app/views/board/noEdit.php'
+put 'protected/maglab/app/views/board/show.php' 'protected/maglab/app/views/board/show.php'
+put 'protected/maglab/app/views/hal/chart.php' 'protected/maglab/app/views/hal/chart.php'
+put 'protected/maglab/app/views/hal/index.php' 'protected/maglab/app/views/hal/index.php'
+put 'protected/maglab/app/views/main/_map_footer.php' 'protected/maglab/app/views/main/_map_footer.php'
 put '/var/website/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
