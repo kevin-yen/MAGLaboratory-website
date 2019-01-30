@@ -171,7 +171,7 @@ function drawChart(){
 <div id="footer" class="containment">
 <div class="container">
 <div class="row">
-<span class="text-center">Copyright &copy; 2011-2016 Makers, Artists, and Gadgeteers Laboratory, Inc</span>
+<span class="text-center">Copyright &copy; 2011-2019 Makers, Artists, and Gadgeteers Laboratory, Inc</span>
 </div>
 </div>
 </div>
