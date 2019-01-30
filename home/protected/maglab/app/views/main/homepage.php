@@ -176,7 +176,7 @@ They might share some tips and tricks or even be interested in joining your proj
 </p>
 <p>
 And if you don't like us enough to join in holy makermony, you're still welcome visit anytime.
-<strong>Check the calendar, Facebook and Meetup page</strong>
+<strong>Check the calendar, Facebook and Wiki</strong>
 to see what MAGLab is doing.
 </p>
 </div>
@@ -251,7 +251,7 @@ to check if--and for how long--the space will be open by the time you arrive.
 <div id="footer" class="containment">
 <div class="container">
 <div class="row">
-<span class="text-center">Copyright &copy; 2011-2017 Makers, Artists, and Gadgeteers Laboratory, Inc</span>
+<span class="text-center">Copyright &copy; 2011-2019 Makers, Artists, and Gadgeteers Laboratory, Inc</span>
 </div>
 </div>
 </div>
