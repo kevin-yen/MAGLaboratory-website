@@ -61,6 +61,7 @@ function base64_urlencode($data) {
   return rtrim(strtr(base64_encode($data), '+/', '-_'), '='); 
 } 
 
+# Called on by startup notification to generate a session for the notifier
 function generate_session(){
   return base64_urlencode(openssl_random_pseudo_bytes(30));
 }
@@ -196,6 +197,13 @@ function set_boot_switch($req, $session){
   
   $mysqli = get_mysqli();
   if(!$mysqli){ return false; }
+
+  if($stmt = $mysqli->prepare("INSERT INTO haldor_sessions (session) VALUES (?)")){
+    $stmt->bind_param('s', $session);
+    $stmt->execute();
+  } else {
+    return false;
+  }
   
   if($stmt = $mysqli->prepare("INSERT INTO haldor_payloads (payload, session) VALUES (?, ?)")){
     $stmt->bind_param('ss', json_encode($post), $session);
@@ -311,6 +319,8 @@ function get_latest($sensor){
   return null;
 }
 
+# TODO make fewer SQL calls with the following:
+# #SELECT sensor, UNIX_TIMESTAMP(progress_at), UNIX_TIMESTAMP(end_at), UNIX_TIMESTAMP(mark_at), last_value, UNIX_TIMESTAMP(start_at) from `haldor` WHERE id IN (SELECT MAX(id) from `haldor` GROUP BY sensor)
 function latest_changes(){
   $change_items = array(
     'Open Switch' => [],

@@ -10,6 +10,7 @@ class Haldor {
 
   function init(){
     $this->app->get('/haldor/test', [$this, 'test']);
+    $this->app->get('/haldor/status', [$this, 'status']);
     $this->app->post('/haldor/bootup', [$this, 'bootup']);
     $this->app->post('/haldor/checkup', [$this, 'checkup']);
   }
@@ -20,6 +21,7 @@ class Haldor {
   
   function bootup($req, $res){
     authenticate($req);
+    # generate a random number that will be used to identify this session
     $session = generate_session();
     set_boot_switch($req, $session);
     echo $session;
@@ -30,6 +32,11 @@ class Haldor {
     save_payload($req);
     save_switches($req);
     echo 'OK';
+  }
+
+  function status($req, $res){
+    $latest = latest_changes();
+    echo json_encode($latest);
   }
 }
 
