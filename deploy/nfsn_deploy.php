@@ -14,7 +14,7 @@ if(strpos($check_clean, 'On branch master') === false){
   exit();
 }
 
-if(!in_array('dirty_ok', $argv) and (strpos($check_clean, 'nothing to commit') === false or strpos($check_clean, 'working directory clean') === false)){
+if(!in_array('dirty_ok', $argv) and (strpos($check_clean, 'nothing to commit') === false or strpos($check_clean, 'working tree clean') === false)){
   puts("Refusing to deploy. Current HEAD is dirty. Commit changes to master to deploy.");
   exit();
 }
