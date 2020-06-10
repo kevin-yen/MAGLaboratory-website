@@ -83,14 +83,14 @@ function authenticate($req) {
 }
 
 function save_payload($req){
-  $post = $req->getParsedBody();
+  $post = json_encode($req->getParsedBody());
   $session = $req->getHeaderLine('X-Session');
   
   $mysqli = get_mysqli();
   if(!$mysqli){ return false; }
   
   if($stmt = $mysqli->prepare("INSERT INTO haldor_payloads (payload, session) VALUES (?, ?)")){
-    $stmt->bind_param('ss', json_encode($post), $session);
+    $stmt->bind_param('ss', $post, $session);
     $stmt->execute();
     $stmt->close();
   } else {
