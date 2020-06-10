@@ -3,11 +3,11 @@
   .container
     .row
       %h1.text-center
-        - if($pricing_title)
+        - if(isset($pricing_title))
           = $pricing_title
         - else
           Membership Info
-      - if(!$skip_membership_link)
+      - if(!isset($skip_membership_link) || !$skip_membership_link)
         %p.text-center
           More information available on the
           %strong
@@ -110,7 +110,7 @@
           %br
           We ask that interested keyholders try the space out as a General Member first.
     .row
-      - if(!$skip_membership_link)
+      - if(!isset($skip_membership_link) || !$skip_membership_link)
         %p.text-center
           If you're interested and want more details, please see the
           %strong

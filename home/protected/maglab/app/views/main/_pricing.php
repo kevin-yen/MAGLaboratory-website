@@ -2,13 +2,13 @@
 <div class="container">
 <div class="row">
 <h1 class="text-center">
-<?php if($pricing_title) { ?>
+<?php if(isset($pricing_title)) { ?>
 <?php echo htmlspecialchars($pricing_title,ENT_QUOTES,'UTF-8'); ?>
 <?php } else { ?>
 Membership Info
 <?php } ?>
 </h1>
-<?php if(!$skip_membership_link) { ?>
+<?php if(!isset($skip_membership_link) || !$skip_membership_link) { ?>
 <p class="text-center">
 More information available on the
 <strong>
@@ -135,7 +135,7 @@ We ask that interested keyholders try the space out as a General Member first.
 </div>
 </div>
 <div class="row">
-<?php if(!$skip_membership_link) { ?>
+<?php if(!isset($skip_membership_link) || !$skip_membership_link) { ?>
 <p class="text-center">
 If you're interested and want more details, please see the
 <strong>

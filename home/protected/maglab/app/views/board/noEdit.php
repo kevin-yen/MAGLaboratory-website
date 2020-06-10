@@ -150,7 +150,7 @@ The edit code you are using is incorrect. You can not edit this posting.
 <div id="footer" class="containment">
 <div class="container">
 <div class="row">
-<span class="text-center">Copyright &copy; 2011-2019 Makers, Artists, and Gadgeteers Laboratory, Inc</span>
+<span class="text-center">Copyright &copy; 2011-2020 Makers, Artists, and Gadgeteers Laboratory, Inc</span>
 </div>
 </div>
 </div>

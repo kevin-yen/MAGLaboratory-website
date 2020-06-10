@@ -46,7 +46,7 @@ function outputFile($filename){
   $fpath = explode('.', $filename);
 
   if(array_pop($fpath) == 'haml'){
-    if($fpath[count($fpath)-1] == 'layout'){ continue; }
+    if($fpath[count($fpath)-1] == 'layout'){ return; } // once again, skip layout files
     $content = $haml->compileFileWithLayout($filename);
     echo $content;
   } else {
