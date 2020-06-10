@@ -1,2 +1,2 @@
-!echo "Commit: a0caae7bc0c9b6e2627e7736f7ba0bcbfacae460 05bf6a1124128b2dea3b19c3ff0b81cf89445825"
+!echo "Commit: 05bf6a1124128b2dea3b19c3ff0b81cf89445825 dbcce613edc5818104dfcccee98a25e7b25754e9"
 put '/home/brandon/maglab_website/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
