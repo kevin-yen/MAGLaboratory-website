@@ -89,7 +89,7 @@ array_walk($changed_files, function($changed_file) {
           # Parent directory does not exist, so all paths under will not either
           $check = 'CREATED_PARENT';
         } else {
-          $check = shell_exec("ssh " . SSH_USERHOST . " \"ls -d '/home/{$new_path}' && echo DIR_EXISTS\"");
+          $check = shell_exec("ssh " . SSH_USERHOST . " \"ls -d '". DEPLOY_HOME ."{$new_path}' && echo DIR_EXISTS\"");
         }
         $skip_dirs[$new_path] = true;
         if(strpos($check, 'DIR_EXISTS') === false){
@@ -139,7 +139,7 @@ if(DEPLOY_TEST){
 }
 
 $deploy_result = -1;
-$deploy_output = system("sftp -b " . DEPLOY_DIRECTORY . "/deploy.sftp " . SSH_USERHOST . ":/home/", $deploy_result);
+$deploy_output = system("sftp -b " . DEPLOY_DIRECTORY . "/deploy.sftp " . SSH_USERHOST . ":" . DEPLOY_HOME , $deploy_result);
 
 if($deploy_output and $deploy_result == 0){
   echo "\nDeploy Succeeded.\n\n";
