@@ -1,5 +1,5 @@
 
-%table.table-striped.table-hover{:style => 'width: 100%;'}
+%table#sensor-table.table-striped.table-hover{:style => 'width: 100%;'}
   %thead
     %tr
       %th Sensor
@@ -15,4 +15,9 @@
         %td
           - if($v[1])
             %time.timeago{'datetime' => date('c', $v[1])}
-        %td= $v[1] ? date('M j, Y g:i A T', $v[1]) : 'NEVER'
+        %td= $v[1] ? date('M j, Y, g:i A T', $v[1]) : 'NEVER'
+    %tr
+      %td Auto Refresh
+      %td JS Not Enabled
+      %td
+      %td

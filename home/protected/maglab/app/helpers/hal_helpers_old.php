@@ -304,14 +304,25 @@ function timeline_graph_json($from, $to){
   return "[]";
 }
 
-function get_latest($sensor){
+function get_latest($sensors){
+  # uhm, sorry for making so much SQL magic to unpack.
+  # the inside portion with MAX(id) gets the latest data indices from the sensors
+  # the ORDER BY FIELD( portion basically picks the sensors with a bit of -
+  # double-reverse-fudgery to produce a list in the right order 
+  $sql = "SELECT sensor, UNIX_TIMESTAMP(progress_at), UNIX_TIMESTAMP(end_at), UNIX_TIMESTAMP(mark_at), last_value, UNIX_TIMESTAMP(start_at) from `haldor` WHERE id IN (SELECT MAX(id) from `haldor` GROUP BY sensor) ORDER BY FIELD(sensor";
+  # first reverse
+  $sensors = array_reverse($sensors);
+  foreach ($sensors as $sensor_name => $value) {
+    $sensor_name = str_replace(' ', '_', $sensor_name);
+    $sql .= ", '" . $sensor_name . "'";
+  }
+  # second reverse
+  $sql .= ") DESC";
   $mysqli = get_mysqli();
-  if($stmt = $mysqli->prepare("SELECT UNIX_TIMESTAMP(progress_at), UNIX_TIMESTAMP(end_at), UNIX_TIMESTAMP(mark_at), last_value, UNIX_TIMESTAMP(start_at) FROM haldor WHERE sensor = ? ORDER BY id DESC LIMIT 1")){
-    $sensor_name = str_replace(' ', '_', $sensor);
-    $stmt->bind_param('s', $sensor_name);
+  if($stmt = $mysqli->prepare($sql)){
     $stmt->execute();
     if($res = $stmt->get_result()){
-      $data = $res->fetch_all()[0];
+      $data = $res->fetch_all();
       return $data;
     }
   }
@@ -319,8 +330,6 @@ function get_latest($sensor){
   return null;
 }
 
-# TODO make fewer SQL calls with the following:
-# #SELECT sensor, UNIX_TIMESTAMP(progress_at), UNIX_TIMESTAMP(end_at), UNIX_TIMESTAMP(mark_at), last_value, UNIX_TIMESTAMP(start_at) from `haldor` WHERE id IN (SELECT MAX(id) from `haldor` GROUP BY sensor)
 function latest_changes(){
   $change_items = array(
     'Open Switch' => [],
@@ -333,67 +342,71 @@ function latest_changes(){
   
   $now = time();
   $last_update_time = 0;
-  
-  // TODO: May be better to manually run each one to avoid extra strpos calls
+
+  # this bit could skip the sensor name at index 0
+  $data = get_latest($change_items);
+  $d_i = 0;
   foreach($change_items as $sensor => &$value){
-    $data = get_latest($sensor);
-    
     if($data == null){
       array_push($value, 'No Data');
       array_push($value, null);
       array_push($value, false);
       continue;
     }
+
+    $data_line = $data[$d_i];
     
     # Doors are either open or closed. Easy
     if(strpos($sensor, 'Door') !== false){
-      if($data[3] == '1' and $data[1] == null){
+      if($data_line[4] == '1' and $data_line[2] == null){
         array_push($value, 'Open');
-        array_push($value, $data[4]);
+        array_push($value, $data_line[5]);
         array_push($value, true);
       } else {
         array_push($value, 'Closed');
-        array_push($value, $data[4]);
+        array_push($value, $data_line[5]);
         array_push($value, false);
       }
     }
     
     if(strpos($sensor, 'Motion') !== false){
-      if($data[1] == null && $data[3] == '1'){
+      if($data_line[2] == null && $data_line[4] == '1'){
         array_push($value, 'Moving');
-        array_push($value, $data[0]);
+        array_push($value, $data_line[1]);
         array_push($value, true);
-      } elseif($now - 20*60 < $data[0] && $data[3] != '0'){
+      } elseif($now - 20*60 < $data_line[1] && $data_line[4] != '0'){
         array_push($value, 'Moving');
-        array_push($value, $data[0]);
+        array_push($value, $data_line[1]);
         array_push($value, true);
       } else {
         array_push($value, 'No Movement since');
-        array_push($value, $data[4]);
+        array_push($value, $data_line[5]);
         array_push($value, false);
       }
     }
     
     if(strpos($sensor, 'Switch') !== false){
-      if($data[3] == '1'){
+      if($data_line[4] == '1'){
         array_push($value, 'Flipped ON');
-        array_push($value, $data[4]);
+        array_push($value, $data_line[5]);
         array_push($value, true);
       } else {
         array_push($value, 'Flipped OFF');
-        array_push($value, $data[4]);
+        array_push($value, $data_line[5]);
         array_push($value, false);
       }
     }
     
     if($sensor == 'Temperature'){
-      array_push($value, '' . sprintf("%.2f °C/ %.2f °F", (($data[3] | 0) / 1000), ((($data[3] | 0) / 1000)*1.8 + 32)));
-      array_push($value, $data[4] );
+      array_push($value, '' . sprintf("%.2f °C/ %.2f °F", (($data_line[4] | 0) / 1000), ((($data_line[4] | 0) / 1000)*1.8 + 32)));
+      array_push($value, $data_line[5] );
     }
     
     if($value[1] and $value[1] > $last_update_time){
       $last_update_time = $value[1];
     }
+
+    $d_i += 1;
   }
 
   $change_items['Page Loaded'] = ['at', $now];

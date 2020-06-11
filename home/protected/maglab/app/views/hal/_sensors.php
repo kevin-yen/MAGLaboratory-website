@@ -1,4 +1,4 @@
-<table <?php echo MtHaml\Runtime::renderAttributes(array(array('class', ('table-striped' . ' ' . 'table-hover')), array('style', ('width: 100%;'))), 'html5', 'UTF-8'); ?>>
+<table <?php echo MtHaml\Runtime::renderAttributes(array(array('id', 'sensor-table'), array('class', ('table-striped' . ' ' . 'table-hover')), array('style', ('width: 100%;'))), 'html5', 'UTF-8'); ?>>
 <thead>
 <tr>
 <th>Sensor</th>
@@ -18,8 +18,14 @@
 <time <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'timeago'), array(('datetime'), (date('c', $v[1])))), 'html5', 'UTF-8'); ?>></time>
 <?php } ?>
 </td>
-<td><?php echo htmlspecialchars($v[1] ? date('M j, Y g:i A T', $v[1]) : 'NEVER',ENT_QUOTES,'UTF-8'); ?></td>
+<td><?php echo htmlspecialchars($v[1] ? date('M j, Y, g:i A T', $v[1]) : 'NEVER',ENT_QUOTES,'UTF-8'); ?></td>
 </tr>
 <?php } ?>
+<tr>
+<td>Auto Refresh</td>
+<td>JS Not Enabled</td>
+<td></td>
+<td></td>
+</tr>
 </tbody>
 </table>

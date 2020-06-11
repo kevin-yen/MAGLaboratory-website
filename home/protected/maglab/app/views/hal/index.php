@@ -178,6 +178,7 @@ We are
 </div>
 </div>
 <script <?php echo MtHaml\Runtime::renderAttributes(array(array('src', ('/js/timeago.js'))), 'html5', 'UTF-8'); ?>></script>
+<script <?php echo MtHaml\Runtime::renderAttributes(array(array('src', ('/js/sensor_updater.js'))), 'html5', 'UTF-8'); ?>></script>
 <script type="text/javascript">
 //<![CDATA[
 $(function(){
