@@ -23,7 +23,7 @@
 <?php } ?>
 <tr>
 <td>Auto Refresh</td>
-<td>JS Not Enabled</td>
+<td>Not Enabled</td>
 <td></td>
 <td></td>
 </tr>

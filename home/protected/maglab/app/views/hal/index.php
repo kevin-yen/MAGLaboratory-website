@@ -149,7 +149,7 @@ Menu
 </div>
 <div class="col-md-12" id="activity_panel">
 <?php if($isTechBad) { ?>
-<div class="alert alert-danger">
+<div id="openness" class="alert alert-danger">
 <h1>
 We are
 <strong>HAVING TECHNICAL DIFFICULTIES</strong>
@@ -157,14 +157,14 @@ We are
 </div>
 <h2>Details below are outdated. Please check back later.</h2>
 <?php } else if($isOpen) { ?>
-<div class="alert alert-success">
+<div id="openness" class="alert alert-success">
 <h1>
 We are
 <strong>OPEN</strong>
 </h1>
 </div>
 <?php } else { ?>
-<div class="alert alert-warning">
+<div id="openness" class="alert alert-warning">
 <h1>
 We are
 <strong>CLOSED</strong>

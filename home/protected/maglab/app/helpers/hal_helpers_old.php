@@ -426,8 +426,8 @@ function is_tech_bad(&$latest){
   unset($latest['LastUpdate']);
   $now = time();
   
-  if($last_update_time <= $now-(60*20)){
-    return true; # No response in 20 minutes is bad
+  if($last_update_time <= $now-(60*15)){
+    return true; # No response in 15 minutes is bad
   } else {
     return false;
   }
