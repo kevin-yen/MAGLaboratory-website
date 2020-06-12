@@ -4,7 +4,7 @@
 var sensor_table = document.getElementById("sensor-table");
 var i;
 var auto_refresh_row;
-var has_focus = false;
+var has_focus = document.hasFocus();
 var override = false;
 const C_REFRESH_NORMAL = 300;
 const C_REFRESH_ERROR = 60;
