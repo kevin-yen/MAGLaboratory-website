@@ -1,0 +1,19 @@
+<?php
+
+$secret = "A secret key for HAL\n"
+$mysqli = null;
+
+define('SKIP_CHECKSUM', false);
+define('COOKIE_SECRET', 'secretforcookies');
+define('MYSQL_HOST', '');
+define('MYSQL_USER', '');
+define('MYSQL_PASS', '');
+define('MYSQL_DB', '');
+define('WIKI_INSTALL_PATH', '/home/protected/mediawiki-version');
+define('ROOT_URL', "web deployment url");
+
+$slim_mode = 'production';
+
+if(!defined('HALDOR_ROOT')){
+    define('HALDOR_ROOT' . __DIR__);
+}
