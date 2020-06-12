@@ -1,3 +1,4 @@
-!echo "Commit: 475e7be6c3b706a43a03f5f6fd83217436b7cf82 a5119ecdef549efed6e49a0758819098d811a0f2"
-put 'public/js/sensor_updater.js' 'public/js/sensor_updater.js'
+!echo "Commit: a5119ecdef549efed6e49a0758819098d811a0f2 a759f004fe52a4efd584db27dd9c591e835fcb81"
+put 'public/favicon.ico' 'public/favicon.ico'
+put 'public/images/logo.png' 'public/images/logo.png'
 put '/home/brandon/maglab_website/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
