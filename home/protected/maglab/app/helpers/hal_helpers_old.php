@@ -399,7 +399,7 @@ function latest_changes(){
     
     if($sensor == 'Temperature'){
       array_push($value, '' . sprintf("%.2f °C/ %.2f °F", (($data_line[4] | 0) / 1000), ((($data_line[4] | 0) / 1000)*1.8 + 32)));
-      array_push($value, $data_line[5] );
+      array_push($value, $data_line[1] );
     }
     
     if($value[1] and $value[1] > $last_update_time){
