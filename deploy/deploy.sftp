@@ -1,4 +1,4 @@
-!echo "Commit: a5119ecdef549efed6e49a0758819098d811a0f2 a759f004fe52a4efd584db27dd9c591e835fcb81"
-put 'public/favicon.ico' 'public/favicon.ico'
-put 'public/images/logo.png' 'public/images/logo.png'
+!echo "Commit: a759f004fe52a4efd584db27dd9c591e835fcb81 91b1195ef1d6e68c2107cd9556a5ba7cf9da16b6"
+put 'protected/maglab/app/helpers/hal_helpers_old.php' 'protected/maglab/app/helpers/hal_helpers_old.php'
+put 'protected/maglab/config/config.php.example' 'protected/maglab/config/config.php.example'
 put '/home/brandon/maglab_website/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
