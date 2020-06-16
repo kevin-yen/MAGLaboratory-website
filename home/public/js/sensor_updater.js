@@ -127,6 +127,19 @@ function override_enable() {
     auto_refresh_row.cells[1].innerHTML = "in";
 }
 
+function maybeUpdate() {
+    if (auto_refresh_counter <= 0) {
+        update_sensors();
+        update_refresh_counter();
+    }
+}
+
 auto_refresh_row.cells[1].addEventListener("click", override_enable, false);
 window.addEventListener("focus", windowHasFocus, false);
 window.addEventListener("blur", windowLostFocus, false);
+window.addEventListener("click", maybeUpdate, false);
+window.addEventListener("mousemove", maybeUpdate, false);
+window.addEventListener("keypress", maybeUpdate, false);
+window.addEventListener("scroll", maybeUpdate, false);
+document.addEventListener("touchMove", maybeUpdate, false);
+document.addEventListener("touchEnd", maybeUpadate, false);
