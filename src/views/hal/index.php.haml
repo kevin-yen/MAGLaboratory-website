@@ -24,6 +24,8 @@
               We are
               %strong CLOSED
         
+        %h2.text-center Synoptic View
+        - include('_synoptic.php')
         %h2.text-center Sensor Status
         - include('_sensors.php')
       
@@ -41,4 +43,5 @@
 -# which means the full header gets rendered before the body yield.
 -# $head_content needs to be set before the render call, anything in this template is inside the template in the middle of the php script
 
-!= $this->partial('main/_map_footer.php')
+-# bad way of including the map, but it works...
+- include(__DIR__ . 'main/_map_footer.php')

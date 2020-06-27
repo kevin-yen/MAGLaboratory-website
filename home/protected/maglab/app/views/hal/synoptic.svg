@@ -1,0 +1,392 @@
+<?xml version="1.0"?>
+<svg
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   version="1.1"
+   viewBox="120 30 480 564"
+   height="564"
+   width="480"
+   id="maglab_synoptic_view">
+  <defs>
+    <pattern
+       height="10"
+       width="10"
+       patternUnits="userSpaceOnUse"
+       id="diagonal-stripe-2">
+      <image
+         height="10"
+         width="10"
+         y="0"
+         x="0"
+         xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+" />
+    </pattern>
+  </defs>
+  <g
+     id="root">
+    <g
+       id="Background">
+      <rect
+         style="fill:url(#diagonal-stripe-2) #cccccc;stroke:#e6e6e6;stroke-width:0"
+         id="The_Unknown"
+         width="977.5"
+         height="624"
+         x="260.5"
+         y="0" />
+      <rect
+         y="0"
+         x="0"
+         height="624"
+         width="260.5"
+         id="Outside_Asphalt"
+         style="fill:#4d4d4d;stroke:#e6e6e6;stroke-width:0" />
+      <rect
+         style="fill:#b3b3b3;fill-rule:evenodd"
+         id="Space_Floor"
+         width="942.5"
+         height="472"
+         x="260.5"
+         y="75" />
+      <text
+         id="Space_Space"
+         y="118"
+         x="290"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="118"
+           x="290"
+           id="Space_Span_Space">Space</tspan></text>
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;"
+         x="290"
+         y="160"
+         id="Space_Closed"
+         visibility="visible"><tspan
+           id="Space_Span_Closed"
+           x="290"
+           y="160">Closed</tspan></text>
+      <text
+         visibility="hidden"
+         id="Space_Open"
+         y="160"
+         x="290"
+         style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none;"
+         xml:space="preserve"><tspan
+           y="160"
+           x="290"
+           id="Space_Span_Open">Open</tspan></text>
+    </g>
+    <g
+       id="Walls">
+      <path
+         id="Electronics-Room_L0"
+         d="M 959.5,332 V 285"
+         style="fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         id="Electronics-Room_L1"
+         d="M 959.5,544 V 386"
+         style="fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         id="Conference-Room_B0"
+         d="m 942,284.5 h 258"
+         style="fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         id="Conference-Room_L0"
+         d="M 888,284.5 797,284.5 V 78"
+         style="fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         id="Bathroom_R0"
+         d="m 555,395.5 h 27.5 V 544"
+         style="fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         id="Bathroom_T0"
+         d="M 501,395.5 H 469.5"
+         style="fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         id="Kitchen_R0"
+         d="m 447,337.5 h 22.5 V 544"
+         style="fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         id="Kitchen_T0"
+         d="M 393,337.5 H 263.5"
+         style="fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         id="Space_L0"
+         d="M 263.5,452 V 305"
+         style="fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         id="Space_Wall"
+         d="m 263.5,506 v 38 h 936.5 v -466 h -936.5 v 38"
+         style="fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
+    <g
+       id="Unmonitored-Doors">
+      <path
+         style="fill:none;stroke:#cccccc;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 959.5,332 v 54"
+         id="Electronics-Room_Door" />
+      <path
+         style="fill:none;stroke:#cccccc;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 888,284.5 h 54"
+         id="Conference-Room_Door" />
+      <path
+         style="fill:none;stroke:#cccccc;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 501,395.5 h 54"
+         id="Bathroom-Door" />
+      <path
+         style="fill:none;stroke:#cccccc;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 393,337.5 h 54"
+         id="Kitchen-Door" />
+    </g>
+    <g
+       id="Pod-Bay-Door">
+      <path
+         style="fill:none;stroke:#000000;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 263.5,116 V 305"
+         id="Pod-Bay-Door_Closed" />
+      <g
+         id="Pod-Bay-Door_Fail"
+         visibility="hidden">
+        <rect
+           id="rect190"
+           width="20"
+           height="189"
+           x="261"
+           y="116"
+           style="fill:#cccccc;stroke:#ff0000;stroke-width:1px" />
+        <path
+           style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 281,116 261,305"
+           id="path194" />
+        <path
+           style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+           d="M 281,305 261,116"
+           id="path192" />
+      </g>
+    </g>
+    <g
+       id="Front-Door">
+      <path
+         visibility="hidden"
+         style="fill:none;stroke:#000000;stroke-width:4px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+         d="M 263.5,506 225.32,467.82"
+         id="Front-Door_Open" />
+      <path
+         visibility="visible"
+         style="fill:none;stroke:#000000;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 263.5,452 v 54"
+         id="Front-Door_Closed" />
+      <g
+         id="Front-Door_Fail"
+         visibility="hidden">
+        <rect
+           style="fill:#cccccc;stroke:#ff0000;stroke-width:1"
+           id="rect196"
+           width="43"
+           height="53"
+           x="223"
+           y="452.5" />
+        <path
+           style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 223,505.5 43,-53"
+           id="path200" />
+        <path
+           style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 223,452.5 43,53"
+           id="path198" />
+      </g>
+    </g>
+    <g
+       id="Shop-Motion">
+      <path
+         id="Shop-Motion_Sensor"
+         d="M480,239 a1,1 0 0,0 10,0"
+         style="fill:#000000;stroke:none" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 470,239 a 15,15 0 0 0 15,15"
+         id="Shop-Motion_IR-Wave0" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 455,239 a 30,30 0 0 0 30,30"
+         id="Shop-Motion_IR-Wave1" />
+      <path
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 440,239 a 45,45 0 0 0 45,45"
+         id="Shop-Motion_IR-Wave2" />
+      <g
+         visibility="hidden"
+         id="Shop-Motion_Motion">
+        <circle
+           style="fill:#000000"
+           id="Shop-Motion_Head"
+           cx="462"
+           cy="277.5"
+           r="5.5" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 461,291.5 -3,14"
+           id="Shop-Motion_Torso" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           d="m 468,328 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"
+           id="Shop-Motion_Legs" />
+        <path
+           style="fill:none;stroke:#000000;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1"
+           d="m 448,303 2,-8 8.5,-6 5.5,1 6,10 6,2.5"
+           id="Shop-Motion_Arms" />
+      </g>
+      <rect
+         y="239"
+         x="429"
+         height="95"
+         width="62"
+         id="Shop-Motion_Enclosure"
+         style="fill:none;stroke:#000000" />
+      <g
+         id="Shop-Motion_Fail"
+         visibility="hidden">
+        <path
+           style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 491,239 -62,95"
+           id="Shop-Motion_Fw-Slash" />
+        <path
+           style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 429,239 62,95"
+           id="Shop-Motion_Bk-Slash" />
+      </g>
+    </g>
+    <g
+       id="Office-Motion">
+      <path
+         style="fill:#000000;stroke:none"
+         d="m 318,341 a 5,5 0 0 0 10,0"
+         id="Office-Motion_Sensor" />
+      <path
+         id="Office-Motion_IR-Wave0"
+         d="m 308,341 a 15,15 0 0 0 15,15"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         id="Office-Motion_IR-Wave1"
+         d="m 293,341 a 30,30 0 0 0 30,30"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <path
+         id="Office-Motion_IR-Wave2"
+         d="m 278,341 a 45,45 0 0 0 45,45"
+         style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      <g
+         id="Office-Motion_Motion"
+         visibility="hidden">
+        <circle
+           r="5.5"
+           cy="379.5"
+           cx="300"
+           id="Office-Motion_Head"
+           style="fill:#000000" />
+        <path
+           id="Office-Motion_Torso"
+           d="m 299,393.5 -3,14"
+           style="fill:none;stroke:#000000;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" />
+        <path
+           id="Office-Motion_Legs"
+           d="m 306,430 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"
+           style="fill:none;stroke:#000000;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+        <path
+           id="Office-Motion_Arms"
+           d="m 286,405 2,-8 8.5,-6 5.5,1 6,10 6,2.5"
+           style="fill:none;stroke:#000000;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" />
+      </g>
+      <rect
+         style="fill:none;stroke:#000000"
+         id="Office-Motion_Enclosure"
+         width="62"
+         height="95"
+         x="267"
+         y="341" />
+      <g
+         id="Office-Motion_Fail"
+         visibility="hidden">
+        <path
+           style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 329,341 -62,95"
+           id="Office-Motion_Fw-Slash" />
+        <path
+           style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 267,341 62,95"
+           id="Office-Motion_Bk-Slash" />
+      </g>
+    </g>
+    <g
+       id="HAL">
+      <text
+         id="HAL_Text"
+         y="330"
+         x="302"
+         style="font-style:normal;font-weight:normal;font-size:36px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"><tspan
+           y="330"
+           x="302"
+           id="tspan58">HAL</tspan></text>
+      <rect
+         y="300"
+         x="300"
+         height="34"
+         width="75"
+         id="HAL_Enclosure"
+         style="fill:none;stroke:#000000" />
+      <g
+         id="HAL_Fail"
+         visibility="hidden">
+        <path
+           id="HAL_Bk-Slash"
+           d="m 300,300 75,34"
+           style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <path
+           id="HAL_Fw-Slash"
+           d="m 375,300 -75,34"
+           style="fill:#ffffff;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+      </g>
+    </g>
+    <g
+       id="Temperature">
+      <text
+         id="Temperature_Temperature"
+         y="290"
+         x="321"
+         style="font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           y="290"
+           x="321"
+           id="Temperature_Temperature_Span">XX°C</tspan></text>
+      <text
+         id="Temperature_Symbol"
+         y="292"
+         x="298.5"
+         style="font-style:normal;font-weight:normal;font-size:26px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"
+         xml:space="preserve"><tspan
+           style="font-size:26px"
+           y="292"
+           x="298.5"
+           id="Temperature_Symbol_Span">🌡️</tspan></text>
+      <g
+         visibility="hidden"
+         id="Temperature_Fail">
+        <path
+           style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 300,265 75,34"
+           id="Temperature_Bk-Slash" />
+        <path
+           style="fill:#ffffff;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 375,265 -75,34"
+           id="Temperature_Fw-Slash" />
+      </g>
+      <rect
+         y="265"
+         x="300"
+         height="34"
+         width="75"
+         id="Temperature_Enclosure"
+         style="fill:none;stroke:#000000" />
+    </g>
+  </g>
+</svg>
+

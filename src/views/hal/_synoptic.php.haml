@@ -1,0 +1,352 @@
+
+-# testing view here
+-# viewBox: "0 0 1238 624",
+-#  width: "1238",
+-#  height: "624"}
+
+%svg#maglab-synoptic-view{ xmlns: "http://www.w3.org/2000/svg",
+  "xmlns:xlink" => "http://www.w3.org/1999/xlink",
+  version: "1.1",
+  viewBox: "120 30 480 564",
+  height: "564",
+  width: "480"}
+  %defs
+    %pattern#diagonal-stripe-2{ height: "10",
+      width: "10",
+      patternUnits: "userSpaceOnUse"}
+      %image{ height: "10",
+        width: "10",
+        y: "0",
+        x: "0",
+        "xlink:href" => "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+"}
+  %g#root
+    %g#Background
+      %rect#The-Unknown{ style: "fill:url(#diagonal-stripe-2) #cccccc",
+        width: "977.5",
+        height: "624",
+        x: "260.5",
+        y: "0"}
+      %rect#Outside-Asphalt{ x: "0",
+        y: "0",
+        height: "624",
+        width: "260.5",
+        style: "fill:#4d4d4d"}
+      - if ($isTechBad || !$isOpen)
+        %rect#Space-Floor{ width: "942.5",
+          height: "472",
+          x: "260.5",
+          y: "75",
+          style: "fill:#b3b3b3"}
+      - else
+        %rect#Space-Floor{ width: "942.5",
+          height: "472",
+          x: "260.5",
+          y: "75",
+          style: "fill:#ffffff"}
+      %text#Space_Space{ style: "font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none",
+        y: "118",
+        x: "290",
+        "xml:space" => "preserve"}
+        %tspan#Space_Span_Space{ y: "118",
+          x: "290"}Space
+      - if ($isTechBad)
+        %text#Space_Openness{ style: "font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#ff0000;fill-opacity:1;stroke:none",
+          x: "290",
+          y: "160",
+          visibility: "visible",
+          "xml:space" => "preserve"}
+          %tspan#Space_Span_Openness{ x: "290",
+            y: "160"}Unknown
+      - else if ($isOpen)
+        %text#Space_Openness{ style: "font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none",
+          x: "290",
+          y: "160",
+          visibility: "visible",
+          "xml:space" => "preserve"}
+          %tspan#Space_Span_Openness{ x: "290",
+            y: "160"}Open
+      - else
+        %text#Space_Openness{ style: "font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none",
+          x: "290",
+          y: "160",
+          visibility: "visible",
+          "xml:space" => "preserve"}
+          %tspan#Space_Span_Openness{ x: "290",
+            y: "160"}Closed
+    %g#Walls
+      %path#Electronics-Room_L0{ style: "fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "M 959.5,332 V 285"}
+      %path#Electronics-Room_L1{ style: "fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "M 959.5,544 V 386"}
+      %path#Conference-Room_B0{ style: "fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "m 942,284.5 h 258"}
+      %path#Conference-Room_L0{ style: "fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "M 888,284.5 797,284.5 V 78"}
+      %path#Bathroom_R0{ style: "fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "m 555,395.5 h 27.5 V 544"}
+      %path#Bathroom_T0{ style: "fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "M 501,395.5 H 469.5"}
+      %path#Kitchen_R0{ style: "fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "m 447,337.5 h 22.5 V 544"}
+      %path#Kitchen_T0{ style: "fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "M 393,337.5 H 263.5"}
+      %path#Space_L0{ style: "fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "M 263.5,452 V 305"}
+      %path#Space_Wall{ style: "fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "m 263.5,506 v 38 h 936.5 v -466 h -936.5 v 38"}
+    %g#Unmonitored-Doors
+      %path#Electronics-Room_Door{ style: "fill:none;stroke:#cccccc;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "m 959.5,332 v 54"}
+      %path#Conference-Room_Door{ style: "fill:none;stroke:#cccccc;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "m 888,284.5 h 54"}
+      %path#Bathroom-Door{ style: "fill:none;stroke:#cccccc;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "m 501,395.5 h 54"}
+      %path#Kitchen-Door{ style: "fill:none;stroke:#cccccc;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "m 393,337.5 h 54"}
+    %g#Pod-Bay-Door
+      - if ($isTechBad || $latestStatus['Pod Bay Door'][0] == 'Open')
+        %path#Pod-Bay-Door_Closed{ style: "fill:none;stroke:#000000;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+          visibility: "hidden",
+          d: "M 263.5,116 V 305"}
+      - else if (!$isTechBad)
+        %path#Pod-Bay-Door_Closed{ style: "fill:none;stroke:#000000;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+          visibility: "visible",
+          d: "M 263.5,116 V 305"}
+      - if ($isTechBad)
+        %g#Pod-Bay-Door_Fail{ visibility: "visible" }
+          %rect{ style: "fill:#cccccc;stroke:#ff0000;stroke-width:1px",
+            x: "261",
+            y: "116",
+            width: "20",
+            height: "189"}
+          %path{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
+              d: "M 281,116 261,305"}
+          %path{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
+              d: "M 281,305 261,116"}
+      - else
+        %g#Pod-Bay-Door_Fail{ visibility: "hidden" }
+          %rect{ style: "fill:#cccccc;stroke:#ff0000;stroke-width:1px",
+            x: "261",
+            y: "116",
+            width: "20",
+            height: "189"}
+          %path{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
+              d: "M 281,116 261,305"}
+          %path{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
+              d: "M 281,305 261,116"}
+    %g#Front-Door
+      - if (!$isTechBad && $latestStatus['Front Door'][0] == 'Open')
+        %path#Front-Door_Open{ style: "fill:none;stroke:#000000;stroke-width:4px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
+          visibility: "visible",
+          d: "M 263.5,506 225.32,468.82"}
+        %path#Front-Door_Closed{ style: "fill:none;stroke:#000000;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+          visibility: "hidden",
+          d: "m 263.5,452 v 54"}
+      - else if (!$isTechBad)
+        %path#Front-Door_Open{ style: "fill:none;stroke:#000000;stroke-width:4px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
+          visibility: "hidden",
+          d: "M 263.5,506 225.32,468.82"}
+        %path#Front-Door_Closed{ style: "fill:none;stroke:#000000;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+          visibility: "visible",
+          d: "m 263.5,452 v 54"}
+      - else
+        %path#Front-Door_Open{ style: "fill:none;stroke:#000000;stroke-width:4px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
+          visibility: "hidden",
+          d: "M 263.5,506 225.32,468.82"}
+        %path#Front-Door_Closed{ style: "fill:none;stroke:#000000;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+          visibility: "hidden",
+          d: "m 263.5,452 v 54"}
+      - if ($isTechBad)
+        %g#Front-Door_Fail{ visibility: "visible" }
+          %rect{ style: "fill:#cccccc;stroke:#ff0000;stroke-width:1",
+            x: "223",
+            y: "452.5",
+            width: "43",
+            height: "53"}
+          %path{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 223,505.5 43,-53"}
+          %path{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 223,452.5 43,53"}
+      - else
+        %g#Front-Door_Fail{ visibility: "hidden" }
+          %rect{ style: "fill:#cccccc;stroke:#ff0000;stroke-width:1",
+            x: "223",
+            y: "452.5",
+            width: "43",
+            height: "53"}
+          %path{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 223,505.5 43,-53"}
+          %path{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 223,452.5 43,53"}
+      %g#Shop-Motion
+      %path#Shop-Motion_Sensor{ style: "fill:#000000;stroke:none",
+        d: "M480,239 a1,1 0 0,0 10,0"}
+      %path#Shop-Motion_IR-Wave0{ style: "fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1", 
+        d: "m 470,239 a 15,15 0 0 0 15,15"}
+      %path#Shop-Motion_IR-Wave1{ style: "fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "m 455,239 a 30,30 0 0 0 30,30"}
+      %path#Shop-Motion_IR-Wave2{ style: "fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "m 440,239 a 45,45 0 0 0 45,45"}
+      - if (!$isTechBad && $latestStatus['Shop Motion'][2] == true)
+        %g#Shop-Motion_Motion{ visibility: "visible" }
+          %circle#Shop-Motion_Head{ style: "fill:#000000",
+            cx: "462",
+            cy: "277.5",
+            r: "5.5"}
+          %path#Shop-Motion_Torso{ style: "fill:none;stroke:#000000;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 461,291.5 -3,14"}
+          %path#Shop-Motion_Legs{ style: "fill:none;stroke:#000000;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
+            d: "m 468,328 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"}
+          %path#Shop-Motion_Arms{ style: "fill:none;stroke:#000000;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
+            d: "m 448,303 2,-8 8.5,-6 5.5,1 6,10 6,2.5"}
+      - else
+        %g#Shop-Motion_Motion{ visibility: "hidden" }
+          %circle#Shop-Motion_Head{ style: "fill:#000000",
+            cx: "462",
+            cy: "277.5",
+            r: "5.5"}
+          %path#Shop-Motion_Torso{ style: "fill:none;stroke:#000000;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 461,291.5 -3,14"}
+          %path#Shop-Motion_Legs{ style: "fill:none;stroke:#000000;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
+            d: "m 468,328 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"}
+          %path#Shop-Motion_Arms{ style: "fill:none;stroke:#000000;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
+            d: "m 448,303 2,-8 8.5,-6 5.5,1 6,10 6,2.5"}
+      - if ($isTechBad)        
+        %rect#Shop-Motion_Enclosure{ style: "fill:none;stroke:#ff0000",
+          x: "429",
+          y: "239",
+          width: "62",
+          height: "95"}
+        %g#Shop-Motion_Fail{ visibility: "visible" }
+          %path#Shop-Motion_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 491,239 -62,95"}
+          %path#Shop-Motion_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 429,239 62,95"}
+      - else
+        %rect#Shop-Motion_Enclosure{ style: "fill:none;stroke:#000000",
+          x: "429",
+          y: "239",
+          width: "62",
+          height: "95"}
+        %g#Shop-Motion_Fail{ visibility: "hidden" }
+          %path#Shop-Motion_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 491,239 -62,95"}
+          %path#Shop-Motion_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 429,239 62,95"}
+    %g#Office-Motion
+      %path#Office-Motion_Sensor{ style: "fill:#000000;stroke:none",
+        d: "M318,341 a1,1 0 0,0 10,0"}
+      %path#Office-Motion_IR-Wave0{ style: "fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1", 
+        d: "m 308,341 a 15,15 0 0 0 15,15"}
+      %path#Office-Motion_IR-Wave1{ style: "fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "m 293,341 a 30,30 0 0 0 30,30"}
+      %path#Office-Motion_IR-Wave2{ style: "fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "m 278,341 a 45,45 0 0 0 45,45"}
+      - if (!$isTechBad && $latestStatus['Office Motion'][2] == true)
+        %g#Office-Motion_Motion{ visibility: "visible" }
+          %circle#Office-Motion_Head{ style: "fill:#000000",
+            cx: "300",
+            cy: "379.5",
+            r: "5.5"}
+          %path#Office-Motion_Torso{ style: "fill:none;stroke:#000000;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 299,393.5 -3,14"}
+          %path#Office-Motion_Legs{ style: "fill:none;stroke:#000000;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
+            d: "m 306,430 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"}
+          %path#Office-Motion_Arms{ style: "fill:none;stroke:#000000;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
+            d: "m 286,405 2,-8 8.5,-6 5.5,1 6,10 6,2.5"}
+      - else
+        %g#Office-Motion_Motion{ visibility: "hidden" }
+          %circle#Office-Motion_Head{ style: "fill:#000000",
+            cx: "300",
+            cy: "379.5",
+            r: "5.5"}
+          %path#Office-Motion_Torso{ style: "fill:none;stroke:#000000;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 299,393.5 -3,14"}
+          %path#Office-Motion_Legs{ style: "fill:none;stroke:#000000;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
+            d: "m 306,430 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"}
+          %path#Office-Motion_Arms{ style: "fill:none;stroke:#000000;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
+            d: "m 286,405 2,-8 8.5,-6 5.5,1 6,10 6,2.5"}
+      - if ($isTechBad)
+        %rect#Office-Motion_Enclosure{ style: "fill:none;stroke:#ff0000",
+          x: "267",
+          y: "341",
+          width: "62",
+          height: "95"}
+        %g#Office-Motion_Fail{ visibility: "visible" }
+          %path#Office-Motion_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 329,341 -62,95"}
+          %path#Office-Motion_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 267,341 62,95"}
+      - else 
+        %rect#Office-Motion_Enclosure{ style: "fill:none;stroke:#000000",
+          x: "267",
+          y: "341",
+          width: "62",
+          height: "95"}
+        %g#Office-Motion_Fail{ visibility: "hidden" }
+          %path#Office-Motion_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 329,341 -62,95"}
+          %path#Office-Motion_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 267,341 62,95"}
+      %g#HAL
+        %text#HAL_Text{ style: "font-style:normal;font-weight:normal;font-size:36px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none" }
+          %tspan{ x: "302",
+            y: "330"}HAL
+        - if ($isTechBad)
+          %rect#HAL_Enclosure{ style: "fill:none;stroke:#ff0000",
+            x: "300",
+            y: "300",
+            width: "75",
+            height: "34"}
+          %g#HAL_Fail{ visibility: "visible" }
+            %path#HAL_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+              d: "m 300,300 75,34"}
+            %path#HAL_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+              d: "m 375,300 -75,34"}
+        - else
+          %rect#HAL_Enclosure{ style: "fill:none;stroke:#000000",
+            x: "300",
+            y: "300",
+            width: "75",
+            height: "34"}
+          %g#HAL_Fail{ visibility: "hidden" }
+            %path#HAL_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+              d: "m 300,300 75,34"}
+            %path#HAL_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+              d: "m 375,300 -75,34"}
+      %g#Temperature
+        - preg_match ('/^.+?(?=\.)/', $latestStatus['Temperature'][0], $wholeTemperature)
+        - if (!$isTechBad && sizeof($wholeTemperature) > 0)
+          %text#Temperature_Temperature{ style: "font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"}
+            %tspan{ x: "321",
+              y: "290"}
+              - print($wholeTemperature[0] . '&#xB0;C')
+        - else
+          %text#Temperature_Temperature{ style: "font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"}
+            %tspan{ x: "321",
+              y: "290"}XX&#xB0;C
+        %text#Temperature_Symbol{ style: "font-style:normal;font-weight:normal;font-size:26px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"}
+          %tspan{ x: "298.5",
+            y: "292"}&#x1f321;
+        - if ($isTechBad)
+          %rect#Temperature_Enclosure{ style: "fill:none;stroke:#ff0000",
+            x: "300",
+            y: "265",
+            width: "75",
+            height: "34"}
+          %g#Temperature_Fail{ visibility: "visible" }
+            %path#Temperature_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+              d: "m 300,265 75,34"}
+            %path#Temperature_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+              d: "m 375,265 -75,34"}
+        - else
+          %rect#Temperature_Enclosure{ style: "fill:none;stroke:#000000",
+            x: "300",
+            y: "265",
+            width: "75",
+            height: "34"}
+          %g#Temperature_Fail{ visibility: "hidden" }
+            %path#Temperature_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+              d: "m 300,265 75,34"}
+            %path#Temperature_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+              d: "m 375,265 -75,34"}
