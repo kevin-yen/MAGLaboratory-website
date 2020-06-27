@@ -171,6 +171,8 @@ We are
 </h1>
 </div>
 <?php } ?>
+<h2 class="text-center">Synoptic View</h2>
+<?php include('_synoptic.php'); ?>
 <h2 class="text-center">Sensor Status</h2>
 <?php include('_sensors.php'); ?>
 </div>
@@ -187,7 +189,7 @@ $(function(){
   
 //]]>
 </script>
-<?php echo $this->partial('main/_map_footer.php'); ?>
+<?php include(__DIR__ . 'main/_map_footer.php'); ?>
 
 <?php if(!isset($layout_no_footer)) { ?>
 <div id="footer" class="containment">
