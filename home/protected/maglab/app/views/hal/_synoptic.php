@@ -6,12 +6,14 @@
 </defs>
 <g id="root">
 <g id="Background">
-<rect id="The-Unknown" style="fill:url(#diagonal-stripe-2) #cccccc" width="977.5" height="624" x="260.5" y="0"></rect>
+<rect id="The-Unknown" style="fill:url(#diagonal-stripe-2) #999999" width="977.5" height="624" x="260.5" y="0"></rect>
 <rect id="Outside-Asphalt" x="0" y="0" height="624" width="260.5" style="fill:#4d4d4d"></rect>
-<?php if ($isTechBad || !$isOpen) { ?>
-<rect id="Space-Floor" width="942.5" height="472" x="260.5" y="75" style="fill:#b3b3b3"></rect>
-<?php } else { ?>
+<?php if (!$isTechBad && $isOpen) { ?>
 <rect id="Space-Floor" width="942.5" height="472" x="260.5" y="75" style="fill:#ffffff"></rect>
+<?php } else if (!$isTechBad) { ?>
+<rect id="Space-Floor" width="942.5" height="472" x="260.5" y="75" style="fill:#e0e0d5"></rect>
+<?php } else { ?>
+<rect id="Space-Floor" width="942.5" height="472" x="260.5" y="75" style="fill:#e0d5d5"></rect>
 <?php } ?>
 <text id="Space_Space" style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none" y="118" x="290" xml:space="preserve">
 <tspan id="Space_Span_Space" y="118" x="290">Space</tspan>
@@ -21,11 +23,11 @@
 <tspan id="Space_Span_Openness" x="290" y="160">Unknown</tspan>
 </text>
 <?php } else if ($isOpen) { ?>
-<text id="Space_Openness" style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none" x="290" y="160" visibility="visible" xml:space="preserve">
+<text id="Space_Openness" style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#2ecc40;fill-opacity:1;stroke:none" x="290" y="160" visibility="visible" xml:space="preserve">
 <tspan id="Space_Span_Openness" x="290" y="160">Open</tspan>
 </text>
 <?php } else { ?>
-<text id="Space_Openness" style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none" x="290" y="160" visibility="visible" xml:space="preserve">
+<text id="Space_Openness" style="font-style:normal;font-weight:normal;font-size:40px;line-height:1.25;font-family:sans-serif;fill:#8a6d3b;fill-opacity:1;stroke:none" x="290" y="160" visibility="visible" xml:space="preserve">
 <tspan id="Space_Span_Openness" x="290" y="160">Closed</tspan>
 </text>
 <?php } ?>
@@ -43,26 +45,30 @@
 <path id="Space_Wall" style="fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 263.5,506 v 38 h 936.5 v -466 h -936.5 v 38"></path>
 </g>
 <g id="Unmonitored-Doors">
-<path id="Electronics-Room_Door" style="fill:none;stroke:#cccccc;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 959.5,332 v 54"></path>
-<path id="Conference-Room_Door" style="fill:none;stroke:#cccccc;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 888,284.5 h 54"></path>
-<path id="Bathroom-Door" style="fill:none;stroke:#cccccc;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 501,395.5 h 54"></path>
-<path id="Kitchen-Door" style="fill:none;stroke:#cccccc;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 393,337.5 h 54"></path>
+<path id="Electronics-Room_Door" style="fill:none;stroke:#999999;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 959.5,332 v 54"></path>
+<path id="Conference-Room_Door" style="fill:none;stroke:#999999;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 888,284.5 h 54"></path>
+<path id="Bathroom-Door" style="fill:none;stroke:#999999;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 501,395.5 h 54"></path>
+<path id="Kitchen-Door" style="fill:none;stroke:#999999;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 393,337.5 h 54"></path>
 </g>
 <g id="Pod-Bay-Door">
-<?php if ($isTechBad || $latestStatus['Pod Bay Door'][0] == 'Open') { ?>
-<path id="Pod-Bay-Door_Closed" style="fill:none;stroke:#000000;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" visibility="hidden" d="M 263.5,116 V 305"></path>
+<?php if ($isTechBad && $latestStatus['Pod Bay Door'][0] == 'Open') { ?>
+<path id="Pod-Bay-Door_Closed" style="fill:none;stroke:#2ecc40;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" visibility="hidden" d="M 263.5,116 V 305"></path>
+<path id="Pod-Bay-Door_Open-0" style="fill:none;stroke:#ffdc00;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" visibility="visible" d="M 263.5,116 v 15"></path>
+<path id="Pod-Bay-Door_Open-1" style="fill:none;stroke:#ffdc00;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" visibility="visible" d="M 263.5,305 v -15"></path>
 <?php } else if (!$isTechBad) { ?>
-<path id="Pod-Bay-Door_Closed" style="fill:none;stroke:#000000;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" visibility="visible" d="M 263.5,116 V 305"></path>
+<path id="Pod-Bay-Door_Closed" style="fill:none;stroke:#2ecc40;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" visibility="visible" d="M 263.5,116 V 305"></path>
+<path id="Pod-Bay-Door_Open-0" style="fill:none;stroke:#ffdc00;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" visibility="hidden" d="M 263.5,116 v 15"></path>
+<path id="Pod-Bay-Door_Open-1" style="fill:none;stroke:#ffdc00;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" visibility="hidden" d="M 263.5,305 v -15"></path>
 <?php } ?>
 <?php if ($isTechBad) { ?>
 <g id="Pod-Bay-Door_Fail" visibility="visible">
-<rect style="fill:#cccccc;stroke:#ff0000;stroke-width:1px" x="261" y="116" width="20" height="189"></rect>
+<rect style="fill:none;stroke:#ff0000;stroke-width:1px" x="261" y="116" width="20" height="189"></rect>
 <path style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" d="M 281,116 261,305"></path>
 <path style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" d="M 281,305 261,116"></path>
 </g>
 <?php } else { ?>
 <g id="Pod-Bay-Door_Fail" visibility="hidden">
-<rect style="fill:#cccccc;stroke:#ff0000;stroke-width:1px" x="261" y="116" width="20" height="189"></rect>
+<rect style="fill:none;stroke:#ff0000;stroke-width:1px" x="261" y="116" width="20" height="189"></rect>
 <path style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" d="M 281,116 261,305"></path>
 <path style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" d="M 281,305 261,116"></path>
 </g>
@@ -70,46 +76,47 @@
 </g>
 <g id="Front-Door">
 <?php if (!$isTechBad && $latestStatus['Front Door'][0] == 'Open') { ?>
-<path id="Front-Door_Open" style="fill:none;stroke:#000000;stroke-width:4px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" visibility="visible" d="M 263.5,506 225.32,468.82"></path>
-<path id="Front-Door_Closed" style="fill:none;stroke:#000000;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" visibility="hidden" d="m 263.5,452 v 54"></path>
+<path id="Front-Door_Open" style="fill:none;stroke:#ffdc00;stroke-width:4px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" visibility="visible" d="M 263.5,506 225.32,468.82"></path>
+<path id="Front-Door_Closed" style="fill:none;stroke:#2ecc40;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" visibility="hidden" d="m 263.5,452 v 54"></path>
 <?php } else if (!$isTechBad) { ?>
-<path id="Front-Door_Open" style="fill:none;stroke:#000000;stroke-width:4px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" visibility="hidden" d="M 263.5,506 225.32,468.82"></path>
-<path id="Front-Door_Closed" style="fill:none;stroke:#000000;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" visibility="visible" d="m 263.5,452 v 54"></path>
+<path id="Front-Door_Open" style="fill:none;stroke:#ffdc00;stroke-width:4px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" visibility="hidden" d="M 263.5,506 225.32,468.82"></path>
+<path id="Front-Door_Closed" style="fill:none;stroke:#2ecc40;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" visibility="visible" d="m 263.5,452 v 54"></path>
 <?php } else { ?>
-<path id="Front-Door_Open" style="fill:none;stroke:#000000;stroke-width:4px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" visibility="hidden" d="M 263.5,506 225.32,468.82"></path>
-<path id="Front-Door_Closed" style="fill:none;stroke:#000000;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" visibility="hidden" d="m 263.5,452 v 54"></path>
+<path id="Front-Door_Open" style="fill:none;stroke:#ffdc00;stroke-width:4px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" visibility="hidden" d="M 263.5,506 225.32,468.82"></path>
+<path id="Front-Door_Closed" style="fill:none;stroke:#2ecc40;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" visibility="hidden" d="m 263.5,452 v 54"></path>
 <?php } ?>
 <?php if ($isTechBad) { ?>
 <g id="Front-Door_Fail" visibility="visible">
-<rect style="fill:#cccccc;stroke:#ff0000;stroke-width:1" x="223" y="452.5" width="43" height="53"></rect>
+<rect style="fill:#999999;stroke:#ff0000;stroke-width:1" x="223" y="452.5" width="43" height="53"></rect>
 <path style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" d="m 223,505.5 43,-53"></path>
 <path style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" d="m 223,452.5 43,53"></path>
 </g>
 <?php } else { ?>
 <g id="Front-Door_Fail" visibility="hidden">
-<rect style="fill:#cccccc;stroke:#ff0000;stroke-width:1" x="223" y="452.5" width="43" height="53"></rect>
+<rect style="fill:#999999;stroke:#ff0000;stroke-width:1" x="223" y="452.5" width="43" height="53"></rect>
 <path style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" d="m 223,505.5 43,-53"></path>
 <path style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" d="m 223,452.5 43,53"></path>
 </g>
 <?php } ?>
-<g id="Shop-Motion"></g>
+</g>
+<g id="Shop-Motion">
 <path id="Shop-Motion_Sensor" style="fill:#000000;stroke:none" d="M480,239 a1,1 0 0,0 10,0"></path>
 <path id="Shop-Motion_IR-Wave0" style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 470,239 a 15,15 0 0 0 15,15"></path>
 <path id="Shop-Motion_IR-Wave1" style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 455,239 a 30,30 0 0 0 30,30"></path>
 <path id="Shop-Motion_IR-Wave2" style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 440,239 a 45,45 0 0 0 45,45"></path>
 <?php if (!$isTechBad && $latestStatus['Shop Motion'][2] == true) { ?>
 <g id="Shop-Motion_Motion" visibility="visible">
-<circle id="Shop-Motion_Head" style="fill:#000000" cx="462" cy="277.5" r="5.5"></circle>
-<path id="Shop-Motion_Torso" style="fill:none;stroke:#000000;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" d="m 461,291.5 -3,14"></path>
-<path id="Shop-Motion_Legs" style="fill:none;stroke:#000000;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" d="m 468,328 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"></path>
-<path id="Shop-Motion_Arms" style="fill:none;stroke:#000000;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" d="m 448,303 2,-8 8.5,-6 5.5,1 6,10 6,2.5"></path>
+<circle id="Shop-Motion_Head" style="fill:#2ecc40" cx="462" cy="277.5" r="5.5"></circle>
+<path id="Shop-Motion_Torso" style="fill:none;stroke:#2ecc40;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" d="m 461,291.5 -3,14"></path>
+<path id="Shop-Motion_Legs" style="fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" d="m 468,328 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"></path>
+<path id="Shop-Motion_Arms" style="fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" d="m 448,303 2,-8 8.5,-6 5.5,1 6,10 6,2.5"></path>
 </g>
 <?php } else { ?>
 <g id="Shop-Motion_Motion" visibility="hidden">
-<circle id="Shop-Motion_Head" style="fill:#000000" cx="462" cy="277.5" r="5.5"></circle>
-<path id="Shop-Motion_Torso" style="fill:none;stroke:#000000;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" d="m 461,291.5 -3,14"></path>
-<path id="Shop-Motion_Legs" style="fill:none;stroke:#000000;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" d="m 468,328 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"></path>
-<path id="Shop-Motion_Arms" style="fill:none;stroke:#000000;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" d="m 448,303 2,-8 8.5,-6 5.5,1 6,10 6,2.5"></path>
+<circle id="Shop-Motion_Head" style="fill:#2ecc40" cx="462" cy="277.5" r="5.5"></circle>
+<path id="Shop-Motion_Torso" style="fill:none;stroke:#2ecc40;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" d="m 461,291.5 -3,14"></path>
+<path id="Shop-Motion_Legs" style="fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" d="m 468,328 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"></path>
+<path id="Shop-Motion_Arms" style="fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" d="m 448,303 2,-8 8.5,-6 5.5,1 6,10 6,2.5"></path>
 </g>
 <?php } ?>
 <?php if ($isTechBad)         { ?>
@@ -133,17 +140,17 @@
 <path id="Office-Motion_IR-Wave2" style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 278,341 a 45,45 0 0 0 45,45"></path>
 <?php if (!$isTechBad && $latestStatus['Office Motion'][2] == true) { ?>
 <g id="Office-Motion_Motion" visibility="visible">
-<circle id="Office-Motion_Head" style="fill:#000000" cx="300" cy="379.5" r="5.5"></circle>
-<path id="Office-Motion_Torso" style="fill:none;stroke:#000000;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" d="m 299,393.5 -3,14"></path>
-<path id="Office-Motion_Legs" style="fill:none;stroke:#000000;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" d="m 306,430 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"></path>
-<path id="Office-Motion_Arms" style="fill:none;stroke:#000000;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" d="m 286,405 2,-8 8.5,-6 5.5,1 6,10 6,2.5"></path>
+<circle id="Office-Motion_Head" style="fill:#2ecc40" cx="300" cy="379.5" r="5.5"></circle>
+<path id="Office-Motion_Torso" style="fill:none;stroke:#2ecc40;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" d="m 299,393.5 -3,14"></path>
+<path id="Office-Motion_Legs" style="fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" d="m 306,430 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"></path>
+<path id="Office-Motion_Arms" style="fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" d="m 286,405 2,-8 8.5,-6 5.5,1 6,10 6,2.5"></path>
 </g>
 <?php } else { ?>
 <g id="Office-Motion_Motion" visibility="hidden">
-<circle id="Office-Motion_Head" style="fill:#000000" cx="300" cy="379.5" r="5.5"></circle>
-<path id="Office-Motion_Torso" style="fill:none;stroke:#000000;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" d="m 299,393.5 -3,14"></path>
-<path id="Office-Motion_Legs" style="fill:none;stroke:#000000;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" d="m 306,430 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"></path>
-<path id="Office-Motion_Arms" style="fill:none;stroke:#000000;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" d="m 286,405 2,-8 8.5,-6 5.5,1 6,10 6,2.5"></path>
+<circle id="Office-Motion_Head" style="fill:#2ecc40" cx="300" cy="379.5" r="5.5"></circle>
+<path id="Office-Motion_Torso" style="fill:none;stroke:#2ecc40;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1" d="m 299,393.5 -3,14"></path>
+<path id="Office-Motion_Legs" style="fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" d="m 306,430 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"></path>
+<path id="Office-Motion_Arms" style="fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1" d="m 286,405 2,-8 8.5,-6 5.5,1 6,10 6,2.5"></path>
 </g>
 <?php } ?>
 <?php if ($isTechBad) { ?>
@@ -159,6 +166,7 @@
 <path id="Office-Motion_Bk-Slash" style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 267,341 62,95"></path>
 </g>
 <?php } ?>
+</g>
 <g id="HAL">
 <text id="HAL_Text" style="font-style:normal;font-weight:normal;font-size:36px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none">
 <tspan x="302" y="330">HAL</tspan>
@@ -206,7 +214,6 @@
 <path id="Temperature_Fw-Slash" style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 375,265 -75,34"></path>
 </g>
 <?php } ?>
-</g>
 </g>
 </g>
 </svg>

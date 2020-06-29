@@ -31,6 +31,7 @@ RewriteRule ^/?jobs /JobBoardApp.php [L]
 RewriteRule ^(.*)?$ /MainApp.php [L]
 # }
 
+RewriteRule ^/?hal /HalApp.php [L]
 
 RewriteRule ^/?jobs /JobBoardApp.php [L]
 
