@@ -110,7 +110,7 @@
       %path#Kitchen-Door{ style: "fill:none;stroke:#999999;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
         d: "m 393,337.5 h 54"}
     %g#Pod-Bay-Door
-      - if ($isTechBad && $latestStatus['Pod Bay Door'][0] == 'Open')
+      - if (!$isTechBad && $latestStatus['Pod Bay Door'][0] == 'Open')
         %path#Pod-Bay-Door_Closed{ style: "fill:none;stroke:#2ecc40;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
           visibility: "hidden",
           d: "M 263.5,116 V 305"}

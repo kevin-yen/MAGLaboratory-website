@@ -51,7 +51,7 @@
 <path id="Kitchen-Door" style="fill:none;stroke:#999999;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 393,337.5 h 54"></path>
 </g>
 <g id="Pod-Bay-Door">
-<?php if ($isTechBad && $latestStatus['Pod Bay Door'][0] == 'Open') { ?>
+<?php if (!$isTechBad && $latestStatus['Pod Bay Door'][0] == 'Open') { ?>
 <path id="Pod-Bay-Door_Closed" style="fill:none;stroke:#2ecc40;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" visibility="hidden" d="M 263.5,116 V 305"></path>
 <path id="Pod-Bay-Door_Open-0" style="fill:none;stroke:#ffdc00;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" visibility="visible" d="M 263.5,116 v 15"></path>
 <path id="Pod-Bay-Door_Open-1" style="fill:none;stroke:#ffdc00;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" visibility="visible" d="M 263.5,305 v -15"></path>
