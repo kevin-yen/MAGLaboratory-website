@@ -59,6 +59,10 @@
 <path id="Pod-Bay-Door_Closed" style="fill:none;stroke:#2ecc40;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" visibility="visible" d="M 263.5,116 V 305"></path>
 <path id="Pod-Bay-Door_Open-0" style="fill:none;stroke:#ffdc00;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" visibility="hidden" d="M 263.5,116 v 15"></path>
 <path id="Pod-Bay-Door_Open-1" style="fill:none;stroke:#ffdc00;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" visibility="hidden" d="M 263.5,305 v -15"></path>
+<?php } else { ?>
+<path id="Pod-Bay-Door_Closed" style="fill:none;stroke:#2ecc40;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" visibility="hidden" d="M 263.5,116 V 305"></path>
+<path id="Pod-Bay-Door_Open-0" style="fill:none;stroke:#ffdc00;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" visibility="hidden" d="M 263.5,116 v 15"></path>
+<path id="Pod-Bay-Door_Open-1" style="fill:none;stroke:#ffdc00;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" visibility="hidden" d="M 263.5,305 v -15"></path>
 <?php } ?>
 <?php if ($isTechBad) { ?>
 <g id="Pod-Bay-Door_Fail" visibility="visible">
