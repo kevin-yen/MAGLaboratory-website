@@ -255,24 +255,24 @@ function update_sensors() {
 
         if (isTechBad)
         {
-            synoptic.getElementById("Temperature_Temperature").innerHTML =
-                synoptic.getElementById("Temperature_Temperature").innerHTML
+            synoptic.getElementById("Shop-Temp_Temperature").innerHTML =
+                synoptic.getElementById("Shop-Temp_Temperature").innerHTML
                     .replace(/([^>]+>?\s+)([0-9]+)(.+)/g, "$1" + "XX" + "$3");
-            synoptic.getElementById("Temperature_Fail").setAttribute(
+            synoptic.getElementById("Shop-Temp_Fail").setAttribute(
                 "visibility", "visible");
-            synoptic.getElementById("Temperature_Enclosure").style.stroke = 
+            synoptic.getElementById("Shop-Temp_Enclosure").style.stroke = 
                 "#ff0000";
         }
         else
         {
-            var temp = Math.round(json["Temperature"][0].match(/[^ ]+/)*1);
-            synoptic.getElementById("Temperature_Temperature").innerHTML =
-                synoptic.getElementById("Temperature_Temperature").innerHTML
+            var temp = Math.round(json["Shop-Temp"][0].match(/[^ ]+/)*1);
+            synoptic.getElementById("Shop-Temp_Temperature").innerHTML =
+                synoptic.getElementById("Shop-Temp_Temperature").innerHTML
                     .replace(/([^>]+>?\s+)([0-9]+)(.+)/g, "$1" + temp 
                         + "$3");
-            synoptic.getElementById("Temperature_Fail").setAttribute(
+            synoptic.getElementById("Shop-Temp_Fail").setAttribute(
                 "visibility", "hidden");
-            synoptic.getElementById("Temperature_Enclosure").style.stroke = 
+            synoptic.getElementById("Shop-Temp_Enclosure").style.stroke = 
                 "#000000";
         }
 

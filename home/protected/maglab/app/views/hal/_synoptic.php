@@ -189,33 +189,33 @@
 </g>
 <?php } ?>
 </g>
-<g id="Temperature">
-<?php preg_match ('/^.+?(?=\.)/', $latestStatus['Temperature'][0], $wholeTemperature); ?>
+<g id="Bay-Temp">
+<?php preg_match ('/^.+?(?=\.)/', $latestStatus['Bay Temp'][0], $wholeTemperature); ?>
 <?php if (!$isTechBad && sizeof($wholeTemperature) > 0) { ?>
-<text id="Temperature_Temperature" style="font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none">
+<text id="Bay-Temp_Temperature" style="font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none">
 <tspan x="321" y="290">
 <?php print($wholeTemperature[0] . '&#xB0;C'); ?>
 </tspan>
 </text>
 <?php } else { ?>
-<text id="Temperature_Temperature" style="font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none">
+<text id="Bay-Temp_Temperature" style="font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none">
 <tspan x="321" y="290">XX&#xB0;C</tspan>
 </text>
 <?php } ?>
-<text id="Temperature_Symbol" style="font-style:normal;font-weight:normal;font-size:26px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none">
+<text id="Bay-Temp_Symbol" style="font-style:normal;font-weight:normal;font-size:26px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none">
 <tspan x="298.5" y="292">&#x1f321;</tspan>
 </text>
 <?php if ($isTechBad) { ?>
-<rect id="Temperature_Enclosure" style="fill:none;stroke:#ff0000" x="300" y="265" width="75" height="34"></rect>
-<g id="Temperature_Fail" visibility="visible">
-<path id="Temperature_Bk-Slash" style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 300,265 75,34"></path>
-<path id="Temperature_Fw-Slash" style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 375,265 -75,34"></path>
+<rect id="Bay-Temp_Enclosure" style="fill:none;stroke:#ff0000" x="300" y="265" width="75" height="34"></rect>
+<g id="Bay-Temp_Fail" visibility="visible">
+<path id="Bay-Temp_Bk-Slash" style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 300,265 75,34"></path>
+<path id="Bay-Temp_Fw-Slash" style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 375,265 -75,34"></path>
 </g>
 <?php } else { ?>
-<rect id="Temperature_Enclosure" style="fill:none;stroke:#000000" x="300" y="265" width="75" height="34"></rect>
-<g id="Temperature_Fail" visibility="hidden">
-<path id="Temperature_Bk-Slash" style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 300,265 75,34"></path>
-<path id="Temperature_Fw-Slash" style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 375,265 -75,34"></path>
+<rect id="Bay-Temp_Enclosure" style="fill:none;stroke:#000000" x="300" y="265" width="75" height="34"></rect>
+<g id="Bay-Temp_Fail" visibility="hidden">
+<path id="Bay-Temp_Bk-Slash" style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 300,265 75,34"></path>
+<path id="Bay-Temp_Fw-Slash" style="fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 375,265 -75,34"></path>
 </g>
 <?php } ?>
 </g>
