@@ -1,3 +1,3 @@
 <?php
 
-define('CURRENT_COMMIT', '4db0243ea3d7a479fbf42c450cc3ee1de9176544');
+define('CURRENT_COMMIT', '334e101a5dd268af9b8c7d8510eddb88c16689bf');

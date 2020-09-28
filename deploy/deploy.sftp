@@ -1,3 +1,5 @@
-!echo "Commit: 4db0243ea3d7a479fbf42c450cc3ee1de9176544 334e101a5dd268af9b8c7d8510eddb88c16689bf"
+!echo "Commit: 334e101a5dd268af9b8c7d8510eddb88c16689bf 810e51beef3d80790ddfff34027de526db5d6187"
+put 'protected/maglab/app/helpers/hal_helpers_old.php' 'protected/maglab/app/helpers/hal_helpers_old.php'
 put 'protected/maglab/app/views/hal/_synoptic.php' 'protected/maglab/app/views/hal/_synoptic.php'
+put 'public/js/sensor_updater.js' 'public/js/sensor_updater.js'
 put '/home/brandon/maglab_website/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
