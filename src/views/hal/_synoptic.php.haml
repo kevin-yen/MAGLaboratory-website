@@ -7,9 +7,9 @@
 %svg#maglab-synoptic-view{ xmlns: "http://www.w3.org/2000/svg",
   "xmlns:xlink" => "http://www.w3.org/1999/xlink",
   version: "1.1",
-  viewBox: "120 30 480 564",
-  height: "564",
-  width: "480"}
+  viewBox: "160 30 900 564",
+  width: "900",
+  height: "564"}
   %defs
     %pattern#diagonal-stripe-2{ height: "10",
       width: "10",
@@ -32,19 +32,19 @@
         width: "260.5",
         style: "fill:#4d4d4d"}
       - if (!$isTechBad && $isOpen)
-        %rect#Space-Floor{ width: "942.5",
+        %rect#Space-Floor{ width: "742.5",
           height: "472",
           x: "260.5",
           y: "75",
           style: "fill:#ffffff"}
       - else if (!$isTechBad)
-        %rect#Space-Floor{ width: "942.5",
+        %rect#Space-Floor{ width: "742.5",
           height: "472",
           x: "260.5",
           y: "75",
           style: "fill:#e0e0d5"}
       - else
-        %rect#Space-Floor{ width: "942.5",
+        %rect#Space-Floor{ width: "742.5",
           height: "472",
           x: "260.5",
           y: "75",
@@ -81,13 +81,13 @@
             y: "160"}Closed
     %g#Walls
       %path#Electronics-Room_L0{ style: "fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-        d: "M 959.5,332 V 285"}
+        d: "M 789.5,332 V 285"}
       %path#Electronics-Room_L1{ style: "fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-        d: "M 959.5,544 V 386"}
+        d: "M 789.5,544 V 386"}
       %path#Conference-Room_B0{ style: "fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-        d: "m 942,284.5 h 258"}
+        d: "m 746,284.5 h 258"}
       %path#Conference-Room_L0{ style: "fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-        d: "M 888,284.5 797,284.5 V 78"}
+        d: "M 692,284.5 658,284.5 V 78"}
       %path#Bathroom_R0{ style: "fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
         d: "m 555,395.5 h 27.5 V 544"}
       %path#Bathroom_T0{ style: "fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
@@ -99,12 +99,12 @@
       %path#Space_L0{ style: "fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
         d: "M 263.5,452 V 305"}
       %path#Space_Wall{ style: "fill:none;stroke:#000000;stroke-width:6px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-        d: "m 263.5,506 v 38 h 936.5 v -466 h -936.5 v 38"}
+        d: "m 263.5,506 v 38 h 736.5 v -466 h -736.5 v 38"}
     %g#Unmonitored-Doors
       %path#Electronics-Room_Door{ style: "fill:none;stroke:#999999;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-        d: "m 959.5,332 v 54"}
+        d: "m 789.5,332 v 54"}
       %path#Conference-Room_Door{ style: "fill:none;stroke:#999999;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-        d: "m 888,284.5 h 54"}
+        d: "m 692,284.5 h 54"}
       %path#Bathroom-Door{ style: "fill:none;stroke:#999999;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
         d: "m 501,395.5 h 54"}
       %path#Kitchen-Door{ style: "fill:none;stroke:#999999;stroke-width:4px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
@@ -206,175 +206,466 @@
             d: "m 223,505.5 43,-53"}
           %path{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
             d: "m 223,452.5 43,53"}
-    %g#Shop-Motion
+    %g#Shop-Motion{ transform: "translate(474, 296)"}
       %path#Shop-Motion_Sensor{ style: "fill:#000000;stroke:none",
-        d: "M480,239 a1,1 0 0,0 10,0"}
+        d: "M51,0 a1,1 0 0,0 10,0"}
       %path#Shop-Motion_IR-Wave0{ style: "fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1", 
-        d: "m 470,239 a 15,15 0 0 0 15,15"}
+        d: "m 41,0 a 15,15 0 0 0 15,15"}
       %path#Shop-Motion_IR-Wave1{ style: "fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-        d: "m 455,239 a 30,30 0 0 0 30,30"}
+        d: "m 26,0 a 30,30 0 0 0 30,30"}
       %path#Shop-Motion_IR-Wave2{ style: "fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-        d: "m 440,239 a 45,45 0 0 0 45,45"}
+        d: "m 11,0 a 45,45 0 0 0 45,45"}
       - if (!$isTechBad && $latestStatus['Shop Motion'][2] == true)
         %g#Shop-Motion_Motion{ visibility: "visible" }
           %circle#Shop-Motion_Head{ style: "fill:#2ecc40",
-            cx: "462",
-            cy: "277.5",
+            cx: "33",
+            cy: "38.5",
             r: "5.5"}
           %path#Shop-Motion_Torso{ style: "fill:none;stroke:#2ecc40;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
-            d: "m 461,291.5 -3,14"}
+            d: "m 32,52.5 -3,14"}
           %path#Shop-Motion_Legs{ style: "fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
-            d: "m 468,328 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"}
+            d: "m 39,89 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"}
           %path#Shop-Motion_Arms{ style: "fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
-            d: "m 448,303 2,-8 8.5,-6 5.5,1 6,10 6,2.5"}
+            d: "m 19,64 2,-8 8.5,-6 5.5,1 6,10 6,2.5"}
       - else
         %g#Shop-Motion_Motion{ visibility: "hidden" }
           %circle#Shop-Motion_Head{ style: "fill:#2ecc40",
-            cx: "462",
-            cy: "277.5",
+            cx: "33",
+            cy: "38.5",
             r: "5.5"}
           %path#Shop-Motion_Torso{ style: "fill:none;stroke:#2ecc40;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
-            d: "m 461,291.5 -3,14"}
+            d: "m 32,52.5 -3,14"}
           %path#Shop-Motion_Legs{ style: "fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
-            d: "m 468,328 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"}
+            d: "m 39,89 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"}
           %path#Shop-Motion_Arms{ style: "fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
-            d: "m 448,303 2,-8 8.5,-6 5.5,1 6,10 6,2.5"}
+            d: "m 19,64 2,-8 8.5,-6 5.5,1 6,10 6,2.5"}
       - if ($isTechBad)        
         %rect#Shop-Motion_Enclosure{ style: "fill:none;stroke:#ff0000",
-          x: "429",
-          y: "239",
           width: "62",
           height: "95"}
         %g#Shop-Motion_Fail{ visibility: "visible" }
           %path#Shop-Motion_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-            d: "m 491,239 -62,95"}
+            d: "m 62,0 -62,95"}
           %path#Shop-Motion_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-            d: "m 429,239 62,95"}
+            d: "m 0,0 62,95"}
       - else
         %rect#Shop-Motion_Enclosure{ style: "fill:none;stroke:#000000",
-          x: "429",
-          y: "239",
           width: "62",
           height: "95"}
         %g#Shop-Motion_Fail{ visibility: "hidden" }
           %path#Shop-Motion_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-            d: "m 491,239 -62,95"}
+            d: "m 62,0 -62,95"}
           %path#Shop-Motion_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-            d: "m 429,239 62,95"}
-    %g#Office-Motion
+            d: "m 0,0 62,95"}
+    %g#Office-Motion{ transform: "translate(368, 347)"}
       %path#Office-Motion_Sensor{ style: "fill:#000000;stroke:none",
-        d: "M318,341 a1,1 0 0,0 10,0"}
+        d: "M51,0 a1,1 0 0,0 10,0"}
       %path#Office-Motion_IR-Wave0{ style: "fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1", 
-        d: "m 308,341 a 15,15 0 0 0 15,15"}
+        d: "m 41,0 a 15,15 0 0 0 15,15"}
       %path#Office-Motion_IR-Wave1{ style: "fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-        d: "m 293,341 a 30,30 0 0 0 30,30"}
+        d: "m 26,0 a 30,30 0 0 0 30,30"}
       %path#Office-Motion_IR-Wave2{ style: "fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-        d: "m 278,341 a 45,45 0 0 0 45,45"}
+        d: "m 11,0 a 45,45 0 0 0 45,45"}
       - if (!$isTechBad && $latestStatus['Office Motion'][2] == true)
         %g#Office-Motion_Motion{ visibility: "visible" }
           %circle#Office-Motion_Head{ style: "fill:#2ecc40",
-            cx: "300",
-            cy: "379.5",
+            cx: "33",
+            cy: "38.5",
             r: "5.5"}
           %path#Office-Motion_Torso{ style: "fill:none;stroke:#2ecc40;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
-            d: "m 299,393.5 -3,14"}
+            d: "m 32,52.5 -3,14"}
           %path#Office-Motion_Legs{ style: "fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
-            d: "m 306,430 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"}
+            d: "m 39,89 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"}
           %path#Office-Motion_Arms{ style: "fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
-            d: "m 286,405 2,-8 8.5,-6 5.5,1 6,10 6,2.5"}
+            d: "m 19,64 2,-8 8.5,-6 5.5,1 6,10 6,2.5"}
       - else
         %g#Office-Motion_Motion{ visibility: "hidden" }
           %circle#Office-Motion_Head{ style: "fill:#2ecc40",
-            cx: "300",
-            cy: "379.5",
+            cx: "33",
+            cy: "38.5",
             r: "5.5"}
           %path#Office-Motion_Torso{ style: "fill:none;stroke:#2ecc40;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
-            d: "m 299,393.5 -3,14"}
+            d: "m 32,52.5 -3,14"}
           %path#Office-Motion_Legs{ style: "fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
-            d: "m 306,430 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"}
+            d: "m 39,89 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"}
           %path#Office-Motion_Arms{ style: "fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
-            d: "m 286,405 2,-8 8.5,-6 5.5,1 6,10 6,2.5"}
-      - if ($isTechBad)
+            d: "m 19,64 2,-8 8.5,-6 5.5,1 6,10 6,2.5"}
+      - if ($isTechBad)        
         %rect#Office-Motion_Enclosure{ style: "fill:none;stroke:#ff0000",
-          x: "267",
-          y: "341",
           width: "62",
           height: "95"}
         %g#Office-Motion_Fail{ visibility: "visible" }
           %path#Office-Motion_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-            d: "m 329,341 -62,95"}
+            d: "m 62,0 -62,95"}
           %path#Office-Motion_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-            d: "m 267,341 62,95"}
-      - else 
+            d: "m 0,0 62,95"}
+      - else
         %rect#Office-Motion_Enclosure{ style: "fill:none;stroke:#000000",
-          x: "267",
-          y: "341",
           width: "62",
           height: "95"}
         %g#Office-Motion_Fail{ visibility: "hidden" }
           %path#Office-Motion_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-            d: "m 329,341 -62,95"}
+            d: "m 62,0 -62,95"}
           %path#Office-Motion_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-            d: "m 267,341 62,95"}
-    %g#HAL
+            d: "m 0,0 62,95"}
+    %g#ShopB-Motion{ transform: "translate(723, 325)"}
+      %path#ShopB-Motion_Sensor{ style: "fill:#000000;stroke:none",
+        d: "M51,0 a1,1 0 0,0 10,0"}
+      %path#ShopB-Motion_IR-Wave0{ style: "fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1", 
+        d: "m 41,0 a 15,15 0 0 0 15,15"}
+      %path#ShopB-Motion_IR-Wave1{ style: "fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "m 26,0 a 30,30 0 0 0 30,30"}
+      %path#ShopB-Motion_IR-Wave2{ style: "fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "m 11,0 a 45,45 0 0 0 45,45"}
+      - if (!$isTechBad && $latestStatus['ShopB Motion'][2] == true)
+        %g#ShopB-Motion_Motion{ visibility: "visible" }
+          %circle#ShopB-Motion_Head{ style: "fill:#2ecc40",
+            cx: "33",
+            cy: "38.5",
+            r: "5.5"}
+          %path#ShopB-Motion_Torso{ style: "fill:none;stroke:#2ecc40;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 32,52.5 -3,14"}
+          %path#ShopB-Motion_Legs{ style: "fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
+            d: "m 39,89 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"}
+          %path#ShopB-Motion_Arms{ style: "fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
+            d: "m 19,64 2,-8 8.5,-6 5.5,1 6,10 6,2.5"}
+      - else
+        %g#ShopB-Motion_Motion{ visibility: "hidden" }
+          %circle#ShopB-Motion_Head{ style: "fill:#2ecc40",
+            cx: "33",
+            cy: "38.5",
+            r: "5.5"}
+          %path#ShopB-Motion_Torso{ style: "fill:none;stroke:#2ecc40;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 32,52.5 -3,14"}
+          %path#ShopB-Motion_Legs{ style: "fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
+            d: "m 39,89 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"}
+          %path#ShopB-Motion_Arms{ style: "fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
+            d: "m 19,64 2,-8 8.5,-6 5.5,1 6,10 6,2.5"}
+      - if ($isTechBad)        
+        %rect#ShopB-Motion_Enclosure{ style: "fill:none;stroke:#ff0000",
+          width: "62",
+          height: "95"}
+        %g#ShopB-Motion_Fail{ visibility: "visible" }
+          %path#ShopB-Motion_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 62,0 -62,95"}
+          %path#ShopB-Motion_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 0,0 62,95"}
+      - else
+        %rect#ShopB-Motion_Enclosure{ style: "fill:none;stroke:#000000",
+          width: "62",
+          height: "95"}
+        %g#ShopB-Motion_Fail{ visibility: "hidden" }
+          %path#ShopB-Motion_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 62,0 -62,95"}
+          %path#ShopB-Motion_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 0,0 62,95"}
+    %g#ElecRm-Motion{ transform: "translate(794, 289)"}
+      %path#ElecRm-Motion_Sensor{ style: "fill:#000000;stroke:none",
+        d: "M51,0 a1,1 0 0,0 10,0"}
+      %path#ElecRm-Motion_IR-Wave0{ style: "fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1", 
+        d: "m 41,0 a 15,15 0 0 0 15,15"}
+      %path#ElecRm-Motion_IR-Wave1{ style: "fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "m 26,0 a 30,30 0 0 0 30,30"}
+      %path#ElecRm-Motion_IR-Wave2{ style: "fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "m 11,0 a 45,45 0 0 0 45,45"}
+      - if (!$isTechBad && $latestStatus['ElecRm Motion'][2] == true)
+        %g#ElecRm-Motion_Motion{ visibility: "visible" }
+          %circle#ElecRm-Motion_Head{ style: "fill:#2ecc40",
+            cx: "33",
+            cy: "38.5",
+            r: "5.5"}
+          %path#ElecRm-Motion_Torso{ style: "fill:none;stroke:#2ecc40;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 32,52.5 -3,14"}
+          %path#ElecRm-Motion_Legs{ style: "fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
+            d: "m 39,89 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"}
+          %path#ElecRm-Motion_Arms{ style: "fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
+            d: "m 19,64 2,-8 8.5,-6 5.5,1 6,10 6,2.5"}
+      - else
+        %g#ElecRm-Motion_Motion{ visibility: "hidden" }
+          %circle#ElecRm-Motion_Head{ style: "fill:#2ecc40",
+            cx: "33",
+            cy: "38.5",
+            r: "5.5"}
+          %path#ElecRm-Motion_Torso{ style: "fill:none;stroke:#2ecc40;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 32,52.5 -3,14"}
+          %path#ElecRm-Motion_Legs{ style: "fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
+            d: "m 39,89 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"}
+          %path#ElecRm-Motion_Arms{ style: "fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
+            d: "m 19,64 2,-8 8.5,-6 5.5,1 6,10 6,2.5"}
+      - if ($isTechBad)        
+        %rect#ElecRm-Motion_Enclosure{ style: "fill:none;stroke:#ff0000",
+          width: "62",
+          height: "95"}
+        %g#ElecRm-Motion_Fail{ visibility: "visible" }
+          %path#ElecRm-Motion_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 62,0 -62,95"}
+          %path#ElecRm-Motion_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 0,0 62,95"}
+      - else
+        %rect#ElecRm-Motion_Enclosure{ style: "fill:none;stroke:#000000",
+          width: "62",
+          height: "95"}
+        %g#ElecRm-Motion_Fail{ visibility: "hidden" }
+          %path#ElecRm-Motion_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 62,0 -62,95"}
+          %path#ElecRm-Motion_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 0,0 62,95"}
+    %g#ConfRm-Motion{ transform: "translate(757, 185)"}
+      %path#ConfRm-Motion_Sensor{ style: "fill:#000000;stroke:none",
+        d: "M51,0 a1,1 0 0,0 10,0"}
+      %path#ConfRm-Motion_IR-Wave0{ style: "fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1", 
+        d: "m 41,0 a 15,15 0 0 0 15,15"}
+      %path#ConfRm-Motion_IR-Wave1{ style: "fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "m 26,0 a 30,30 0 0 0 30,30"}
+      %path#ConfRm-Motion_IR-Wave2{ style: "fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+        d: "m 11,0 a 45,45 0 0 0 45,45"}
+      - if (!$isTechBad && $latestStatus['ConfRm Motion'][2] == true)
+        %g#ConfRm-Motion_Motion{ visibility: "visible" }
+          %circle#ConfRm-Motion_Head{ style: "fill:#2ecc40",
+            cx: "33",
+            cy: "38.5",
+            r: "5.5"}
+          %path#ConfRm-Motion_Torso{ style: "fill:none;stroke:#2ecc40;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 32,52.5 -3,14"}
+          %path#ConfRm-Motion_Legs{ style: "fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
+            d: "m 39,89 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"}
+          %path#ConfRm-Motion_Arms{ style: "fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
+            d: "m 19,64 2,-8 8.5,-6 5.5,1 6,10 6,2.5"}
+      - else
+        %g#ConfRm-Motion_Motion{ visibility: "hidden" }
+          %circle#ConfRm-Motion_Head{ style: "fill:#2ecc40",
+            cx: "33",
+            cy: "38.5",
+            r: "5.5"}
+          %path#ConfRm-Motion_Torso{ style: "fill:none;stroke:#2ecc40;stroke-width:12px;stroke-linecap:round;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 32,52.5 -3,14"}
+          %path#ConfRm-Motion_Legs{ style: "fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
+            d: "m 39,89 v -13 l -6.5,-6.5 -7,-1 -2.5,9.5 -9,9"}
+          %path#ConfRm-Motion_Arms{ style: "fill:none;stroke:#2ecc40;stroke-width:5px;stroke-linecap:round;stroke-linejoin:round;stroke-opacity:1",
+            d: "m 19,64 2,-8 8.5,-6 5.5,1 6,10 6,2.5"}
+      - if ($isTechBad)        
+        %rect#ConfRm-Motion_Enclosure{ style: "fill:none;stroke:#ff0000",
+          width: "62",
+          height: "95"}
+        %g#ConfRm-Motion_Fail{ visibility: "visible" }
+          %path#ConfRm-Motion_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 62,0 -62,95"}
+          %path#ConfRm-Motion_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 0,0 62,95"}
+      - else
+        %rect#ConfRm-Motion_Enclosure{ style: "fill:none;stroke:#000000",
+          width: "62",
+          height: "95"}
+        %g#ConfRm-Motion_Fail{ visibility: "hidden" }
+          %path#ConfRm-Motion_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 62,0 -62,95"}
+          %path#ConfRm-Motion_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 0,0 62,95"}
+    %g#HAL{transform: "translate(300,299)"}
       %text#HAL_Text{ style: "font-style:normal;font-weight:normal;font-size:36px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none" }
-        %tspan{ x: "302",
-          y: "330"}HAL
+        %tspan{ x: "2",
+          y: "30"}HAL
       - if ($isTechBad)
         %rect#HAL_Enclosure{ style: "fill:none;stroke:#ff0000",
-          x: "300",
-          y: "300",
           width: "75",
           height: "34"}
         %g#HAL_Fail{ visibility: "visible" }
           %path#HAL_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-            d: "m 300,300 75,34"}
+            d: "m 0,0 75,34"}
           %path#HAL_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-            d: "m 375,300 -75,34"}
+            d: "m 75,0 -75,34"}
       - else
         %rect#HAL_Enclosure{ style: "fill:none;stroke:#000000",
-          x: "300",
-          y: "300",
+          x: "0",
+          y: "0",
           width: "75",
           height: "34"}
         %g#HAL_Fail{ visibility: "hidden" }
           %path#HAL_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-            d: "m 300,300 75,34"}
+            d: "m 0,0 75,34"}
           %path#HAL_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-            d: "m 375,300 -75,34"}
-    %g#Bay-Temp
+            d: "m 75,0 -75,34"}
+    %g#Daisy{transform: "translate(858,289)"}
+      %text#Daisy_Text{ style: "font-style:normal;font-weight:normal;font-size:36px;line-height:1.25;font-family:sans-serif;font-stretch:condensed;fill:#000000;fill-opacity:1;stroke:none" }
+        %tspan{ x: "2",
+          y: "30"}Daisy
+      - if ($isTechBad)
+        %rect#Daisy_Enclosure{ style: "fill:none;stroke:#ff0000",
+          width: "75",
+          height: "34"}
+        %g#Daisy_Fail{ visibility: "visible" }
+          %path#Daisy_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 0,0 75,34"}
+          %path#Daisy_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 75,0 -75,34"}
+      - else
+        %rect#Daisy_Enclosure{ style: "fill:none;stroke:#000000",
+          x: "0",
+          y: "0",
+          width: "75",
+          height: "34"}
+        %g#Daisy_Fail{ visibility: "hidden" }
+          %path#Daisy_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 0,0 75,34"}
+          %path#Daisy_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 75,0 -75,34"}
+    %g#Bay-Temp{transform: "translate(300,263)"}
       - preg_match ('/^.+?(?=\.)/', $latestStatus['Bay Temp'][0], $wholeTemperature)
       - if (!$isTechBad && sizeof($wholeTemperature) > 0)
         %text#Bay-Temp_Temperature{ style: "font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"}
-          %tspan{ x: "321",
-            y: "290"}
+          %tspan{ x: "21",
+            y: "23"}
             - print($wholeTemperature[0] . '&#xB0;C')
       - else
         %text#Bay-Temp_Temperature{ style: "font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"}
-          %tspan{ x: "321",
-            y: "290"}XX&#xB0;C
+          %tspan{ x: "21",
+            y: "23"}XX&#xB0;C
       %text#Bay-Temp_Symbol{ style: "font-style:normal;font-weight:normal;font-size:26px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"}
-        %tspan{ x: "298.5",
-          y: "292"}&#x1f321;
+        %tspan{x: "-1.5",
+          y: "25"}&#x1f321;
       - if ($isTechBad)
         %rect#Bay-Temp_Enclosure{ style: "fill:none;stroke:#ff0000",
-          x: "300",
-          y: "265",
           width: "75",
           height: "34"}
         %g#Bay-Temp_Fail{ visibility: "visible" }
           %path#Bay-Temp_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-            d: "m 300,265 75,34"}
+            d: "m 0,0 75,34"}
           %path#Bay-Temp_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-            d: "m 375,265 -75,34"}
+            d: "m 75,0 -75,34"}
       - else
         %rect#Bay-Temp_Enclosure{ style: "fill:none;stroke:#000000",
-          x: "300",
-          y: "265",
           width: "75",
           height: "34"}
         %g#Bay-Temp_Fail{ visibility: "hidden" }
           %path#Bay-Temp_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-            d: "m 300,265 75,34"}
+            d: "m 0,0 75,34"}
           %path#Bay-Temp_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
-            d: "m 375,265 -75,34"}
+            d: "m 75,0 -75,34"}
+    %g#ShopB-Temp{transform: "translate(710,289)"}
+      - preg_match ('/^.+?(?=\.)/', $latestStatus['ShopB Temp'][0], $wholeTemperature)
+      - if (!$isTechBad && sizeof($wholeTemperature) > 0)
+        %text#ShopB-Temp_Temperature{ style: "font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"}
+          %tspan{ x: "21",
+            y: "23"}
+            - print($wholeTemperature[0] . '&#xB0;C')
+      - else
+        %text#ShopB-Temp_Temperature{ style: "font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"}
+          %tspan{ x: "21",
+            y: "23"}XX&#xB0;C
+      %text#ShopB-Temp_Symbol{ style: "font-style:normal;font-weight:normal;font-size:26px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"}
+        %tspan{x: "-1.5",
+          y: "25"}&#x1f321;
+      - if ($isTechBad)
+        %rect#ShopB-Temp_Enclosure{ style: "fill:none;stroke:#ff0000",
+          width: "75",
+          height: "34"}
+        %g#ShopB-Temp_Fail{ visibility: "visible" }
+          %path#ShopB-Temp_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 0,0 75,34"}
+          %path#ShopB-Temp_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 75,0 -75,34"}
+      - else
+        %rect#ShopB-Temp_Enclosure{ style: "fill:none;stroke:#000000",
+          width: "75",
+          height: "34"}
+        %g#ShopB-Temp_Fail{ visibility: "hidden" }
+          %path#ShopB-Temp_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 0,0 75,34"}
+          %path#ShopB-Temp_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 75,0 -75,34"}
+    %g#ElecRm-Temp{transform: "translate(858,325)"}
+      - preg_match ('/^.+?(?=\.)/', $latestStatus['ElecRm Temp'][0], $wholeTemperature)
+      - if (!$isTechBad && sizeof($wholeTemperature) > 0)
+        %text#ElecRm-Temp_Temperature{ style: "font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"}
+          %tspan{ x: "21",
+            y: "23"}
+            - print($wholeTemperature[0] . '&#xB0;C')
+      - else
+        %text#ElecRm-Temp_Temperature{ style: "font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"}
+          %tspan{ x: "21",
+            y: "23"}XX&#xB0;C
+      %text#ElecRm-Temp_Symbol{ style: "font-style:normal;font-weight:normal;font-size:26px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"}
+        %tspan{x: "-1.5",
+          y: "25"}&#x1f321;
+      - if ($isTechBad)
+        %rect#ElecRm-Temp_Enclosure{ style: "fill:none;stroke:#ff0000",
+          width: "75",
+          height: "34"}
+        %g#ElecRm-Temp_Fail{ visibility: "visible" }
+          %path#ElecRm-Temp_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 0,0 75,34"}
+          %path#ElecRm-Temp_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 75,0 -75,34"}
+      - else
+        %rect#ElecRm-Temp_Enclosure{ style: "fill:none;stroke:#000000",
+          width: "75",
+          height: "34"}
+        %g#ElecRm-Temp_Fail{ visibility: "hidden" }
+          %path#ElecRm-Temp_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 0,0 75,34"}
+          %path#ElecRm-Temp_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 75,0 -75,34"}
+    %g#ConfRm-Temp{transform: "translate(821,246)"}
+      - preg_match ('/^.+?(?=\.)/', $latestStatus['ConfRm Temp'][0], $wholeTemperature)
+      - if (!$isTechBad && sizeof($wholeTemperature) > 0)
+        %text#ConfRm-Temp_Temperature{ style: "font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"}
+          %tspan{ x: "21",
+            y: "23"}
+            - print($wholeTemperature[0] . '&#xB0;C')
+      - else
+        %text#ConfRm-Temp_Temperature{ style: "font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"}
+          %tspan{ x: "21",
+            y: "23"}XX&#xB0;C
+      %text#ConfRm-Temp_Symbol{ style: "font-style:normal;font-weight:normal;font-size:26px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none"}
+        %tspan{x: "-1.5",
+          y: "25"}&#x1f321;
+      - if ($isTechBad)
+        %rect#ConfRm-Temp_Enclosure{ style: "fill:none;stroke:#ff0000",
+          width: "75",
+          height: "34"}
+        %g#ConfRm-Temp_Fail{ visibility: "visible" }
+          %path#ConfRm-Temp_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 0,0 75,34"}
+          %path#ConfRm-Temp_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 75,0 -75,34"}
+      - else
+        %rect#ConfRm-Temp_Enclosure{ style: "fill:none;stroke:#000000",
+          width: "75",
+          height: "34"}
+        %g#ConfRm-Temp_Fail{ visibility: "hidden" }
+          %path#ConfRm-Temp_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 0,0 75,34"}
+          %path#ConfRm-Temp_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 75,0 -75,34"}
+    %g#Outdoor-Temp{transform: "translate(184,76)"}
+      - preg_match ('/^.+?(?=\.)/', $latestStatus['Outdoor Temp'][0], $wholeTemperature)
+      - if (!$isTechBad && sizeof($wholeTemperature) > 0)
+        %text#Outdoor-Temp_Temperature{ style: "font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none"}
+          %tspan{ x: "21",
+            y: "23"}
+            - print($wholeTemperature[0] . '&#xB0;C')
+      - else
+        %text#Outdoor-Temp_Temperature{ style: "font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none"}
+          %tspan{x: "21",
+            y: "23"}XX&#xB0;C
+      %text#Outdoor-Temp_Symbol{ style: "font-style:normal;font-weight:normal;font-size:26px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none"}
+        %tspan{x: "-1.5",
+          y: "25"}&#x1f321;
+      - if ($isTechBad)
+        %rect#Outdoor-Temp_Enclosure{ style: "fill:none;stroke:#ff0000",
+          width: "75",
+          height: "34"}
+        %g#Outdoor-Temp_Fail{ visibility: "visible" }
+          %path#Outdoor-Temp_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 0,0 75,34"}
+          %path#Outdoor-Temp_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 75,0 -75,34"}
+      - else
+        %rect#Outdoor-Temp_Enclosure{ style: "fill:none;stroke:#ffffff",
+          width: "75",
+          height: "34"}
+        %g#Outdoor-Temp_Fail{ visibility: "hidden" }
+          %path#Outdoor-Temp_Bk-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 0,0 75,34"}
+          %path#Outdoor-Temp_Fw-Slash{ style: "fill:none;stroke:#ff0000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1",
+            d: "m 75,0 -75,34"}
