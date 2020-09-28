@@ -183,62 +183,39 @@ function update_sensors() {
                 "visibility", "hidden");
         }
 
-        if (isTechBad)
-        {
-            synoptic.getElementById("Shop-Motion_Motion").setAttribute(
-                "visibility", "hidden");
-            synoptic.getElementById("Shop-Motion_Fail").setAttribute(
-                "visibility", "visible");
-            synoptic.getElementById("Shop-Motion_Enclosure").style.stroke = 
-                "#ff0000";
-        }
-        else if (json["Shop Motion"][2] == true)
-        {
-            synoptic.getElementById("Shop-Motion_Motion").setAttribute(
-                "visibility", "visible");
-            synoptic.getElementById("Shop-Motion_Fail").setAttribute(
-                "visibility", "hidden");
-            synoptic.getElementById("Shop-Motion_Enclosure").style.stroke =
-                "#000000";
-        }
-        else
-        {
-            synoptic.getElementById("Shop-Motion_Motion").setAttribute(
-                "visibility", "hidden");
-            synoptic.getElementById("Shop-Motion_Fail").setAttribute(
-                "visibility", "hidden");
-            synoptic.getElementById("Shop-Motion_Enclosure").style.stroke = 
-                "#000000";
-        }
+	var Motion_Sensors = ["Shop", "Office", "ShopB", "ElecRm", "ConfRm"];
 
-        if (isTechBad)
+        for (i in Motion_Sensors)
         {
-            synoptic.getElementById("Office-Motion_Motion").setAttribute(
-                "visibility", "hidden");
-            synoptic.getElementById("Office-Motion_Fail").setAttribute(
-                "visibility", "visible");
-            synoptic.getElementById("Office-Motion_Enclosure").style.stroke = 
-                "#ff0000";
+            if (isTechBad)
+            {
+                synoptic.getElementById(Motion_Sensors[i]+"-Motion_Motion").setAttribute(
+                    "visibility", "hidden");
+                synoptic.getElementById(Motion_Sensors[i]+"-Motion_Fail").setAttribute(
+                    "visibility", "visible");
+                synoptic.getElementById(Motion_Sensors[i]+"-Motion_Enclosure").style.stroke = 
+                    "#ff0000";
+            }
+            else if (json[Motion_Sensors[i]+" Motion"][2] == true)
+            {
+                synoptic.getElementById(Motion_Sensors[i]+"-Motion_Motion").setAttribute(
+                    "visibility", "visible");
+                synoptic.getElementById(Motion_Sensors[i]+"-Motion_Fail").setAttribute(
+                    "visibility", "hidden");
+                synoptic.getElementById(Motion_Sensors[i]+"-Motion_Enclosure").style.stroke =
+                    "#000000";
+            }
+            else
+            {
+                synoptic.getElementById(Motion_Sensors[i]+"-Motion_Motion").setAttribute(
+                    "visibility", "hidden");
+                synoptic.getElementById(Motion_Sensors[i]+"-Motion_Fail").setAttribute(
+                    "visibility", "hidden");
+                synoptic.getElementById(Motion_Sensors[i]+"-Motion_Enclosure").style.stroke = 
+                    "#000000";
+            }
         }
-        else if (json["Office Motion"][2] == true)
-        {
-            synoptic.getElementById("Office-Motion_Motion").setAttribute(
-                "visibility", "visible");
-            synoptic.getElementById("Office-Motion_Fail").setAttribute(
-                "visibility", "hidden");
-            synoptic.getElementById("Office-Motion_Enclosure").style.stroke = 
-                "#000000";
-        }
-        else
-        {
-            synoptic.getElementById("Office-Motion_Motion").setAttribute(
-                "visibility", "hidden");
-            synoptic.getElementById("Office-Motion_Fail").setAttribute(
-                "visibility", "hidden");
-            synoptic.getElementById("Office-Motion_Enclosure").style.stroke = 
-                "#000000";
-        }
-
+    
         if (isTechBad)
         {
             synoptic.getElementById("HAL_Fail").setAttribute(
@@ -252,28 +229,68 @@ function update_sensors() {
             synoptic.getElementById("HAL_Enclosure").style.stroke = "#000000";
         }
 
-
         if (isTechBad)
         {
-            synoptic.getElementById("Temperature_Temperature").innerHTML =
-                synoptic.getElementById("Temperature_Temperature").innerHTML
-                    .replace(/([^>]+>?\s+)([0-9]+)(.+)/g, "$1" + "XX" + "$3");
-            synoptic.getElementById("Temperature_Fail").setAttribute(
+            synoptic.getElementById("Daisy_Fail").setAttribute(
                 "visibility", "visible");
-            synoptic.getElementById("Temperature_Enclosure").style.stroke = 
+            synoptic.getElementById("Daisy_Enclosure").style.stroke = "#ff0000";
+        }
+        else
+        {
+            synoptic.getElementById("Daisy_Fail").setAttribute(
+                "visibility", "hidden");
+            synoptic.getElementById("Daisy_Enclosure").style.stroke = "#000000";
+        }
+
+        var Temp_Sensors = ["Bay", "ShopB", "ElecRm", "ConfRm"];
+
+        for (i in Temp_Sensors)
+        {
+            if (isTechBad)
+            {
+                synoptic.getElementById(Temp_Sensors[i]+"-Temp_Temperature").innerHTML =
+                    synoptic.getElementById(Temp_Sensors[i]+"-Temp_Temperature").innerHTML
+                        .replace(/([^>]+>?\s+)([0-9]+|XX)(.+)/g, "$1" + "XX" + "$3");
+                synoptic.getElementById(Temp_Sensors[i]+"-Temp_Fail").setAttribute(
+                    "visibility", "visible");
+                synoptic.getElementById(ts+"-Temp_Enclosure").style.stroke = 
+                    "#ff0000";
+            }
+            else
+            {
+                var temp = Math.round(json[Temp_Sensors[i]+" Temp"][0].match(/[^ ]+/)*1);
+                synoptic.getElementById(Temp_Sensors[i]+"-Temp_Temperature").innerHTML =
+                    synoptic.getElementById(Temp_Sensors[i]+"-Temp_Temperature").innerHTML
+                        .replace(/([^>]+>?\s+)([0-9]+|XX)(.+)/g, "$1" + temp 
+                            + "$3");
+                synoptic.getElementById(Temp_Sensors[i]+"-Temp_Fail").setAttribute(
+                    "visibility", "hidden");
+                synoptic.getElementById(Temp_Sensors[i]+"-Temp_Enclosure").style.stroke = 
+                    "#000000";
+            }
+        }
+    
+        if (isTechBad)
+        {
+            synoptic.getElementById("Outdoor-Temp_Temperature").innerHTML =
+                synoptic.getElementById("Outdoor-Temp_Temperature").innerHTML
+                    .replace(/([^>]+>?\s+)([0-9]+|XX)(.+)/g, "$1" + "XX" + "$3");
+            synoptic.getElementById("Outdoor-Temp_Fail").setAttribute(
+                "visibility", "visible");
+            synoptic.getElementById("Outdoor-Temp_Enclosure").style.stroke = 
                 "#ff0000";
         }
         else
         {
-            var temp = Math.round(json["Temperature"][0].match(/[^ ]+/)*1);
-            synoptic.getElementById("Temperature_Temperature").innerHTML =
-                synoptic.getElementById("Temperature_Temperature").innerHTML
-                    .replace(/([^>]+>?\s+)([0-9]+)(.+)/g, "$1" + temp 
+            var temp = Math.round(json["Outdoor Temp"][0].match(/[^ ]+/)*1);
+            synoptic.getElementById("Outdoor-Temp_Temperature").innerHTML =
+                synoptic.getElementById("Outdoor-Temp_Temperature").innerHTML
+                    .replace(/([^>]+>?\s+)([0-9]+|XX)(.+)/g, "$1" + temp 
                         + "$3");
-            synoptic.getElementById("Temperature_Fail").setAttribute(
+            synoptic.getElementById("Outdoor-Temp_Fail").setAttribute(
                 "visibility", "hidden");
-            synoptic.getElementById("Temperature_Enclosure").style.stroke = 
-                "#000000";
+            synoptic.getElementById("Outdoor-Temp_Enclosure").style.stroke = 
+                "#ffffff";
         }
 
         updating_sensors = false;

@@ -101,7 +101,7 @@ function save_payload($req){
 function save_switches($req) {
   $post = $req->getParsedBody();
   $session = $req->getHeaderLine('X-Session');
-  $checks = ['Front_Door', 'Pod_Bay_Door', 'Office_Motion', 'Shop_Motion', 'Open_Switch', 'Temperature'];
+  $checks = ['Front_Door', 'Pod_Bay_Door', 'Office_Motion', 'Shop_Motion', 'ConfRm_Motion', 'ElecRm_Motion', 'ShopB_Motion', 'Open_Switch', 'Bay_Temp', 'Outdoor_Temp', 'ConfRm_Temp', 'ElecRm_Temp', 'ShopB_Temp'];
 
   mark_old_switches();
 
@@ -337,7 +337,14 @@ function latest_changes(){
     'Pod Bay Door' => [],
     'Office Motion' => [],
     'Shop Motion' => [],
-    'Temperature' => []
+    'ConfRm Motion' => [],
+    'ElecRm Motion' => [],
+    'ShopB Motion' => [],
+    'Bay Temp' => [],
+    'Outdoor Temp' => [],
+    'ShopB Temp' => [],
+    'ConfRm Temp' => [],
+    'ElecRm Temp' => []
     );
   
   $now = time();
@@ -397,7 +404,7 @@ function latest_changes(){
       }
     }
     
-    if($sensor == 'Temperature'){
+    if(strpos($sensor, 'Temp') !== false){
       array_push($value, '' . sprintf("%.2f °C/ %.2f °F", (($data_line[4] | 0) / 1000), ((($data_line[4] | 0) / 1000)*1.8 + 32)));
       array_push($value, $data_line[1] );
     }
