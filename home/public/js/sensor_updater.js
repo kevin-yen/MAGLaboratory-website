@@ -253,7 +253,7 @@ function update_sensors() {
                         .replace(/([^>]+>?\s+)([0-9]+|XX)(.+)/g, "$1" + "XX" + "$3");
                 synoptic.getElementById(Temp_Sensors[i]+"-Temp_Fail").setAttribute(
                     "visibility", "visible");
-                synoptic.getElementById(ts+"-Temp_Enclosure").style.stroke = 
+                synoptic.getElementById(Temp_Sensors[i]+"-Temp_Enclosure").style.stroke = 
                     "#ff0000";
             }
             else
