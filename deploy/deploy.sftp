@@ -1,3 +1,2 @@
-!echo "Commit: 810e51beef3d80790ddfff34027de526db5d6187 5280bebe32d3e2304b38fdb8ae31191b918487ea"
-put 'public/js/sensor_updater.js' 'public/js/sensor_updater.js'
+!echo "Commit: 5280bebe32d3e2304b38fdb8ae31191b918487ea 5f9d3a1f01ba943d4d4758aab8cce4dac6c1904a"
 put '/home/brandon/maglab_website/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
