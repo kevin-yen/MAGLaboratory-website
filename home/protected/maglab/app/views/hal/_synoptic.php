@@ -1,4 +1,4 @@
-<svg id="maglab-synoptic-view" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="160 30 900 564" width="900" height="564">
+<svg id="maglab-synoptic-view" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="160 30 900 564" width="100%" height="564">
 <defs>
 <pattern id="diagonal-stripe-2" height="10" width="10" patternUnits="userSpaceOnUse">
 <image height="10" width="10" y="0" x="0" xlink:href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxMCcgaGVpZ2h0PScxMCc+CiAgPHJlY3Qgd2lkdGg9JzEwJyBoZWlnaHQ9JzEwJyBmaWxsPSd3aGl0ZScvPgogIDxwYXRoIGQ9J00tMSwxIGwyLC0yCiAgICAgICAgICAgTTAsMTAgbDEwLC0xMAogICAgICAgICAgIE05LDExIGwyLC0yJyBzdHJva2U9J2JsYWNrJyBzdHJva2Utd2lkdGg9JzInLz4KPC9zdmc+"></image>
@@ -137,7 +137,7 @@
 </g>
 <?php } ?>
 </g>
-<g id="Office-Motion" transform="translate(368, 347)">
+<g id="Office-Motion" transform="translate(268, 347)">
 <path id="Office-Motion_Sensor" style="fill:#000000;stroke:none" d="M51,0 a1,1 0 0,0 10,0"></path>
 <path id="Office-Motion_IR-Wave0" style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 41,0 a 15,15 0 0 0 15,15"></path>
 <path id="Office-Motion_IR-Wave1" style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" d="m 26,0 a 30,30 0 0 0 30,30"></path>
