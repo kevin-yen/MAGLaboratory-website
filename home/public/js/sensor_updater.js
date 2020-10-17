@@ -8,7 +8,7 @@ var has_focus = document.hasFocus();
 var override = false;
 const C_REFRESH_NORMAL = 300;
 const C_REFRESH_ERROR = 60;
-var auto_refresh_counter = C_REFRESH_NORMAL;
+var next_refresh = new Date() / 1000 + C_REFRESH_NORMAL;
 var date_options = {
     year: 'numeric',
     month: 'short', 
@@ -32,12 +32,12 @@ if (i >= sensor_table.rows.length)
 auto_refresh_row.cells[1].innerHTML = "paused";
 
 function update_refresh_counter() {
-    auto_refresh_row.cells[2].innerHTML = auto_refresh_counter + " seconds";
+    auto_refresh_row.cells[2].innerHTML = Math.round(next_refresh - new Date() / 1000) + " seconds";
 }
 
 var updating_sensors = false;
 function update_sensors() {
-    auto_refresh_counter = C_REFRESH_NORMAL;
+    next_refresh = new Date() / 1000 + C_REFRESH_NORMAL;
     if (updating_sensors)
         return;
 
@@ -298,21 +298,20 @@ function update_sensors() {
         .fail(function() {
             auto_refresh_row.cells[1].innerHTML = "failed: " + resp.status 
                 + ".  Retrying in";
-	    auto_refresh_counter = C_REFRESH_ERROR;
+	    next_refresh = new Date() / 1000 + C_REFRESH_ERROR;
 	    updating_sensors = false;
             return;
         });
 }
 
 setInterval(function() {
-    if (auto_refresh_counter > 0)
-        auto_refresh_counter--;
-    update_refresh_counter();
+    if (next_refresh > new Date() / 1000)
+        update_refresh_counter();
     if (has_focus || override) {
-        if (auto_refresh_counter <= 0) {
+        if (next_refresh <= new Date() / 1000) {
             update_sensors();
             update_refresh_counter();
-	}
+        }
     }
 }, 1000);
 
@@ -335,7 +334,7 @@ function override_enable() {
 }
 
 function maybeUpdate() {
-    if (auto_refresh_counter <= 0) {
+    if (next_refresh <= new Date() / 1000) {
         update_sensors();
         update_refresh_counter();
     }
