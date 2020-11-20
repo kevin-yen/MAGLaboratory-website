@@ -172,7 +172,7 @@ function update_switch($sensor, $session, $value){
   $mysqli = get_mysqli();
   if(!$mysqli){ return false; }
   
-  $ival = (int)$value;
+  $ival = $value;
   $query = null;
   
   $last = last_sensor_value($sensor, $session);
@@ -182,7 +182,7 @@ function update_switch($sensor, $session, $value){
     return;
   }
   
-  if($ival != (int)$last[1]){
+  if($ival != $last[1]){
     # Item has changed. Close last value and mark change by inserting new value.
     close_sensor_entry($last[0]);
     insert_switch($sensor, $session, $ival);
