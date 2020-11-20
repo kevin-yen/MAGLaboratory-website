@@ -1,3 +1,3 @@
-!echo "Commit: c03062aca673215e40f18006685edf1b47a017c0 1dde490da84ab880919bb83ef94ee06c97996924"
-put 'public/js/sensor_updater.js' 'public/js/sensor_updater.js'
+!echo "Commit: 1dde490da84ab880919bb83ef94ee06c97996924 e4391a2e658f735f978fd2ef6dbab1e85cdf24a0"
+put 'protected/maglab/app/helpers/hal_helpers_old.php' 'protected/maglab/app/helpers/hal_helpers_old.php'
 put '/home/brandon/maglab_website/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
