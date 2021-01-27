@@ -250,7 +250,7 @@ function update_sensors() {
             {
                 synoptic.getElementById(Temp_Sensors[i]+"-Temp_Temperature").innerHTML =
                     synoptic.getElementById(Temp_Sensors[i]+"-Temp_Temperature").innerHTML
-                        .replace(/([^>]+>?\s+)([0-9]+|XX)(.+)/g, "$1" + "XX" + "$3");
+                        .replace(/([^>]+>\s*)(-?[0-9]+|XX)(.+)/g, "$1" + "XX" + "$3");
                 synoptic.getElementById(Temp_Sensors[i]+"-Temp_Fail").setAttribute(
                     "visibility", "visible");
                 synoptic.getElementById(Temp_Sensors[i]+"-Temp_Enclosure").style.stroke = 
@@ -261,7 +261,7 @@ function update_sensors() {
                 var temp = Math.round(json[Temp_Sensors[i]+" Temp"][0].match(/[^ ]+/)*1);
                 synoptic.getElementById(Temp_Sensors[i]+"-Temp_Temperature").innerHTML =
                     synoptic.getElementById(Temp_Sensors[i]+"-Temp_Temperature").innerHTML
-                        .replace(/([^>]+>?\s+)([0-9]+|XX)(.+)/g, "$1" + temp 
+                        .replace(/([^>]+>\s*)(-?[0-9]+|XX)(.+)/g, "$1" + temp 
                             + "$3");
                 synoptic.getElementById(Temp_Sensors[i]+"-Temp_Fail").setAttribute(
                     "visibility", "hidden");
@@ -274,7 +274,7 @@ function update_sensors() {
         {
             synoptic.getElementById("Outdoor-Temp_Temperature").innerHTML =
                 synoptic.getElementById("Outdoor-Temp_Temperature").innerHTML
-                    .replace(/([^>]+>?\s+)([0-9]+|XX)(.+)/g, "$1" + "XX" + "$3");
+                    .replace(/([^>]+>\s*)(-?[0-9]+|XX)(.+)/g, "$1" + "XX" + "$3");
             synoptic.getElementById("Outdoor-Temp_Fail").setAttribute(
                 "visibility", "visible");
             synoptic.getElementById("Outdoor-Temp_Enclosure").style.stroke = 
@@ -285,7 +285,7 @@ function update_sensors() {
             var temp = Math.round(json["Outdoor Temp"][0].match(/[^ ]+/)*1);
             synoptic.getElementById("Outdoor-Temp_Temperature").innerHTML =
                 synoptic.getElementById("Outdoor-Temp_Temperature").innerHTML
-                    .replace(/([^>]+>?\s+)([0-9]+|XX)(.+)/g, "$1" + temp 
+                    .replace(/([^>]+>\s*)(-?[0-9]+|XX)(.+)/g, "$1" + temp 
                         + "$3");
             synoptic.getElementById("Outdoor-Temp_Fail").setAttribute(
                 "visibility", "hidden");

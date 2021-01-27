@@ -408,7 +408,7 @@ function latest_changes(){
       if (preg_match('/[^-0-9]+/', $data_line[4])) {
         array_push($value, $data_line[4]);
       } else {
-        array_push($value, '' . sprintf("%.2f °C/ %.2f °F", (($data_line[4] | 0) / 1000), ((($data_line[4] | 0) / 1000)*1.8 + 32)));
+        array_push($value, '' . sprintf("%.2f \xb0C/ %.2f \xb0F", (($data_line[4] | 0) / 1000), ((($data_line[4] | 0) / 1000)*1.8 + 32)));
       }
       array_push($value, $data_line[1] );
     }

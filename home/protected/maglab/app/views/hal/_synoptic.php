@@ -310,11 +310,12 @@
 <?php } ?>
 </g>
 <g id="Bay-Temp" transform="translate(300,263)">
-<?php preg_match ('/^.+?(?=\.)/', $latestStatus['Bay Temp'][0], $wholeTemperature); ?>
+<?php preg_match ('/^.+?(?=\s)/', $latestStatus['Bay Temp'][0], $wholeTemperature); ?>
 <?php if (!$isTechBad && sizeof($wholeTemperature) > 0) { ?>
 <text id="Bay-Temp_Temperature" style="font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none">
 <tspan x="21" y="23">
-<?php print($wholeTemperature[0] . '&#xB0;C'); ?>
+<?php $tempTemp = (int)(floatval($wholeTemperature[0]) > 0 ? floatval($wholeTemperature[0]) + 0.5 : floatval($wholeTemperature[0] - 0.5); ?>
+<?php print($tempTemp . '&#xB0;C'); ?>
 </tspan>
 </text>
 <?php } else { ?>
@@ -340,11 +341,12 @@
 <?php } ?>
 </g>
 <g id="ShopB-Temp" transform="translate(710,289)">
-<?php preg_match ('/^.+?(?=\.)/', $latestStatus['ShopB Temp'][0], $wholeTemperature); ?>
+<?php preg_match ('/^.+?(?=\s)/', $latestStatus['ShopB Temp'][0], $wholeTemperature); ?>
 <?php if (!$isTechBad && sizeof($wholeTemperature) > 0) { ?>
 <text id="ShopB-Temp_Temperature" style="font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none">
 <tspan x="21" y="23">
-<?php print($wholeTemperature[0] . '&#xB0;C'); ?>
+<?php $tempTemp = (int)(floatval($wholeTemperature[0]) > 0 ? floatval($wholeTemperature[0]) + 0.5 : floatval($wholeTemperature[0] - 0.5); ?>
+<?php print($tempTemp . '&#xB0;C'); ?>
 </tspan>
 </text>
 <?php } else { ?>
@@ -370,11 +372,12 @@
 <?php } ?>
 </g>
 <g id="ElecRm-Temp" transform="translate(858,325)">
-<?php preg_match ('/^.+?(?=\.)/', $latestStatus['ElecRm Temp'][0], $wholeTemperature); ?>
+<?php preg_match ('/^.+?(?=\s)/', $latestStatus['ElecRm Temp'][0], $wholeTemperature); ?>
 <?php if (!$isTechBad && sizeof($wholeTemperature) > 0) { ?>
 <text id="ElecRm-Temp_Temperature" style="font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none">
 <tspan x="21" y="23">
-<?php print($wholeTemperature[0] . '&#xB0;C'); ?>
+<?php $tempTemp = (int)(floatval($wholeTemperature[0]) > 0 ? floatval($wholeTemperature[0]) + 0.5 : floatval($wholeTemperature[0] - 0.5); ?>
+<?php print($tempTemp . '&#xB0;C'); ?>
 </tspan>
 </text>
 <?php } else { ?>
@@ -400,11 +403,12 @@
 <?php } ?>
 </g>
 <g id="ConfRm-Temp" transform="translate(821,246)">
-<?php preg_match ('/^.+?(?=\.)/', $latestStatus['ConfRm Temp'][0], $wholeTemperature); ?>
+<?php preg_match ('/^.+?(?=\s)/', $latestStatus['ConfRm Temp'][0], $wholeTemperature); ?>
 <?php if (!$isTechBad && sizeof($wholeTemperature) > 0) { ?>
 <text id="ConfRm-Temp_Temperature" style="font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none">
 <tspan x="21" y="23">
-<?php print($wholeTemperature[0] . '&#xB0;C'); ?>
+<?php $tempTemp = (int)(floatval($wholeTemperature[0]) > 0 ? floatval($wholeTemperature[0]) + 0.5 : floatval($wholeTemperature[0] - 0.5); ?>
+<?php print($tempTemp . '&#xB0;C'); ?>
 </tspan>
 </text>
 <?php } else { ?>
@@ -430,11 +434,12 @@
 <?php } ?>
 </g>
 <g id="Outdoor-Temp" transform="translate(184,76)">
-<?php preg_match ('/^.+?(?=\.)/', $latestStatus['Outdoor Temp'][0], $wholeTemperature); ?>
+<?php preg_match ('/^.+?(?=\s)/', $latestStatus['Outdoor Temp'][0], $wholeTemperature); ?>
 <?php if (!$isTechBad && sizeof($wholeTemperature) > 0) { ?>
 <text id="Outdoor-Temp_Temperature" style="font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none">
 <tspan x="21" y="23">
-<?php print($wholeTemperature[0] . '&#xB0;C'); ?>
+<?php $tempTemp = (int)(floatval($wholeTemperature[0]) > 0 ? floatval($wholeTemperature[0]) + 0.5 : floatval($wholeTemperature[0] - 0.5); ?>
+<?php print($tempTemp . '&#xB0;C'); ?>
 </tspan>
 </text>
 <?php } else { ?>
