@@ -314,7 +314,7 @@
 <?php if (!$isTechBad && sizeof($wholeTemperature) > 0) { ?>
 <text id="Bay-Temp_Temperature" style="font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none">
 <tspan x="21" y="23">
-<?php $tempTemp = (int)(floatval($wholeTemperature[0]) > 0 ? floatval($wholeTemperature[0]) + 0.5 : floatval($wholeTemperature[0]) - 0.5); ?>
+<?php $tempTemp = (int)(round(floatval($wholeTemperature[0])); ?>
 <?php print($tempTemp . '&#xB0;C'); ?>
 </tspan>
 </text>
@@ -345,7 +345,7 @@
 <?php if (!$isTechBad && sizeof($wholeTemperature) > 0) { ?>
 <text id="ShopB-Temp_Temperature" style="font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none">
 <tspan x="21" y="23">
-<?php $tempTemp = (int)(floatval($wholeTemperature[0]) > 0 ? floatval($wholeTemperature[0]) + 0.5 : floatval($wholeTemperature[0]) - 0.5); ?>
+<?php $tempTemp = (int)(round(floatval($wholeTemperature[0])); ?>
 <?php print($tempTemp . '&#xB0;C'); ?>
 </tspan>
 </text>
@@ -376,7 +376,7 @@
 <?php if (!$isTechBad && sizeof($wholeTemperature) > 0) { ?>
 <text id="ElecRm-Temp_Temperature" style="font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none">
 <tspan x="21" y="23">
-<?php $tempTemp = (int)(floatval($wholeTemperature[0]) > 0 ? floatval($wholeTemperature[0]) + 0.5 : floatval($wholeTemperature[0]) - 0.5); ?>
+<?php $tempTemp = (int)(round(floatval($wholeTemperature[0])); ?>
 <?php print($tempTemp . '&#xB0;C'); ?>
 </tspan>
 </text>
@@ -407,7 +407,7 @@
 <?php if (!$isTechBad && sizeof($wholeTemperature) > 0) { ?>
 <text id="ConfRm-Temp_Temperature" style="font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#000000;fill-opacity:1;stroke:none">
 <tspan x="21" y="23">
-<?php $tempTemp = (int)(floatval($wholeTemperature[0]) > 0 ? floatval($wholeTemperature[0]) + 0.5 : floatval($wholeTemperature[0]) - 0.5); ?>
+<?php $tempTemp = (int)(round(floatval($wholeTemperature[0])); ?>
 <?php print($tempTemp . '&#xB0;C'); ?>
 </tspan>
 </text>
@@ -438,7 +438,7 @@
 <?php if (!$isTechBad && sizeof($wholeTemperature) > 0) { ?>
 <text id="Outdoor-Temp_Temperature" style="font-style:normal;font-weight:normal;font-size:20px;line-height:1.25;font-family:sans-serif;fill:#ffffff;fill-opacity:1;stroke:none">
 <tspan x="21" y="23">
-<?php $tempTemp = (int)(floatval($wholeTemperature[0]) > 0 ? floatval($wholeTemperature[0]) + 0.5 : floatval($wholeTemperature[0]) - 0.5); ?>
+<?php $tempTemp = (int)(round(floatval($wholeTemperature[0])); ?>
 <?php print($tempTemp . '&#xB0;C'); ?>
 </tspan>
 </text>
