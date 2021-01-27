@@ -1,3 +1,3 @@
-!echo "Commit: f5e935f246de08062a76e8925875e2abf2c7e7d5 21d8a5b52b3cbee890bfebbdbe58f933a1374ddd"
-put 'protected/maglab/app/views/hal/_synoptic.php' 'protected/maglab/app/views/hal/_synoptic.php'
+!echo "Commit: 21d8a5b52b3cbee890bfebbdbe58f933a1374ddd 59a024e53e646585ae42126c1bfe0dfcafc640dc"
+put 'protected/maglab/app/helpers/hal_helpers_old.php' 'protected/maglab/app/helpers/hal_helpers_old.php'
 put '/home/brandon/maglab_website/deploy/marker.php.deployed' 'protected/maglab/config/config_cachebust.php'
