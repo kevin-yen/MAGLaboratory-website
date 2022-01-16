@@ -1,6 +1,6 @@
 <?php
 
-$secret = "A secret key for HAL\n"
+$secret = "A secret key for HAL\n";
 $mysqli = null;
 
 define('SKIP_CHECKSUM', false);
