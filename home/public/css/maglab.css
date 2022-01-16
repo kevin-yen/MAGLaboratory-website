@@ -9,6 +9,7 @@
 .social-icons .sprite-twitter { width: 45px; height: 45px; background-position: -115px -60px; }
 .social-icons .sprite-yelp { width: 45px; height: 45px; background-position: -5px -115px; }
 .social-icons .sprite-youtube { width: 45px; height: 45px; background-position: -60px -115px; }
+.social-icons .sprite-discord { width: 45px; height: 45px; background-position: -115px -115px; }
 
 #header { padding: 50px 0; font-family: "Bree Serif", Eczar, Georgia, "Times New Roman", Times, serif; font-size: 20px; }
 #header nav { opacity: 0.6; }

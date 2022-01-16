@@ -134,6 +134,9 @@ Menu
 <li>
 <a <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'sprite-github'), array('href', ('https://github.com/MAGLaboratory')), array('target', ('_blank'))), 'html5', 'UTF-8'); ?>></a>
 </li>
+<li>
+<a <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'sprite-discord'), array('href', ('https://discord.gg/rtzD3PA')), array('target', ('_blank'))), 'html5', 'UTF-8'); ?>></a>
+</li>
 </ul>
 </div>
 </div>
@@ -241,7 +244,7 @@ to check if--and for how long--the space will be open by the time you arrive.
 </div>
 </div>
 <div id="google-calendar" class="containment">
-<iframe src="https://www.google.com/calendar/embed?src=bjpkvaeg1rjq9u3c6utecq1jos%40group.calendar.google.com&amp;amp;ctz=America/Los_Angeles" style="border: 0" width="100%" height="650" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://calendar.google.com/calendar/embed?wkst=1&amp;bgcolor=%23ffffff&amp;ctz=America%2FLos_Angeles&amp;src=Ympwa3ZhZWcxcmpxOXUzYzZ1dGVjcTFqb3NAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&amp;src=Y18za2VvdjNqM2xjNXFzY3E3NTRtYjRuMzhiNEBncm91cC5jYWxlbmRhci5nb29nbGUuY29t&amp;color=%234285F4&amp;color=%23F09300" style="border: 0" width="100%" height="650" frameborder="0" scrolling="no"></iframe>
 <p>The calendar does not list unplanned open times that occur when a keyed member is present.</p>
 </div>
 <?php include '_pricing.php'; ?>
@@ -251,7 +254,7 @@ to check if--and for how long--the space will be open by the time you arrive.
 <div id="footer" class="containment">
 <div class="container">
 <div class="row">
-<span class="text-center">Copyright &copy; 2011-2020 Makers, Artists, and Gadgeteers Laboratory, Inc</span>
+<span class="text-center">Copyright &copy; 2011-2022 Makers, Artists, and Gadgeteers Laboratory, Inc</span>
 </div>
 </div>
 </div>
