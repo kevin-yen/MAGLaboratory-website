@@ -101,7 +101,22 @@ function save_payload($req){
 function save_switches($req) {
   $post = $req->getParsedBody();
   $session = $req->getHeaderLine('X-Session');
-  $checks = ['Front_Door', 'Pod_Bay_Door', 'Office_Motion', 'Shop_Motion', 'ConfRm_Motion', 'ElecRm_Motion', 'ShopB_Motion', 'Open_Switch', 'Bay_Temp', 'Outdoor_Temp', 'ConfRm_Temp', 'ElecRm_Temp', 'ShopB_Temp'];
+  $checks = [
+    'Front_Door', 
+    'Pod_Bay_Door', 
+    'Office_Motion', 
+    'Shop_Motion', 
+    'ConfRm_Motion', 
+    'ElecRm_Motion', 
+    'ShopB_Motion', 
+    'Open_Switch', 
+    'Bay_Temp', 
+    'Outdoor_Temp', 
+    'ConfRm_Temp', 
+    'ElecRm_Temp', 
+    'ShopB_Temp', 
+    'Privacy_Switch'
+  ];
 
   mark_old_switches();
 
@@ -331,21 +346,26 @@ function get_latest($sensors){
 }
 
 function latest_changes(){
+  define(IPROGRESS, 1);
+  define(IEND,      2);
+  define(IVALUE,    4);
+  define(ISTART,    5);
   $change_items = array(
-    'Open Switch' => [],
-    'Front Door' => [],
-    'Pod Bay Door' => [],
-    'Office Motion' => [],
-    'Shop Motion' => [],
-    'ConfRm Motion' => [],
-    'ElecRm Motion' => [],
-    'ShopB Motion' => [],
-    'Bay Temp' => [],
-    'Outdoor Temp' => [],
-    'ShopB Temp' => [],
-    'ConfRm Temp' => [],
-    'ElecRm Temp' => []
-    );
+    'Privacy Switch' => [],
+    'Open Switch'    => [],
+    'Front Door'     => [],
+    'Pod Bay Door'   => [],
+    'Office Motion'  => [],
+    'Shop Motion'    => [],
+    'ConfRm Motion'  => [],
+    'ElecRm Motion'  => [],
+    'ShopB Motion'   => [],
+    'Bay Temp'       => [],
+    'Outdoor Temp'   => [],
+    'ShopB Temp'     => [],
+    'ConfRm Temp'    => [],
+    'ElecRm Temp'    => []
+  );
   
   $now = time();
   $last_update_time = 0;
@@ -353,6 +373,7 @@ function latest_changes(){
   # this bit could skip the sensor name at index 0
   $data = get_latest($change_items);
   $d_i = 0;
+  $privacy_value = false;
   foreach($change_items as $sensor => &$value){
     if($data == null){
       array_push($value, 'No Data');
@@ -362,59 +383,66 @@ function latest_changes(){
     }
 
     $data_line = $data[$d_i];
-    
-    # Doors are either open or closed. Easy
-    if(strpos($sensor, 'Door') !== false){
-      if($data_line[4] == '1' and $data_line[2] == null){
+
+    # Compute Sensor Types
+    if($sensor == 'Privacy Switch'){
+      if($data_line[IVALUE] == '1' and $data_line[IEND] == null){
+        $privacy_value = true;
+      }
+    }
+    elseif(strpos($sensor, 'Door') !== false){
+      if($data_line[IVALUE] == '1' and $data_line[IEND] == null and $privacy_value == false){
         array_push($value, 'Open');
-        array_push($value, $data_line[5]);
+        array_push($value, $data_line[ISTART]);
         array_push($value, true);
+      } elseif($privacy_value == true){
+        array_push($value, 'Closed');
+        array_push($value, $data_line[ISTART] - 86400);
+        array_push($value, false);
       } else {
         array_push($value, 'Closed');
-        array_push($value, $data_line[5]);
+        array_push($value, $data_line[ISTART]);
         array_push($value, false);
       }
     }
-    
-    if(strpos($sensor, 'Motion') !== false){
-      if($data_line[2] == null && $data_line[4] == '1'){
+    elseif(strpos($sensor, 'Motion') !== false){
+      if($data_line[IEND] == null && $data_line[IVALUE] == '1' and $data_line[IPROGRESS] > $now - 20*60 and $privacy_value == false){
         array_push($value, 'Moving');
-        array_push($value, $data_line[1]);
+        array_push($value, $data_line[IPROGRESS]);
         array_push($value, true);
-      } elseif($now - 20*60 < $data_line[1] && $data_line[4] != '0'){
-        array_push($value, 'Moving');
-        array_push($value, $data_line[1]);
-        array_push($value, true);
+      } elseif($privacy_value == true){
+        array_push($value, 'No Movement since');
+        array_push($value, $data_line[ISTART] - 86400);
+        array_push($value, false);
       } else {
         array_push($value, 'No Movement since');
-        array_push($value, $data_line[5]);
+        array_push($value, $data_line[ISTART]);
         array_push($value, false);
       }
     }
-    
-    if(strpos($sensor, 'Switch') !== false){
-      if($data_line[4] == '1'){
+    elseif(strpos($sensor, 'Switch') !== false){
+      if($data_line[IEND] == null && $data_line[IVALUE] == '1' && $data_line[IPROGRESS] > $now - 20*60){
         array_push($value, 'Flipped ON');
-        array_push($value, $data_line[5]);
+        array_push($value, $data_line[IEND]);
         array_push($value, true);
       } else {
         array_push($value, 'Flipped OFF');
-        array_push($value, $data_line[5]);
+        array_push($value, $data_line[IEND]);
         array_push($value, false);
       }
     }
-    
-    if(strpos($sensor, 'Temp') !== false){
-      if (preg_match('/[^-0-9]+/', $data_line[4])) {
-        array_push($value, $data_line[4]);
+    elseif(strpos($sensor, 'Temp') !== false){
+      # Output cursed temperature text strings if the temperature is not reported
+      if (preg_match('/[^-0-9]+/', $data_line[IVALUE])) {
+        array_push($value, $data_line[IVALUE]);
       } else {
-        array_push($value, '' . sprintf("%.2f °C/ %.2f °F", (($data_line[4] | 0) / 1000), ((($data_line[4] | 0) / 1000)*1.8 + 32)));
+        array_push($value, '' . sprintf("%.2f °C/ %.2f °F", (($data_line[IVALUE] | 0) / 1000), ((($data_line[IVALUE] | 0) / 1000)*1.8 + 32)));
       }
-      array_push($value, $data_line[1] );
+      array_push($value, $data_line[IPROGRESS] );
     }
     
-    if($value[1] and $value[1] > $last_update_time){
-      $last_update_time = $value[1];
+    if($value[IPROGRESS] and $value[IPROGRESS] > $last_update_time){
+      $last_update_time = $value[IPROGRESS];
     }
 
     $d_i += 1;
