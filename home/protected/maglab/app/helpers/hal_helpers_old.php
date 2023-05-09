@@ -346,10 +346,10 @@ function get_latest($sensors){
 }
 
 function latest_changes(){
-  define(IPROGRESS, 1);
-  define(IEND,      2);
-  define(IVALUE,    4);
-  define(ISTART,    5);
+  define('IPROGRESS', 1);
+  define('IEND',      2);
+  define('IVALUE',    4);
+  define('ISTART',    5);
   $change_items = array(
     'Privacy Switch' => [],
     'Open Switch'    => [],
