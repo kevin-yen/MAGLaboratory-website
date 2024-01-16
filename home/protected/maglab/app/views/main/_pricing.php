@@ -43,11 +43,10 @@ Guests are
 <strong class="text-danger">not allowed</strong>
 to
 <ul>
-<li>disregard common sense or otherwise do anything illegal</li>
 <li>use equipment (unless accompanied by and helping a General Member)</li>
-<li>steal anything including but not limited to tools, supplies, equipment, personal belongings, and/or trash</li>
-<li>kidnap, impersonate, pester, lick or kick people and/or objects at the space</li>
-<li>injure, maim, kill or otherwise endanger harm upon themselves or others while on premises</li>
+<li>harass, discriminate against, injure, maim, kill, or otherwise endanger others or themselves</li>
+<li>damage, tamper with, or steal anything including but not limited to tools, supplies, equipment, personal belongings, and/or trash</li>
+<li>disregard common sense or otherwise do anything illegal</li>
 </ul>
 </div>
 <div class="panel-footer text-center">
@@ -76,7 +75,7 @@ General Members have all basic guest privileges and
 <li>use our machines and equipment (heavy machinery requires safety test)</li>
 <li>throw stuff away and take out the trash</li>
 <li>use publicly available materials (please refill or donate for consumables that you use often)</li>
-<li>a locker at the space (please bring your own lock)</li>
+<li>can use a locker at the space (please bring your own lock)</li>
 <li>should clean up their workspace</li>
 <li>return equipment/tools/supplies to their designated location before leaving</li>
 </ul>
@@ -92,7 +91,7 @@ to
 </ul>
 </div>
 <div class="panel-footer text-center">
-<strong>$50/month</strong>
+<strong>$60/month</strong>
 <br>
 <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
 <input type="hidden" name="cmd" value="_s-xclick">
@@ -112,9 +111,9 @@ You may also pay with cash in person
 Keyholders have all General Member privileges and
 <ul>
 <li>get an rfid key allowing them to come and go whenever</li>
-<li>responsibility to lock up if they are the last keyholder to leave</li>
+<li>must lock up if they are the last keyholder to leave</li>
 <li>allow general members to use the space while they are there</li>
-<li>officer positions if they're interested in helping with MAG Lab business or administration affairs (on a volunteer basis)</li>
+<li>run for officer positions if they're interested in helping with MAG Lab business or administration affairs (on a volunteer basis)</li>
 </ul>
 Keyholders are
 <strong class="text-danger">not allowed</strong>
@@ -125,12 +124,12 @@ to
 </ul>
 </div>
 <div class="panel-footer text-center">
-<strong>$100/month</strong>
+<strong>$120/month</strong>
 <br>
 <a <?php echo MtHaml\Runtime::renderAttributes(array(array('class', ('btn' . ' ' . 'btn-primary')), array('href', ('mailto:contact@maglaboratory.org'))), 'html5', 'UTF-8'); ?>>Ask an officer</a>
 <br>
 <br>
-We ask that interested keyholders try the space out as a General Member first.
+We require that interested keyholders try the space out as a General Member first.
 </div>
 </div>
 </div>

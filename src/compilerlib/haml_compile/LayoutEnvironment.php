@@ -28,7 +28,7 @@ class LayoutEnvironment extends Environment {
       if($layout_paths[count($layout_paths)-1][0] != '_'){
         while(array_pop($layout_paths) and count($layout_paths) > 0){
           array_push($layout_paths, array_pop($layout_paths) . '.layout.haml');
-          $fileCheck = implode($layout_paths, '/');
+          $fileCheck = implode('/', $layout_paths);
           if(file_exists($fileCheck)){
             $layout = $fileCheck;
             break;

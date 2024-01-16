@@ -152,7 +152,7 @@ Menu
 <div id="footer" class="containment">
 <div class="container">
 <div class="row">
-<span class="text-center">Copyright &copy; 2011-2022 Makers, Artists, and Gadgeteers Laboratory, Inc</span>
+<span class="text-center">Copyright &copy; 2011-2024 Makers, Artists, and Gadgeteers Laboratory, Inc</span>
 </div>
 </div>
 </div>

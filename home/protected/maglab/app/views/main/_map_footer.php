@@ -2,7 +2,7 @@
 <div <?php echo MtHaml\Runtime::renderAttributes(array(array('style', ('background-color: #fcd89e;'))), 'html5', 'UTF-8'); ?>>
 <div class="container">
 <div class="row">
-<span class="text-center">Copyright &copy; 2011-2022 Makers, Artists, and Gadgeteers Laboratory, Inc</span>
+<span class="text-center">Copyright &copy; 2011-2024 Makers, Artists, and Gadgeteers Laboratory, Inc</span>
 </div>
 </div>
 </div>

@@ -33,7 +33,7 @@ function saveDirectory($globular = null){
     if(array_pop($fpath) == 'haml'){
       if($fpath[count($fpath)-1] == 'layout'){ continue; } // skip layout files
       $content = $haml->compileFileWithLayout($filename);
-      save($content, implode($fpath, '.'));
+      save($content, implode('.', $fpath));
     } else {
       save(file_get_contents($filename), $filename);
     }
