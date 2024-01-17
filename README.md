@@ -17,3 +17,7 @@ The year is mentioned in four places on MAGLab.
 * board layout
 * hal layout
 * main layout 
+
+## Deployment with Rsync instead of the script
+
+`rsync -rpt home/* USER_maglabs@ssh.nyc1.nearlyfreespeech.net:/home`
