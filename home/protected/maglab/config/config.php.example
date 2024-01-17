@@ -15,5 +15,5 @@ define('ROOT_URL', "web deployment url");
 $slim_mode = 'production';
 
 if(!defined('HALDOR_ROOT')){
-    define('HALDOR_ROOT' . __DIR__);
+    define('HALDOR_ROOT', __DIR__);
 }
