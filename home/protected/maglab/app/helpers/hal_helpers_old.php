@@ -423,11 +423,11 @@ function latest_changes(){
     elseif(strpos($sensor, 'Switch') !== false){
       if($data_line[IEND] == null && $data_line[IVALUE] == '1' && $data_line[IPROGRESS] > $now - 20*60){
         array_push($value, 'Flipped ON');
-        array_push($value, $data_line[IEND]);
+        array_push($value, $data_line[ISTART]);
         array_push($value, true);
       } else {
         array_push($value, 'Flipped OFF');
-        array_push($value, $data_line[IEND]);
+        array_push($value, $data_line[ISTART]);
         array_push($value, false);
       }
     }
@@ -450,6 +450,8 @@ function latest_changes(){
 
   $change_items['Page Loaded'] = ['at', $now];
   $change_items['LastUpdate'] = ['at', $last_update_time];
+
+  unset($change_items['Privacy Switch']);
 
   return $change_items;
 }
