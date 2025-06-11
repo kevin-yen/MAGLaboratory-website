@@ -161,7 +161,7 @@ We reserve the right to refuse service and entry for whatever reason. If there's
 <div class="col-xs-12">
 <h2>
 General Members
-<small>$50/month</small>
+<small>$60/month</small>
 </h2>
 <p>
 Heavy machinery and other dangerous equipment like the welder require special permission to operate. There's a safety test and you must demonstrate that you can follow basic procedures to the section lead. This avoids potential accidents that harm yourself or damage the equipment.
@@ -173,7 +173,7 @@ Most of our members pay using the PayPal subscription link. Some members pay in 
 <div class="col-xs-12">
 <h2>
 Keyholders
-<small>$100/month</small>
+<small>$120/month</small>
 </h2>
 <p>
 Keyholders get a key to the space. That comes with additional responsibilities, the most important of which is
