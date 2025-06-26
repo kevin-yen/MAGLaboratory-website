@@ -302,6 +302,7 @@ function update_sensors() {
 	    updating_sensors = false;
             return;
         });
+    update_refresh_counter();
 }
 
 setInterval(function() {
@@ -310,7 +311,6 @@ setInterval(function() {
     if (has_focus || override) {
         if (next_refresh <= new Date() / 1000) {
             update_sensors();
-            update_refresh_counter();
         }
     }
 }, 1000);
@@ -336,10 +336,10 @@ function override_enable() {
 function maybeUpdate() {
     if (next_refresh <= new Date() / 1000) {
         update_sensors();
-        update_refresh_counter();
     }
 }
 
+auto_refresh_row.cells[0].addEventListener("click", update_sensors, false);
 auto_refresh_row.cells[1].addEventListener("click", override_enable, false);
 window.addEventListener("focus", windowHasFocus, false);
 window.addEventListener("blur", windowLostFocus, false);
