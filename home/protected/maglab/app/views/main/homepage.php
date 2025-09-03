@@ -230,6 +230,28 @@ to check if--and for how long--the space will be open by the time you arrive.
 <p>The calendar does not list unplanned open times that occur when a keyed member is present.</p>
 </div>
 <?php include '_pricing.php'; ?>
+
+<div id="additional-links" class="containment">
+<div class="container">
+<div class="row">
+<h1 class="text-center">ADDITIONAL LINKS</h1>
+</div>
+</div>
+<div class="container">
+<ul class="social-icons">
+<li>
+<a <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'sprite-twitter'), array('href', ('https://www.twitter.com/MAGLaboratory')), array('target', ('_blank'))), 'html5', 'UTF-8'); ?>></a>
+</li>
+<li>
+<a <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'sprite-youtube'), array('href', ('https://www.youtube.com/channel/UCxkmJiwGmDQnIvLe2gDKbpg')), array('target', ('_blank'))), 'html5', 'UTF-8'); ?>></a>
+</li>
+<li>
+<a <?php echo MtHaml\Runtime::renderAttributes(array(array('class', 'sprite-yelp'), array('href', ('https://www.yelp.com/biz/mag-lab-walnut')), array('target', ('_blank'))), 'html5', 'UTF-8'); ?>></a>
+</li>
+</ul>
+</div>
+</div>
+
 <?php include('_map_footer.php'); ?>
 
 <?php if(!isset($layout_no_footer)) { ?>
