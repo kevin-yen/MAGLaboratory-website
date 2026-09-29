@@ -1,5 +1,6 @@
 FROM php:8.2.20-apache
 
+COPY --from=composer/composer:latest-bin /composer /usr/bin/composer
 COPY . /website
 
 ENV APACHE_DOCUMENT_ROOT=/website/home/public
