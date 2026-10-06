@@ -1,6 +1,6 @@
 # Proposal: stop committing `src/vendor`, install it with Composer
 
-Status: proposed. This builds on the PHP 8.2 bump (`bump-docker-to-php8`).
+Status: implemented. This builds on the PHP 8.2 bump (`bump-docker-to-php8`). See "Findings during implementation" below for where the work differed from the plan.
 
 ## Background
 
@@ -37,12 +37,22 @@ This vendor directory **is** deployed. NFSN deploys are a plain rsync/sftp of `h
    - `config.allow-plugins`: `{"cweagans/composer-patches": true}`.
    - `config.platform.php`: `"8.2.20"`.
    - `extra.patches`: `{"mthaml/mthaml": {"Declare Midblock::$skip for PHP 8.2": "patches/mthaml-midblock-skip.patch"}}`.
-2. **Create `src/patches/mthaml-midblock-skip.patch`** from `54508ec`, with paths relative to the package root (`lib/MtHaml/NodeVisitor/Midblock.php`).
+2. **Create `src/patches/mthaml-midblock-skip.patch`** from `54508ec`, with paths relative to the package root (`lib/MtHaml/NodeVisitor/Midblock.php`). Also create `src/patches/mthaml-maglab-customizations.patch` (see Findings).
 3. **Untrack vendor:** add `/src/vendor` to `.gitignore`, then `git rm -r --cached src/vendor`.
 4. **Regenerate `src/composer.lock`** so it includes the plugin, and commit it.
 5. **Add a guard to `src/compile.php` and `src/check.php`:** if `vendor/autoload.php` is missing, print "Run composer install in src/ first (see README)" and exit with status 1.
 6. **Update the README:** make `composer install` an explicit first-time setup step, and note that `src/vendor` is gitignored.
-7. **Dockerfile:** no change, because a build-time install would be hidden by the bind mount (issue 2).
+7. **Dockerfile:** install `unzip`. The `php:*-apache` image has neither `unzip` nor the `zip` extension, so Composer can't extract packages and a fresh `composer install` fails. Do not add a build-time `composer install`, because the bind mount would hide it (issue 2).
+
+## Findings during implementation
+
+- **The vendored MtHaml had undocumented local edits.** Besides the Midblock fix, commits `b924cc8` ("add option to remove indentation") and `8cdc895` ("add render watcher for capture blocks") had edited four MtHaml files directly: `Environment.php`, `Node/Run.php`, `NodeVisitor/PhpRenderer.php` and `NodeVisitor/RendererAbstract.php`. Without them, stock MtHaml re-indents all 20 compiled views. They are now kept in `src/patches/mthaml-maglab-customizations.patch`. After both patches are applied, the installed MtHaml is identical to the copy that used to be committed.
+- **`coffeescript/coffeescript` can no longer be installed.** Its GitHub repo (`alxlit/coffeescript-php`) has been deleted, so Packagist's download URL returns 404. None of the `.haml` views use the `:coffee` filter, so the dependency was removed and `compile.php` and `check.php` no longer register the filter.
+- **`unzip` was missing from the image.** Composer needs it to extract packages, so it was added to the Dockerfile (step 7).
+- **Vendor files were owned by root.** Running Composer through the container as root left `src/vendor` owned by root on the host. The README command now passes `-u $(id -u):$(id -g) -e COMPOSER_HOME=/tmp/composer`.
+- **Not addressed:**
+  - `src/check.php` was already broken before this change. It references `MtHaml\Filter\YieldingContent`, which doesn't exist in the repo.
+  - `erusev/parsedown` 1.6.0 has two advisories (CVE-2018-1000162, CVE-2019-10905). Dependabot PR #21 covers that bump.
 
 ## Verification
 
