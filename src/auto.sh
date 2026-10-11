@@ -1,8 +1,8 @@
 #!/bin/bash
 
 DIR=$( dirname "$0" )
-
-sass --style=compact --sourcemap=none --watch $DIR/scss:$DIR/../home/public/css &
+echo $DIR
+sass --style=compressed --no-source-map --watch $DIR/scss:$DIR/../home/public/css &
 SASS_PID=$!
 
 php $DIR/compile.php
