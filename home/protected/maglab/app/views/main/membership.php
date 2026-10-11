@@ -101,12 +101,6 @@ Menu
 <li>
 <a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ('/hal'))), 'html5', 'UTF-8'); ?>>Are We Open?</a>
 </li>
-<li>
-<a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ('/members/procurement'))), 'html5', 'UTF-8'); ?>>Shopping List</a>
-</li>
-<li>
-<a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ('/members'))), 'html5', 'UTF-8'); ?>>Members Dashboard</a>
-</li>
 </ul>
 </div>
 </div>
@@ -233,11 +227,10 @@ Sign ups and applications will be posted when a new selection round begins.
 </div>
 </div>
 <div class="row">
-<div class="col-xs-12">
+<div class="col-xs-12 hidden">
 <h2>Members Section / Dashboard</h2>
 <p>
 All members will have an account created in our
-<a <?php echo MtHaml\Runtime::renderAttributes(array(array('href', ('/members'))), 'html5', 'UTF-8'); ?>>Members Section</a>
 to manage billing history and basic contact information.
 </p>
 </div>
